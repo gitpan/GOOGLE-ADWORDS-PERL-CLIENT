@@ -75,7 +75,7 @@ $deserializer_input = replace_properties($deserializer_input,
 isa_ok($results[0], "SOAP::WSDL::SOAP::Typelib::Fault11");
 isa_ok($results[0]->get_detail(), "Google::Ads::AdWords::FaultDetail");
 isa_ok($results[0]->get_detail()->get_ApiExceptionFault(),
-       "Google::Ads::AdWords::v201206::ApiException");
+       "Google::Ads::AdWords::${current_version}::ApiException");
 
 # Test we can deserialize a policy violation error response from mutate job
 # service.
@@ -98,4 +98,4 @@ $deserializer_input = replace_properties($deserializer_input,
 isa_ok($results[0], "SOAP::WSDL::SOAP::Typelib::Fault11");
 isa_ok($results[0]->get_detail(), "Google::Ads::AdWords::FaultDetail");
 isa_ok($results[0]->get_detail()->get_ApiExceptionFault(),
-       "Google::Ads::AdWords::v201206::ApiException");
+       "Google::Ads::AdWords::${current_version}::ApiException");

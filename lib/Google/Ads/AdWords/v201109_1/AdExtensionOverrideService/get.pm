@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109_1::AdExtensionOverrideService::get
 Perl data type class for the XML Schema defined element
 get from the namespace https://adwords.google.com/api/adwords/cm/v201109_1.
 
-Returns a list of AdExtensionOverrides based on an AdExtensionOverrideSelector. @param selector the selector specifying the query @return the page containing the AdExtensionOverride which meet the criteria specified by the selector 
+Returns a list of AdExtensionOverrides based on an AdExtensionOverrideSelector. @param selector The selector specifying the query. @return The page containing the AdExtensionOverride which meet the criteria specified by the selector. 
 
 
 

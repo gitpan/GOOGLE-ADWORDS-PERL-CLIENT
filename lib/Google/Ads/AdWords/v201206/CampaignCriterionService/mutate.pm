@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201206::CampaignCriterionService::mutate
 Perl data type class for the XML Schema defined element
 mutate from the namespace https://adwords.google.com/api/adwords/cm/v201206.
 
-Adds, removes or updates campaign criteria. @param operations the operations to do @return the added campaign criteria (without any optional parts) @throws ApiException when there is at least one error with the request 
+Adds, removes or updates campaign criteria. @param operations The operations to apply. @return The added campaign criteria (without any optional parts). @throws ApiException when there is at least one error with the request. 
 
 
 

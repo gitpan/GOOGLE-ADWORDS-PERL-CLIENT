@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109_1::AdExtensionOverrideService::mutate
 Perl data type class for the XML Schema defined element
 mutate from the namespace https://adwords.google.com/api/adwords/cm/v201109_1.
 
-Applies the list of mutate operations. Conditions for adding an ad-level AdExtension override using an AdExtension under the Ad's campaign: 1) If the text ad has never been overridden, an AdExtension override may be set on the creative using an extension under the campaign, along with any override info. 2) If the text ad has been overriden before, the latitude/longitude of the new extension override must be the same as the previous override and no override info can be specified (ie. the override info will inherit from the previous override info). @param operations the operations to apply. The same ad extension override cannot be specified in more than one operation. @return the applied ad extension overrides 
+Applies the list of mutate operations. <p>Conditions for adding an ad-level AdExtension override using an AdExtension under the Ad's campaign:</p> <ol> <li>If the text ad has never been overridden, an AdExtension override may be set on the creative using an extension under the campaign, along with any override info.</li> <li>If the text ad has been overriden before, the latitude/longitude of the new extension override must be the same as the previous override and no override info can be specified (i.e. the override info will inherit from the previous override info).</li> </ol> @param operations The operations to apply. The same ad extension override cannot be specified in more than one operation. @return The applied ad extension overrides. 
 
 
 

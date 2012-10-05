@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109_1::AdGroupAdService::get
 Perl data type class for the XML Schema defined element
 get from the namespace https://adwords.google.com/api/adwords/cm/v201109_1.
 
-Returns a list of AdGroupAds. @param serviceSelector the selector specifying the {@link AdGroupAd}s to return. @return the page containing the AdGroupAds that meet the criteria specified by the selector. @throws ApiException when there is at least one error with the request. 
+Returns a list of AdGroupAds. @param serviceSelector The selector specifying the {@link AdGroupAd}s to return. @return The page containing the AdGroupAds that meet the criteria specified by the selector. @throws ApiException when there is at least one error with the request. 
 
 
 

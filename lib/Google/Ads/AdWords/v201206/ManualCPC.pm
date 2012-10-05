@@ -69,7 +69,7 @@ Google::Ads::AdWords::v201206::ManualCPC
 Perl data type class for the XML Schema defined complexType
 ManualCPC from the namespace https://adwords.google.com/api/adwords/cm/v201206.
 
-Manual click based bidding where user pays per click. For more information, see the article <a href="http://adwords.google.com/support/aw/bin/answer.py?answer=159957" >What is Enhanced CPC?</a>. <span class="constraint AdxEnabled">This is disabled for AdX.</span> 
+Manual click based bidding where user pays per click. For more information, see the <a href="//support.google.com/adwords/bin/answer.py?answer=2464964" >AdWords Help Center</a>. <span class="constraint AdxEnabled">This is disabled for AdX.</span> 
 
 
 

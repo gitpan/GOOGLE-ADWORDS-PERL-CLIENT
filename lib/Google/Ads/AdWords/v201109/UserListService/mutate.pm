@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109::UserListService::mutate
 Perl data type class for the XML Schema defined element
 mutate from the namespace https://adwords.google.com/api/adwords/cm/v201109.
 
-Adds and updates user lists. <p class="note"><b>Note:</b> {@link UserListOperation} does not support the <code>REMOVE</code> operator. To disable a user list, set its {@link UserListMembershipStatus} to <code>CLOSED</code>.</p> @param operations the operations to apply. @return the mutated UserList entities. 
+Adds and updates user lists. <p class="note"><b>Note:</b> {@link UserListOperation} does not support the <code>REMOVE</code> operator. To disable a user list, set its {@link UserListMembershipStatus} to <code>CLOSED</code>.</p> @param operations The operations to apply. @return The mutated UserList entities. 
 
 
 

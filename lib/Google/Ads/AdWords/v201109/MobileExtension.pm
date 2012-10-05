@@ -84,7 +84,7 @@ Google::Ads::AdWords::v201109::MobileExtension
 Perl data type class for the XML Schema defined complexType
 MobileExtension from the namespace https://adwords.google.com/api/adwords/cm/v201109.
 
-<p> Represents a phone extension. This type of ad extension attaches a phone number to a text ad, which lets customers call the advertiser directly from the ad. Phone extensions will appear as clickable phone numbers beneath the main text ad, and will be visible to high-end mobile device users who access Google.com search, Voice search, Google Mobile App, or Google Maps for Mobile from their phone. </p> <p>Learn more about phone extensions <a href="https://adwords.google.com/support/aw/bin/answer.py?hl=en&answer=173346"> here </a>. </p> 
+Represents a phone extension. <p>This type of ad extension attaches a phone number to a text ad, which lets customers call the advertiser directly from the ad. Phone extensions will appear as clickable phone numbers beneath the main text ad, and will be visible to high-end mobile device users who access google.com search, Voice search, Google Mobile App, or Google Maps for Mobile from their phone. </p> <p>Learn more about <a href="//support.google.com/adwords/bin/answer.py?answer=2453991"> phone extensions</a>. </p> 
 
 
 

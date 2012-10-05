@@ -1,3 +1,7 @@
+2.7.3
+- Added support for v201209 and code examples.
+- Added support to new reports download error format.
+
 2.7.2
 - Fixes to issues #46 and #49.
 - Changes to the handle_two_factor_authorization_error.pl code example, to

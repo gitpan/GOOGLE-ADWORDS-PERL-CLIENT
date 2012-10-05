@@ -16,7 +16,7 @@ package Google::Ads::AdWords::Client;
 
 use strict;
 use version;
-our $VERSION = qv("2.7.2");
+our $VERSION = qv("2.7.3");
 
 # Warn if this module is not loaded before any other Google::Ads module.
 BEGIN {
@@ -508,7 +508,7 @@ Google::Ads::AdWords::Client
   my $adGroupId = "12345678";
 
   my $adgroupad_selector =
-      Google::Ads::AdWords::v201109::Types::AdGroupAdSelector->new({
+      Google::Ads::AdWords::v201209::Types::AdGroupAdSelector->new({
         adGroupIds => [$adGroupId]
       });
 
@@ -586,7 +586,7 @@ https://adwords.google.com/select/ApiWelcome
 
 =head2 version
 
-The version of the AdWords API to use. Currently C<v201109> is the default and
+The version of the AdWords API to use. Currently C<v201209> is the default and
 only supported version.
 
 =head2 alternate_url
@@ -789,8 +789,8 @@ die() with an error message describing the failure.
 The client object contains a method for every service provided by the API.
 So for example it can invoked as $client->AdGroupService() and it will return
 an object of type
-L<Google::Ads::AdWords::v201109::AdGroupService::AdGroupServiceInterfacePort>
-when using version v201109 of the API.
+L<Google::Ads::AdWords::v201209::AdGroupService::AdGroupServiceInterfacePort>
+when using version v201209 of the API.
 For a list of all available services please refer to
 http://code.google.com/apis/adwords/docs/ and for examples on
 how to invoke the services please refer to scripts in the examples folder.

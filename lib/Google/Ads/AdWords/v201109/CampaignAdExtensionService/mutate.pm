@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109::CampaignAdExtensionService::mutate
 Perl data type class for the XML Schema defined element
 mutate from the namespace https://adwords.google.com/api/adwords/cm/v201109.
 
-Applies the list of mutate operations. @param operations The operations to apply. The same {@link CampaignAdExtension} cannot be specified in more than one operation. @return The changed {@link CampaignAdExtension}s. The {@link Operator#SET} is not supported. 
+Applies the list of mutate operations. @param operations The operations to apply. The same {@link CampaignAdExtension} cannot be specified in more than one operation. @return The changed {@link CampaignAdExtension}s. 
 
 
 

@@ -124,7 +124,7 @@ Google::Ads::AdWords::v201109::TemplateAd
 Perl data type class for the XML Schema defined complexType
 TemplateAd from the namespace https://adwords.google.com/api/adwords/cm/v201109.
 
-Represents a <a href= "http://www.google.com/adwords/displaynetwork/plan-creative-campaigns/display-ad-builder.html" >Display Ad Builder</a> template ad. A template ad is composed of a template (specified by its ID) and the data that populates the template's fields. For a list of available templates and their required fields, see the <a href= "/apis/adwords/docs/appendix/templateads.html">Template Ads appendix</a>. 
+Represents a <a href= "//www.google.com/adwords/displaynetwork/plan-creative-campaigns/display-ad-builder.html" >Display Ad Builder</a> template ad. A template ad is composed of a template (specified by its ID) and the data that populates the template's fields. For a list of available templates and their required fields, see <a href="/adwords/api/docs/appendix/templateads">Template Ads</a>. 
 
 
 

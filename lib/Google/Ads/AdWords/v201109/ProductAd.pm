@@ -99,7 +99,7 @@ Google::Ads::AdWords::v201109::ProductAd
 Perl data type class for the XML Schema defined complexType
 ProductAd from the namespace https://adwords.google.com/api/adwords/cm/v201109.
 
-Represents a product ad (known as a <a href= "https://adwords.google.com/support/aw/bin/answer.py?answer=185788">product listing ad</a> in the AdWords user interface). A product ad displays product data (managed using the Google Merchant Center) that is pulled from the Google base product feed specified in the parent campaign's {@linkplain ProductExtension product extension}. <p>Product ads are only available to a limited set of advertisers. If you not eligible to use product ads, they will not serve.</p> <p class="caution"><b>Caution:</b> Product ads do not use {@link #url url} or {@link #displayUrl displayUrl}; setting these fields on a product ad will cause an error.</p> 
+Represents a product ad (known as a <a href= "//support.google.com/adwords/bin/answer.py?answer=2456103">product listing ad</a> in the AdWords user interface). A product ad displays product data (managed using the Google Merchant Center) that is pulled from the Google base product feed specified in the parent campaign's {@linkplain ProductExtension product extension}. <p>Product ads are only available to a limited set of advertisers. If you are not eligible to use product ads, they will not serve.</p> <p class="caution"><b>Caution:</b> Product ads do not use {@link #url url} or {@link #displayUrl displayUrl}; setting these fields on a product ad will cause an error.</p> 
 
 
 

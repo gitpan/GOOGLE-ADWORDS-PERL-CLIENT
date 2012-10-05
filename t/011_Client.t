@@ -24,7 +24,7 @@ use strict;
 
 use File::Basename;
 use File::Spec;
-use Test::More (tests => 39);
+use Test::More (tests => 41);
 
 # Set up @INC at runtime with an absolute path.
 my $lib_path = File::Spec->catdir(dirname($0), "..", "lib");
@@ -102,6 +102,34 @@ $client->set_version("v201109_1");
               CampaignAdExtensionService CampaignCriterionService
               CampaignService CampaignTargetService ConstantDataService
               ConversionTrackerService DataService
+              ExperimentService GeoLocationService
+              LocationCriterionService MediaService MutateJobService
+              ReportDefinitionService UserListService InfoService
+              BulkMutateJobService TargetingIdeaService TrafficEstimatorService
+              CustomerSyncService AlertService CreateAccountService
+              ServicedAccountService BudgetOrderService);
+can_ok($client, @services);
+
+$client->set_version("v201206");
+@services = qw(AdExtensionOverrideService AdGroupAdService
+              AdGroupCriterionService AdGroupService AdParamService
+              BudgetOrderService CampaignAdExtensionService
+              CampaignCriterionService CampaignService CampaignTargetService
+              ConstantDataService ConversionTrackerService DataService
+              ExperimentService GeoLocationService
+              LocationCriterionService MediaService MutateJobService
+              ReportDefinitionService UserListService InfoService
+              BulkMutateJobService TargetingIdeaService TrafficEstimatorService
+              CustomerSyncService AlertService CreateAccountService
+              ServicedAccountService BudgetOrderService);
+can_ok($client, @services);
+
+$client->set_version("v201209");
+@services = qw(AdExtensionOverrideService AdGroupAdService
+              AdGroupCriterionService AdGroupService AdParamService
+              BudgetOrderService BudgetService CampaignAdExtensionService
+              CampaignCriterionService CampaignService CampaignTargetService
+              ConstantDataService ConversionTrackerService DataService
               ExperimentService GeoLocationService
               LocationCriterionService MediaService MutateJobService
               ReportDefinitionService UserListService InfoService

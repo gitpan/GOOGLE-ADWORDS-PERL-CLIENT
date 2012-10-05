@@ -99,7 +99,7 @@ Google::Ads::AdWords::v201206::MobileImageAd
 Perl data type class for the XML Schema defined complexType
 MobileImageAd from the namespace https://adwords.google.com/api/adwords/cm/v201206.
 
-Represents a mobile image ad. <p>For more information, see the <a href="http://adwords.google.com/support/aw/bin/answer.py?answer=83248" >mobile ads guidelines</a>.</p> <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span> 
+Represents a mobile image ad. <p>For more information, see <a href="//support.google.com/adwords/bin/answer.py?answer=2472720"> Create a mobile ad</a>.</p> <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span> 
 
 
 

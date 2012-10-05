@@ -51,15 +51,34 @@ sub get_api_package {
 sub create_campaign {
   my $client = shift;
   my $bidding_strategy = shift || get_api_package($client, "ManualCPC", 1);
+  my $budget;
+
+  if ($client->get_version() ge "v201209") {
+    $budget = get_api_package($client, "Budget", 1)->new({
+      name => "Test " . uniqid(),
+      period => "DAILY",
+      amount => { microAmount => 50000000 },
+      deliveryMethod => "STANDARD"
+    });
+    my $budget_operation = get_api_package($client, "BudgetOperation", 1)->new({
+      operand => $budget,
+      operator => "ADD"
+    });
+    $budget = $client->BudgetService()->mutate({
+      operations => ($budget_operation)
+    })->get_value();
+  } else {
+    $budget = get_api_package($client, "Budget", 1)->new({
+      period => "DAILY",
+      amount => { microAmount => 50000000 },
+      deliveryMethod => "STANDARD"
+    });
+  }
 
   my $campaign = get_api_package($client, "Campaign", 1)->new({
     name => "Campaign #" . uniqid(),
     biddingStrategy => $bidding_strategy->new(),
-    budget => get_api_package($client, "Budget", 1)->new({
-      period => "DAILY",
-      amount => { microAmount => 50000000 },
-      deliveryMethod => "STANDARD"
-    })
+    budget => $budget
   });
 
   if ($client->get_version() ge "v201206") {

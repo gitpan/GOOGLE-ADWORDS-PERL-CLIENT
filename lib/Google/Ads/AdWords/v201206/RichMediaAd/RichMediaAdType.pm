@@ -25,7 +25,7 @@ __END__
 Perl data type class for the XML Schema defined simpleType
 RichMediaAd.RichMediaAdType from the namespace https://adwords.google.com/api/adwords/cm/v201206.
 
-Different types of rich media ad that are available to customers 
+Different types of rich media ad that are available to customers. 
 
 
 

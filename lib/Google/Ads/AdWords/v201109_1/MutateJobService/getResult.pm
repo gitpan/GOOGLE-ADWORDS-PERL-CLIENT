@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109_1::MutateJobService::getResult
 Perl data type class for the XML Schema defined element
 getResult from the namespace https://adwords.google.com/api/adwords/cm/v201109_1.
 
-Query mutation results, of a {@code COMPLETED} job.<br/> Use a {@link JobSelector} to query and return either a {@link BulkMutateResult} or a {@link SimpleMutateResult}. 
+Query mutation results, of a {@code COMPLETED} job. <p>Use a {@link JobSelector} to query and return either a {@link BulkMutateResult} or a {@link SimpleMutateResult}. Submit only one job ID at a time.</p> 
 
 
 

@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109_1::CampaignCriterionService::get
 Perl data type class for the XML Schema defined element
 get from the namespace https://adwords.google.com/api/adwords/cm/v201109_1.
 
-Gets campaign criteria. @param serviceSelector the selector specifying the {@link CampaignCriterion}s to return. @return a list of campaign criteria @throws ApiException when there is at least one error with the request 
+Gets campaign criteria. @param serviceSelector The selector specifying the {@link CampaignCriterion}s to return. @return A list of campaign criteria. @throws ApiException when there is at least one error with the request. 
 
 
 

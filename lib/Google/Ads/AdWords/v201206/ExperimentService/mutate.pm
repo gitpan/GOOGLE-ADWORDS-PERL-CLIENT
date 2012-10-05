@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201206::ExperimentService::mutate
 Perl data type class for the XML Schema defined element
 mutate from the namespace https://adwords.google.com/api/adwords/cm/v201206.
 
-Mutates (add, update or remove) experiments. Note: to REMOVE use SET and mark status to DELETED. @param operations a list of unique operations. The same experiment cannot be specified in more than one operation. @return the updated experiments. The list of experiments is returned in the same order in which it came in as input. @throws ApiException if problems occurred while updating experiment information. 
+Mutates (add, update or remove) experiments. <b>Note:</b> To REMOVE use SET and mark status to DELETED. @param operations A list of unique operations. The same experiment cannot be specified in more than one operation. @return The updated experiments. The list of experiments is returned in the same order in which it came in as input. @throws ApiException if problems occurred while updating experiment information. 
 
 
 

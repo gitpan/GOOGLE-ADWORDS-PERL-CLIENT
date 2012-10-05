@@ -81,7 +81,7 @@ Google::Ads::AdWords::v201206::CampaignCriterion
 Perl data type class for the XML Schema defined complexType
 CampaignCriterion from the namespace https://adwords.google.com/api/adwords/cm/v201206.
 
-Represents a campaign level criterion (either keyword or placement). 
+Represents a campaign level criterion. 
 
 
 

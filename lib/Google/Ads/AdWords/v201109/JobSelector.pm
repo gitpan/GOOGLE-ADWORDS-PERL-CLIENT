@@ -71,7 +71,7 @@ Google::Ads::AdWords::v201109::JobSelector
 Perl data type class for the XML Schema defined complexType
 JobSelector from the namespace https://adwords.google.com/api/adwords/cm/v201109.
 
-For selecting jobs whose information will be returned from a get method call of a job service. <p>The selector is immutable so use the inner Builder class to create one. 
+For selecting jobs whose information will be returned from a get method call of a job service. 
 
 
 

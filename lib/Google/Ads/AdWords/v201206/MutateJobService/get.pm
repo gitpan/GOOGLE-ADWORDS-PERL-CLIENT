@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201206::MutateJobService::get
 Perl data type class for the XML Schema defined element
 get from the namespace https://adwords.google.com/api/adwords/cm/v201206.
 
-Query the status of existing jobs, both simple and bulk API.<br/> Use a {@link JobSelector} to query and return a list which may contain both {@link BulkMutateJob} and/or {@link SimpleMutateJob}. <p>This method will limit the number of returned results to the most recent 100 jobs. You should use a selector which will return a reasonable number of jobs in the result. 
+Query the status of existing jobs, both simple and bulk API. <p>Use a {@link JobSelector} to query and return a list which may contain both {@link BulkMutateJob} and/or {@link SimpleMutateJob}.</p> 
 
 
 

@@ -89,7 +89,7 @@ Google::Ads::AdWords::v201206::Vertical
 Perl data type class for the XML Schema defined complexType
 Vertical from the namespace https://adwords.google.com/api/adwords/cm/v201206.
 
-Use verticals to target or exclude placements in the Google Display Network based on the category into which the placement falls (for example, "Pets &amp; Animals/Pets/Dogs"). <a href="/apis/adwords/docs/appendix/verticals.html">View the complete list of available vertical categories.</a> <span class="constraint AdxEnabled">This is enabled for AdX.</span> 
+Use verticals to target or exclude placements in the Google Display Network based on the category into which the placement falls (for example, "Pets &amp; Animals/Pets/Dogs"). <a href="/adwords/api/docs/appendix/verticals">View the complete list of available vertical categories.</a> <span class="constraint AdxEnabled">This is enabled for AdX.</span> 
 
 
 

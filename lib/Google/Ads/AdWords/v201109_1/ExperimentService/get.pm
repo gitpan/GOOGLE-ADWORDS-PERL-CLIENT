@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109_1::ExperimentService::get
 Perl data type class for the XML Schema defined element
 get from the namespace https://adwords.google.com/api/adwords/cm/v201109_1.
 
-Returns a list of experiments specified by the experiment selector from the customer's account. @param serviceSelector the selector specifying the {@link Experiment}s to return. If selector is empty, all experiments are returned. @return list of experiments meeting all the criteria of each selector. @throws ApiException if problems occurred while fetching experiment information. 
+Returns a list of experiments specified by the experiment selector from the customer's account. @param serviceSelector The selector specifying the {@link Experiment}s to return. If selector is empty, all experiments are returned. @return List of experiments meeting all the criteria of each selector. @throws ApiException if problems occurred while fetching experiment information. 
 
 
 

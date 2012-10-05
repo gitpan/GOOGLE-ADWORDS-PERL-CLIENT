@@ -15,11 +15,14 @@
 package Google::Ads::Common::ReportUtils;
 
 use strict;
+use utf8;
 use version;
 
 # The following needs to be on one line because CPAN uses a particularly hacky
 # eval() to determine module versions.
 use Google::Ads::Common::Constants; our $VERSION = ${Google::Ads::Common::Constants::VERSION};
+
+use Google::Ads::Common::ReportDownloadError;
 
 use File::stat;
 use HTTP::Request;
@@ -28,10 +31,12 @@ use LWP::UserAgent;
 use MIME::Base64;
 use POSIX;
 use URI::Escape;
+use XML::Simple;
 
 use constant REPORT_DOWNLOAD_URL => "%s/api/adwords/reportdownload?__rd=%s";
 use constant ADHOC_REPORT_DOWNLOAD_URL => "%s/api/adwords/reportdownload/%s";
 use constant CLIENT_EMAIL_MAX_VERSION => "201101";
+use constant XML_ERRORS_MIN_VERSION => "201209";
 use constant LWP_DEFAULT_TIMEOUT => 300; # 5 minutes.
 
 sub download_report {
@@ -135,7 +140,7 @@ sub download_report {
       # If not gzip support then we can stream directly to a file.
       $response = $lwp->request($request, $file_path);
     } else {
-      open(FH, ">", $file_path) or warn "Can't write to '$file_path': $!";
+      open(FH, ">:utf8", $file_path) or warn "Can't write to '$file_path': $!";
       $response = $lwp->request($request);
       # Need to decode in a file.
       print FH $response->decoded_content();
@@ -149,7 +154,7 @@ sub download_report {
       open(FILE, "<", $file_path) or return undef;
       my $result = <FILE>;
       close(FILE);
-      if (__extract_error($result)) {
+      if (__extract_legacy_error($result)) {
         return undef;
       }
       return stat($file_path)->size;
@@ -158,8 +163,12 @@ sub download_report {
     }
   } elsif ($response->code == HTTP_BAD_REQUEST) {
     my $result = $response->decoded_content();
-    __extract_error($result);
-    return undef;
+    if ($current_version >= XML_ERRORS_MIN_VERSION) {
+      return __extract_xml_error($result);
+    } else {
+      __extract_legacy_error($result);
+      return undef;
+    }
   } else {
     warn("Report download failed with code '" . $response->code .
          "' and message '" . $response->message . ".");
@@ -167,13 +176,25 @@ sub download_report {
   }
 }
 
-sub __extract_error {
+sub __extract_legacy_error {
   my $report_result = shift;
   if ($report_result =~ m/^!!![^|]*\|\|\|([^|]*)\|\|\|([^?]*)\?\?\?/) {
     warn("Report download failed with error " . $2);
     return $2;
   }
   return undef;
+}
+
+sub __extract_xml_error {
+  my $ref = XML::Simple->new()->XMLin(shift, ForceContent => 1);
+
+  return Google::Ads::Common::ReportDownloadError->new({
+    type => $ref->{ApiError}->{type}->{content},
+    field_path => $ref->{ApiError}->{fieldPath}->{content} ?
+        $ref->{ApiError}->{fieldPath}->{content} : "",
+    trigger => $ref->{ApiError}->{trigger}->{content} ?
+        $ref->{ApiError}->{trigger}->{content} : ""
+  });
 }
 
 return 1;
@@ -252,6 +273,15 @@ L<Google::Ads::Common::ReportUtils::LWP_DEFAULT_TIMEOUT>.
 
 If a file_path is given, the report gets saved to file and the file size is
 returned, if not the report data itself is returned.
+
+=head3 Exceptions
+
+Starting with v201209 of the API a L<Google::Ads::Common::ReportDownloadError>
+object will be returned in case of a download error. If not passing a
+C<file_path> to dump the report then you must check if the return
+isa("Google::Ads::Common::ReportDownloadError").
+
+Prior to v201209 a warn() will be issued if a report download error occurs.
 
 =head1 LICENSE AND COPYRIGHT
 

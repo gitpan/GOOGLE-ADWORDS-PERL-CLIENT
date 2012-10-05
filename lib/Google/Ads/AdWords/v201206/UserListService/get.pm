@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201206::UserListService::get
 Perl data type class for the XML Schema defined element
 get from the namespace https://adwords.google.com/api/adwords/cm/v201206.
 
-Returns the list of user lists that meet the selector criteria. @param serviceSelector the selector specifying the {@link UserList}s to return. @return a list of UserList entities which meet the selector criteria. @throws ApiException if problems occurred while fetching UserList information. 
+Returns the list of user lists that meet the selector criteria. @param serviceSelector The selector specifying the {@link UserList}s to return. @return A list of UserList entities which meet the selector criteria. @throws ApiException if problems occurred while fetching UserList information. 
 
 
 

@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109::ConversionTrackerService::mutate
 Perl data type class for the XML Schema defined element
 mutate from the namespace https://adwords.google.com/api/adwords/cm/v201109.
 
-Applies the list of mutate operations such as adding or updating conversion trackers. <p class="note"><b>Note:</b> {@link ConversionTrackerOperation} does not support the <code>REMOVE</code> operator.</p> @param operations a list of mutate operations to perform. @return the list of the conversion trackers as they appear after mutation, in the same order as they appeared in the list of operations. @throws com.google.ads.api.services.common.error.ApiException if problems occurred while updating the data. 
+Applies the list of mutate operations such as adding or updating conversion trackers. <p class="note"><b>Note:</b> {@link ConversionTrackerOperation} does not support the <code>REMOVE</code> operator.</p> @param operations A list of mutate operations to perform. @return The list of the conversion trackers as they appear after mutation, in the same order as they appeared in the list of operations. @throws com.google.ads.api.services.common.error.ApiException if problems occurred while updating the data. 
 
 
 

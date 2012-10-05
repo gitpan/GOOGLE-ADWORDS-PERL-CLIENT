@@ -80,7 +80,7 @@ Google::Ads::AdWords::v201109::MutateJobService::mutate
 Perl data type class for the XML Schema defined element
 mutate from the namespace https://adwords.google.com/api/adwords/cm/v201109.
 
-Simplified way of submitting a mutation job. The provided list of operations, if valid, will create a new job with a unique id, which will be returned. This id can later be used in invocations of {@link #get} and {@link #getResult}. policy can optionally be specified. <p>When this method returns with success, the job will be in {@code PROCESSING} or {@code PENDING} state and no further action is needed for the job to get executed.<br/> You should not use the returned {@link BulkMutateJobId} with bulk API {@link BulkMutateJobService#mutate} method.</p> 
+Simplified way of submitting a mutation job. The provided list of operations, if valid, will create a new job with a unique id, which will be returned. This id can later be used in invocations of {@link #get} and {@link #getResult}. Policy can optionally be specified. <p>When this method returns with success, the job will be in {@code PROCESSING} or {@code PENDING} state and no further action is needed for the job to get executed.</p> <p>You should not use the returned {@link BulkMutateJobId} with bulk API {@link BulkMutateJobService#mutate} method.</p> 
 
 
 

@@ -25,7 +25,7 @@ __END__
 Perl data type class for the XML Schema defined simpleType
 ConversionTracker.Status from the namespace https://adwords.google.com/api/adwords/cm/v201109_1.
 
-Status of the conversion tracker. 
+Status of the conversion tracker. The user cannot ADD or SET the status to {@code HIDDEN}. 
 
 
 

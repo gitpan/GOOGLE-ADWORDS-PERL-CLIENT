@@ -47,9 +47,9 @@ sub validate_text_ad {
 
   # Create invalid text ad
   my $text_ad = Google::Ads::AdWords::v201109_1::TextAd->new({
-    headline => "Luxury Cruise to Mars!",
+    headline => "Luxury Cruise to Mars",
     description1 => "Visit the Red Planet in style.",
-    description2 => "Buy your tickets now!",
+    description2 => "Low-gravity fun for all astronauts in orbit.",
     displayUrl => "www.example.com/cruises",
     url => "http://www.example.com"
   });

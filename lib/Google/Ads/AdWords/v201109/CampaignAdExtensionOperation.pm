@@ -74,7 +74,7 @@ Google::Ads::AdWords::v201109::CampaignAdExtensionOperation
 Perl data type class for the XML Schema defined complexType
 CampaignAdExtensionOperation from the namespace https://adwords.google.com/api/adwords/cm/v201109.
 
-CampaignAdExtension service operation. 
+CampaignAdExtension service operation. <b>Note:</b> The {@code SET} operator is not supported. 
 
 
 

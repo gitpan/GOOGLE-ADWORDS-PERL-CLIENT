@@ -75,7 +75,7 @@ Google::Ads::AdWords::v201109_1::ConversionTrackerService::get
 Perl data type class for the XML Schema defined element
 get from the namespace https://adwords.google.com/api/adwords/cm/v201109_1.
 
-Returns a list of the conversion trackers that match the selector. The actual objects contained in the page's list of entries will be specific subclasses of the abstract {@ConversionTracker} class. @param serviceSelector the selector specifying the {@link ConversionTracker}s to return. @return list of conversion trackers specified by the selector. @throws com.google.ads.api.services.common.error.ApiException if problems occurred while retrieving results. 
+Returns a list of the conversion trackers that match the selector. The actual objects contained in the page's list of entries will be specific subclasses of the abstract {@link ConversionTracker} class. @param serviceSelector The selector specifying the {@link ConversionTracker}s to return. @return List of conversion trackers specified by the selector. @throws com.google.ads.api.services.common.error.ApiException if problems occurred while retrieving results. 
 
 
 
