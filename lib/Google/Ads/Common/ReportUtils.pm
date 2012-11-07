@@ -140,7 +140,7 @@ sub download_report {
       # If not gzip support then we can stream directly to a file.
       $response = $lwp->request($request, $file_path);
     } else {
-      open(FH, ">:utf8", $file_path) or warn "Can't write to '$file_path': $!";
+      open(FH, ">", $file_path) or warn "Can't write to '$file_path': $!";
       $response = $lwp->request($request);
       # Need to decode in a file.
       print FH $response->decoded_content();

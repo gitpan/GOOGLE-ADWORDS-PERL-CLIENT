@@ -52,16 +52,12 @@ BEGIN {
 $Net::OAuth::PROTOCOL_VERSION = Net::OAuth::PROTOCOL_VERSION_1_0A;
 
 # Class::Std-style attributes. Need to be kept in the same line.
-my %request_token_url_of : ATTR(:name<request_token_url>
-    :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_REQUEST_TOKEN_URL>);
-my %authorize_token_url_of : ATTR(:name<authorize_token_url>
-    :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_AUTHORIZE_TOKEN_URL>);
-my %access_token_url_of : ATTR(:name<access_token_url>
-    :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_ACCESS_TOKEN_URL>);
-my %consumer_key_of : ATTR(:name<consumer_key>
-    :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_CONSUMER_KEY>);
-my %consumer_secret_of : ATTR(:name<consumer_secret>
-    :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_CONSUMER_SECRET>);
+# These need to go in the same line for older Perl interpreters to understand.
+my %request_token_url_of : ATTR(:name<request_token_url> :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_REQUEST_TOKEN_URL>);
+my %authorize_token_url_of : ATTR(:name<authorize_token_url> :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_AUTHORIZE_TOKEN_URL>);
+my %access_token_url_of : ATTR(:name<access_token_url> :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_ACCESS_TOKEN_URL>);
+my %consumer_key_of : ATTR(:name<consumer_key> :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_CONSUMER_KEY>);
+my %consumer_secret_of : ATTR(:name<consumer_secret> :default<Google::Ads::Common::OAuth1_0aHandler::DEFAULT_OAUTH_CONSUMER_SECRET>);
 my %token_of : ATTR(:name<token> :default<>);
 my %token_secret_of : ATTR(:name<token_secret> :default<>);
 my %display_name_of : ATTR(:name<display_name> :default<>);

@@ -33,6 +33,7 @@ use constant OAUTH2_TOKEN_INFO_URL =>
 use constant OAUTH2_SCOPE => "https://adwords.google.com/api/adwords/";
 
 # Class::Std-style attributes. Need to be kept in the same line.
+# These need to go in the same line for older Perl interpreters to understand.
 my %api_client_of : ATTR(:name<api_client> :default<>);
 my %client_id_of : ATTR(:name<client_id> :default<>);
 my %client_secret_of : ATTR(:name<client_secret> :default<>);
@@ -41,8 +42,7 @@ my %approval_prompt_of : ATTR(:name<approval_prompt> :default<auto>);
 my %access_token_of : ATTR(:init_arg<access_token> :default<>);
 my %access_token_expires_of : ATTR(:name<access_token_expires> :default<>);
 my %refresh_token_of : ATTR(:name<refresh_token> :default<>);
-my %redirect_uri_of : ATTR(:name<redirect_uri>
-    :default<urn:ietf:wg:oauth:2.0:oob>);
+my %redirect_uri_of : ATTR(:name<redirect_uri> :default<urn:ietf:wg:oauth:2.0:oob>);
 my %__user_agent_of : ATTR(:name<__user_agent> :default<>);
 
 # Constructor

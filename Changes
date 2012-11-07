@@ -1,3 +1,7 @@
+2.7.4
+- Removed support of versions v201109 and v201109_1.
+- Bug fixes to issues #50 and #51.
+
 2.7.3
 - Added support for v201209 and code examples.
 - Added support to new reports download error format.

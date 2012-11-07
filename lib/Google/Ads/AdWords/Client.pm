@@ -16,7 +16,7 @@ package Google::Ads::AdWords::Client;
 
 use strict;
 use version;
-our $VERSION = qv("2.7.3");
+our $VERSION = qv("2.7.4");
 
 # Warn if this module is not loaded before any other Google::Ads module.
 BEGIN {
@@ -53,6 +53,7 @@ use constant AUTH_HANDLERS_ORDER =>
     (OAUTH_2_HANDLER, OAUTH_1_0A_HANDLER, AUTH_TOKEN_HANDLER);
 
 # Class::Std-style attributes. Most values read from adwords.properties file.
+# These need to go in the same line for older Perl interpreters to understand.
 my %client_id_of : ATTR(:name<client_id> :default<>);
 my %user_agent_of : ATTR(:name<user_agent> :default<>);
 my %developer_token_of : ATTR(:name<developer_token> :default<>);
@@ -73,17 +74,12 @@ my %email_of : ATTR(:init_arg<email> :get<email> :default<>);
 my %password_of : ATTR(:init_arg<password> :get<password> :default<>);
 my %auth_server_of : ATTR(:init_arg<auth_server> :get<auth_server> :default<0>);
 my %auth_token_of : ATTR(:init_arg<auth_token> :get<auth_token> :default<>);
-my %use_auth_token_cache_of : ATTR(:init_arg<use_auth_token_cache>
-                                   :get<use_auth_token_cache> :default<>);
-my %oauth_consumer_key_of : ATTR(:init_arg<oauth_consumer_key>
-                                 :get<oauth_consumer_key> :default<>);
-my %oauth_consumer_secret_of : ATTR(:init_arg<oauth_consumer_secret>
-                                    :get<oauth_consumer_secret> :default<>);
+my %use_auth_token_cache_of : ATTR(:init_arg<use_auth_token_cache> :get<use_auth_token_cache> :default<>);
+my %oauth_consumer_key_of : ATTR(:init_arg<oauth_consumer_key> :get<oauth_consumer_key> :default<>);
+my %oauth_consumer_secret_of : ATTR(:init_arg<oauth_consumer_secret> :get<oauth_consumer_secret> :default<>);
 my %oauth_token_of : ATTR(:init_arg<oauth_token> :get<oauth_token> :default<>);
-my %oauth_token_secret_of : ATTR(:init_arg<oauth_token_secret>
-                                 :get<oauth_token_secret> :default<>);
-my %oauth_display_name_of : ATTR(:init_arg<oauth_display_name>
-                                 :get<oauth_display_name> :default<>);
+my %oauth_token_secret_of : ATTR(:init_arg<oauth_token_secret> :get<oauth_token_secret> :default<>);
+my %oauth_display_name_of : ATTR(:init_arg<oauth_display_name> :get<oauth_display_name> :default<>);
 
 # Runtime statistics.
 my %requests_count_of : ATTR(:name<requests_count> :default<0>);

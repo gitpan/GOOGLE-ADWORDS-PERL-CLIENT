@@ -72,7 +72,11 @@ How do I start?
    (http://search.cpan.org/~andk/CPAN-1.9304/lib/CPAN.pm) or automatically by
    running
 
-     perl Build installdeps
+     (sudo) perl Build installdeps
+
+   Note 1: Make sure Module::Build >= 0.36 is installed so you can use
+           installdeps
+   Note 2: In certain Linux installations you'll need to install openssl first
 
 4) Install this module, making use of the Build script generated in step 2:
 
@@ -133,12 +137,12 @@ To run in this enviroment, you can make one of two changes to your library:
 
      my $client = Google::Ads::AdWords::Client->new({
       alternate_url => "https://adwords-sandbox.google.com"
-      version => "v201109_1"
+      version => "v201209"
      });
 
 
 Authorization Options
-----------------------
+---------------------
 
 Authorization in the client library is handled through different authorization
 handlers attached to the Client object. The library supports the following

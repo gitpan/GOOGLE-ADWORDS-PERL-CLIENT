@@ -24,7 +24,7 @@ use strict;
 
 use File::Basename;
 use File::Spec;
-use Test::More (tests => 41);
+use Test::More (tests => 39);
 
 # Set up @INC at runtime with an absolute path.
 my $lib_path = File::Spec->catdir(dirname($0), "..", "lib");
@@ -82,60 +82,64 @@ $client->set_die_on_faults(1);
 is($client->get_die_on_faults(), 1, "get/set die_on_faults()");
 
 # Make sure this supports all the services we think it should for each version.
-$client->set_version("v201109");
-my @services = qw(AdExtensionOverrideService AdGroupAdService
-                  AdGroupCriterionService AdGroupService AdParamService
-                  AlertService BulkMutateJobService
-                  CampaignAdExtensionService CampaignCriterionService
-                  CampaignService CampaignTargetService ConversionTrackerService
-                  ConstantDataService CustomerSyncService DataService
-                  ExperimentService GeoLocationService InfoService
-                  LocationCriterionService MediaService MutateJobService
-                  ReportDefinitionService ServicedAccountService
-                  TargetingIdeaService TrafficEstimatorService
+$client->set_version("v201206");
+my @services = qw(AdExtensionOverrideService
+                  AdGroupAdService
+                  AdGroupCriterionService
+                  AdGroupService
+                  AdParamService
+                  AlertService
+                  BudgetOrderService
+                  BulkMutateJobService
+                  CampaignAdExtensionService
+                  CampaignCriterionService
+                  CampaignService
+                  ConstantDataService
+                  ConversionTrackerService
+                  CustomerService
+                  CustomerSyncService
+                  DataService
+                  ExperimentService
+                  GeoLocationService
+                  InfoService
+                  LocationCriterionService
+                  ManagedCustomerService
+                  MediaService
+                  MutateJobService
+                  ReportDefinitionService
+                  TargetingIdeaService
+                  TrafficEstimatorService
                   UserListService);
 can_ok($client, @services);
 
-$client->set_version("v201109_1");
-@services = qw(AdExtensionOverrideService AdGroupAdService
-              AdGroupCriterionService AdGroupService AdParamService
-              CampaignAdExtensionService CampaignCriterionService
-              CampaignService CampaignTargetService ConstantDataService
-              ConversionTrackerService DataService
-              ExperimentService GeoLocationService
-              LocationCriterionService MediaService MutateJobService
-              ReportDefinitionService UserListService InfoService
-              BulkMutateJobService TargetingIdeaService TrafficEstimatorService
-              CustomerSyncService AlertService CreateAccountService
-              ServicedAccountService BudgetOrderService);
-can_ok($client, @services);
-
-$client->set_version("v201206");
-@services = qw(AdExtensionOverrideService AdGroupAdService
-              AdGroupCriterionService AdGroupService AdParamService
-              BudgetOrderService CampaignAdExtensionService
-              CampaignCriterionService CampaignService CampaignTargetService
-              ConstantDataService ConversionTrackerService DataService
-              ExperimentService GeoLocationService
-              LocationCriterionService MediaService MutateJobService
-              ReportDefinitionService UserListService InfoService
-              BulkMutateJobService TargetingIdeaService TrafficEstimatorService
-              CustomerSyncService AlertService CreateAccountService
-              ServicedAccountService BudgetOrderService);
-can_ok($client, @services);
-
 $client->set_version("v201209");
-@services = qw(AdExtensionOverrideService AdGroupAdService
-              AdGroupCriterionService AdGroupService AdParamService
-              BudgetOrderService BudgetService CampaignAdExtensionService
-              CampaignCriterionService CampaignService CampaignTargetService
-              ConstantDataService ConversionTrackerService DataService
-              ExperimentService GeoLocationService
-              LocationCriterionService MediaService MutateJobService
-              ReportDefinitionService UserListService InfoService
-              BulkMutateJobService TargetingIdeaService TrafficEstimatorService
-              CustomerSyncService AlertService CreateAccountService
-              ServicedAccountService BudgetOrderService);
+@services = qw(AdExtensionOverrideService
+               AdGroupAdService
+               AdGroupCriterionService
+               AdGroupService
+               AdParamService
+               AlertService
+               BudgetOrderService
+               BudgetService
+               CampaignAdExtensionService
+               CampaignCriterionService
+               CampaignService
+               ConstantDataService
+               ConversionTrackerService
+               CustomerService
+               CustomerSyncService
+               DataService
+               ExperimentService
+               GeoLocationService
+               InfoService
+               LocationCriterionService
+               ManagedCustomerService
+               MediaService
+               MutateJobService
+               ReportDefinitionService
+               TargetingIdeaService
+               TrafficEstimatorService
+               UserListService);
 can_ok($client, @services);
 
 ok(Google::Ads::AdWords::Client->new && Google::Ads::AdWords::Client->new,

@@ -45,7 +45,7 @@ sub get_all_disapproved_ads_with_awql {
 
   # Get all the disapproved ads for the given ad group.
   my $query = "SELECT Id, DisapprovalReasons WHERE AdGroupId = ${ad_group_id}" .
-              " AND CreativeApprovalStatus = DISAPPROVED ORDER BY Id";
+              " AND AdGroupCreativeApprovalStatus = DISAPPROVED ORDER BY Id";
 
   # Paginate through results.
   my $page;
