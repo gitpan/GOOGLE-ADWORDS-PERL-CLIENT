@@ -15,7 +15,7 @@ sub __get_attr_class {
 }
 
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -76,7 +76,7 @@ Google::Ads::AdWords::v201209::NetworkSetting
 Perl data type class for the XML Schema defined complexType
 NetworkSetting from the namespace https://adwords.google.com/api/adwords/cm/v201209.
 
-Network settings for a Campaign. <aside class="note"><b>Note:</b> Setting {@code targetContentContextual} for new campaigns or existing campaigns that have enabled Flexible Reach ({@code TargetRestrictSetting.useAdGroup=true}) will fail with {@code TargetError.CANNOT_MODIFY_CONTENT_CONTEXTUAL}.</aside> 
+Network settings for a Campaign. <p class="caution"><b>Note:</b> Setting {@code targetContentContextual} for new campaigns or existing campaigns that have enabled Flexible Reach ({@code TargetRestrictSetting.useAdGroup=true}) will fail with {@code TargetError.CANNOT_MODIFY_CONTENT_CONTEXTUAL}.</p> 
 
 
 
@@ -111,12 +111,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::NetworkSetting
-   targetGoogleSearch =>  $some_value, # boolean
-   targetSearchNetwork =>  $some_value, # boolean
-   targetContentNetwork =>  $some_value, # boolean
-   targetPartnerSearchNetwork =>  $some_value, # boolean
- },
+
 
 
 

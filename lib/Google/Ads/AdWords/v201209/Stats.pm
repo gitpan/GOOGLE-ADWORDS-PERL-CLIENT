@@ -15,7 +15,7 @@ sub __get_attr_class {
 }
 
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -189,21 +189,7 @@ perl code only, XML output uses the original name:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::Stats
-   startDate =>  $some_value, # string
-   endDate =>  $some_value, # string
-   network => $some_value, # Stats.Network
-   clicks =>  $some_value, # long
-   impressions =>  $some_value, # long
-   cost =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Money
-   averagePosition =>  $some_value, # double
-   averageCpc =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Money
-   averageCpm =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Money
-   ctr =>  $some_value, # double
-   conversions =>  $some_value, # long
-   viewThroughConversions =>  $some_value, # long
-   Stats__Type =>  $some_value, # string
- },
+
 
 
 

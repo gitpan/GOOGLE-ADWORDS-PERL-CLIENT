@@ -15,7 +15,7 @@ sub __get_attr_class {
 }
 
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -95,12 +95,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::JobResult
-   # One of the following elements.
-   # No occurance checks yet, so be sure to pass just one...
-   BulkMutateResult =>  $a_reference_to, # see Google::Ads::AdWords::v201209::BulkMutateResult
-   SimpleMutateResult =>  $a_reference_to, # see Google::Ads::AdWords::v201209::SimpleMutateResult
- },
+
 
 
 

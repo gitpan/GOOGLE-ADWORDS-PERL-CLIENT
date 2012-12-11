@@ -24,7 +24,7 @@ use Scalar::Util qw(blessed);
 use Google::Ads::AdWords::Constants; our $VERSION = ${Google::Ads::AdWords::Constants::VERSION};
 use Google::Ads::AdWords::Logging;
 use Google::Ads::AdWords::RequestStats;
-use Google::Ads::ThirdParty::SOAPWSDLPatches;
+use Google::Ads::SOAP::Deserializer::MessageParser;
 
 # Class attributes used to hook this class with the AdWords client
 my %client_of : ATTR(:name<client> :default<>);
@@ -71,7 +71,7 @@ sub deserialize {
   }
 
   $response_xml =~ s!<soap:Header>.*</soap:Header>!<soap:Header></soap:Header>!;
-  my @response = $self->SUPER::deserialize($response_xml);
+  my @response = $self->_deserialize($response_xml);
   my $is_fault = $response[0]->isa("SOAP::WSDL::SOAP::Typelib::Fault");
 
   if ($request_stats) {
@@ -84,6 +84,7 @@ sub deserialize {
     die(sprintf("A fault was returned by the server:\n%s\n",
                 $response[0]->get_faultstring()));
   }
+
   # Unwrapping the response if contains an rval no value for the user to see the
   # outer response object.
   if ($response[0] && $response[0]->can('get_rval')) {
@@ -91,6 +92,27 @@ sub deserialize {
   }
 
   return @response;
+}
+
+sub _deserialize {
+  my ($self, $content) = @_;
+
+  my $parser = Google::Ads::SOAP::Deserializer::MessageParser->new({
+    strict => $self->get_strict()
+  });
+  $parser->class_resolver($self->get_class_resolver());
+  eval {
+    $parser->parse_string($content)
+  };
+  if ($@) {
+      return $self->generate_fault({
+          code => 'SOAP-ENV:Server',
+          role => 'urn:localhost',
+          message => "Error deserializing message: $@. \n" .
+              "Message was: \n$content"
+      });
+  }
+  return ($parser->get_data(), $parser->get_header());
 }
 
 # Retrieves the content of a given XML element.

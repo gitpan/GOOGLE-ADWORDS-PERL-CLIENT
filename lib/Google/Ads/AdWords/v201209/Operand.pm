@@ -15,7 +15,7 @@ sub __get_attr_class {
 }
 
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -191,24 +191,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::Operand
-   # One of the following elements.
-   # No occurance checks yet, so be sure to pass just one...
-   AdExtensionOverride =>  $a_reference_to, # see Google::Ads::AdWords::v201209::AdExtensionOverride
-   AdGroupAd =>  $a_reference_to, # see Google::Ads::AdWords::v201209::AdGroupAd
-   AdGroupCriterion =>  $a_reference_to, # see Google::Ads::AdWords::v201209::AdGroupCriterion
-   AdGroup =>  $a_reference_to, # see Google::Ads::AdWords::v201209::AdGroup
-   Ad =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Ad
-   Budget =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Budget
-   CampaignAdExtension =>  $a_reference_to, # see Google::Ads::AdWords::v201209::CampaignAdExtension
-   CampaignCriterion =>  $a_reference_to, # see Google::Ads::AdWords::v201209::CampaignCriterion
-   Campaign =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Campaign
-   Job =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Job
-   Media =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Media
-   PlaceHolder =>  $a_reference_to, # see Google::Ads::AdWords::v201209::PlaceHolder
-   TargetList =>  $a_reference_to, # see Google::Ads::AdWords::v201209::TargetList
-   Target =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Target
- },
+
 
 
 

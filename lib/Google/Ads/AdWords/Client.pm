@@ -16,22 +16,7 @@ package Google::Ads::AdWords::Client;
 
 use strict;
 use version;
-our $VERSION = qv("2.7.4");
-
-# Warn if this module is not loaded before any other Google::Ads module.
-BEGIN {
-  if (my @modules = grep {
-      m|^Google/Ads/(?!AdWords/Client\.pm\|!AdWords::Constants)| } keys %INC) {
-    my $modules = join "\n", map { s|/|::|g; s/\.pm$//; $_ } @modules;
-    require Carp;
-    Carp::cluck(<<"END");
-Google::Ads::AdWords::Client should be loaded before other Google::Ads::
-modules. The following modules were found in %INC first:
-
-$modules
-END
-  }
-}
+our $VERSION = qv("2.7.5");
 
 use Google::Ads::AdWords::AuthTokenHandler;
 use Google::Ads::AdWords::Constants;
@@ -40,9 +25,7 @@ use Google::Ads::AdWords::OAuth2Handler;
 use Google::Ads::AdWords::OAuth1_0aHandler;
 use Google::Ads::AdWords::Serializer;
 use Google::Ads::Common::HTTPTransport;
-use Google::Ads::ThirdParty::SOAPWSDLPatches;
 
-use CHI;
 use Class::Std::Fast;
 use SOAP::WSDL qv("2.00.10");
 

@@ -15,7 +15,7 @@ sub __get_attr_class {
 }
 
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -511,64 +511,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201206::ApiErrorReason
-   # One of the following elements.
-   # No occurance checks yet, so be sure to pass just one...
-   AdErrorReason => $some_value, # AdError.Reason
-   AdExtensionErrorReason => $some_value, # AdExtensionError.Reason
-   AdExtensionOverrideErrorReason => $some_value, # AdExtensionOverrideError.Reason
-   AdGroupAdErrorReason => $some_value, # AdGroupAdError.Reason
-   AdGroupCriterionErrorReason => $some_value, # AdGroupCriterionError.Reason
-   AdGroupServiceErrorReason => $some_value, # AdGroupServiceError.Reason
-   AdxErrorReason => $some_value, # AdxError.Reason
-   AuthenticationErrorReason => $some_value, # AuthenticationError.Reason
-   AuthorizationErrorReason => $some_value, # AuthorizationError.Reason
-   BetaErrorReason => $some_value, # BetaError.Reason
-   BiddingErrorReason => $some_value, # BiddingError.Reason
-   BiddingTransitionErrorReason => $some_value, # BiddingTransitionError.Reason
-   BudgetErrorReason => $some_value, # BudgetError.Reason
-   BulkMutateJobErrorReason => $some_value, # BulkMutateJobError.Reason
-   CampaignAdExtensionErrorReason => $some_value, # CampaignAdExtensionError.Reason
-   CampaignCriterionErrorReason => $some_value, # CampaignCriterionError.Reason
-   CampaignErrorReason => $some_value, # CampaignError.Reason
-   ClientTermsErrorReason => $some_value, # ClientTermsError.Reason
-   CriterionErrorReason => $some_value, # CriterionError.Reason
-   DatabaseErrorReason => $some_value, # DatabaseError.Reason
-   DateErrorReason => $some_value, # DateError.Reason
-   DistinctErrorReason => $some_value, # DistinctError.Reason
-   EntityAccessDeniedReason => $some_value, # EntityAccessDenied.Reason
-   EntityCountLimitExceededReason => $some_value, # EntityCountLimitExceeded.Reason
-   EntityNotFoundReason => $some_value, # EntityNotFound.Reason
-   IdErrorReason => $some_value, # IdError.Reason
-   ImageErrorReason => $some_value, # ImageError.Reason
-   InternalApiErrorReason => $some_value, # InternalApiError.Reason
-   JobErrorReason => $some_value, # JobError.Reason
-   MediaErrorReason => $some_value, # MediaError.Reason
-   NewEntityCreationErrorReason => $some_value, # NewEntityCreationError.Reason
-   NotEmptyErrorReason => $some_value, # NotEmptyError.Reason
-   NotWhitelistedErrorReason => $some_value, # NotWhitelistedError.Reason
-   NullErrorReason => $some_value, # NullError.Reason
-   OperationAccessDeniedReason => $some_value, # OperationAccessDenied.Reason
-   OperatorErrorReason => $some_value, # OperatorError.Reason
-   PagingErrorReason => $some_value, # PagingError.Reason
-   PolicyViolationErrorReason => $some_value, # PolicyViolationError.Reason
-   QueryErrorReason => $some_value, # QueryError.Reason
-   QuotaCheckErrorReason => $some_value, # QuotaCheckError.Reason
-   QuotaErrorReason => $some_value, # QuotaError.Reason
-   RangeErrorReason => $some_value, # RangeError.Reason
-   RateExceededErrorReason => $some_value, # RateExceededError.Reason
-   ReadOnlyErrorReason => $some_value, # ReadOnlyError.Reason
-   RegionCodeErrorReason => $some_value, # RegionCodeError.Reason
-   RejectedErrorReason => $some_value, # RejectedError.Reason
-   RequestErrorReason => $some_value, # RequestError.Reason
-   RequiredErrorReason => $some_value, # RequiredError.Reason
-   SelectorErrorReason => $some_value, # SelectorError.Reason
-   SettingErrorReason => $some_value, # SettingError.Reason
-   SizeLimitErrorReason => $some_value, # SizeLimitError.Reason
-   StatsQueryErrorReason => $some_value, # StatsQueryError.Reason
-   StringLengthErrorReason => $some_value, # StringLengthError.Reason
-   TargetErrorReason => $some_value, # TargetError.Reason
- },
+
 
 
 

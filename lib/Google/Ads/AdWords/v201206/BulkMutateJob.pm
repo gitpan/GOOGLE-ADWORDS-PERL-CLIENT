@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201206::Job);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -166,16 +166,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201206::BulkMutateJob
-   id =>  $some_value, # long
-   policy =>  $a_reference_to, # see Google::Ads::AdWords::v201206::BulkMutateJobPolicy
-   request =>  $a_reference_to, # see Google::Ads::AdWords::v201206::BulkMutateRequest
-   status => $some_value, # BasicJobStatus
-   history =>  $a_reference_to, # see Google::Ads::AdWords::v201206::BulkMutateJobEvent
-   result =>  $a_reference_to, # see Google::Ads::AdWords::v201206::BulkMutateResult
-   numRequestParts =>  $some_value, # int
-   numRequestPartsReceived =>  $some_value, # int
- },
+
 
 
 

@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201206::SearchParameter);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -69,7 +69,7 @@ Google::Ads::AdWords::v201206::ExcludedKeywordSearchParameter
 Perl data type class for the XML Schema defined complexType
 ExcludedKeywordSearchParameter from the namespace https://adwords.google.com/api/adwords/o/v201206.
 
-A {@link SearchParameter} for {@code KEYWORD} {@link IdeaType}s that specifies {@link Keyword}s that should be excluded from the results.<p> The {@link KeywordMatchType} associated with these keywords is used to provide various filtering strategies. For example, the excluded keyword <b>"sony player"</b> will exclude ideas from the resulting ideas as described by the table below. <table border="1"> <tr style="font-weight: bold;"> <th>Idea</th> <th>{@code BROAD}</th> <th>{@code PHRASE}</th> <th>{@code EXACT}</th> </tr> <tr> <td>sony player</td> <td>Exclude</td> <td>Exclude</td> <td>Exclude</td> </tr> <tr> <td>blu-ray sony player</td> <td>Exclude</td> <td>Exclude</td> <td>Include</td> </tr> <tr> <td>sony dvd player</td> <td>Exclude</td> <td>Include</td> <td>Include</td> </tr> <tr> <td>sony dvd</td> <td>Include</td> <td>Include</td> <td>Include</td> </tr> </table> <p>This element is supported by following {@link IdeaType}s: KEYWORD. <p>This element is supported by following {@link RequestType}s: IDEAS, STATS. 
+A {@link SearchParameter} for {@code KEYWORD} {@link IdeaType}s that specifies {@link Keyword}s that should be excluded from the results.<p> The {@link KeywordMatchType} associated with these keywords is used to provide various filtering strategies. For example, the excluded keyword <b>"brand x player"</b> will exclude ideas from the resulting ideas as described by the table below. <table border="1"> <tr style="font-weight: bold;"> <th>Idea</th> <th>{@code BROAD}</th> <th>{@code PHRASE}</th> <th>{@code EXACT}</th> </tr> <tr> <td>brand x player</td> <td>Exclude</td> <td>Exclude</td> <td>Exclude</td> </tr> <tr> <td>blu-ray brand x player</td> <td>Exclude</td> <td>Exclude</td> <td>Include</td> </tr> <tr> <td>brand x dvd player</td> <td>Exclude</td> <td>Include</td> <td>Include</td> </tr> <tr> <td>brand x dvd</td> <td>Include</td> <td>Include</td> <td>Include</td> </tr> </table> <p>This element is supported by following {@link IdeaType}s: KEYWORD. <p>This element is supported by following {@link RequestType}s: IDEAS, STATS. 
 
 
 
@@ -95,9 +95,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201206::ExcludedKeywordSearchParameter
-   keywords =>  $a_reference_to, # see Google::Ads::AdWords::v201206::Keyword
- },
+
 
 
 

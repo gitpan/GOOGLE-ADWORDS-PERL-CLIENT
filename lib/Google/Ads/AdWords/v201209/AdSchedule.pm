@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201209::Criterion);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -99,7 +99,7 @@ Google::Ads::AdWords::v201209::AdSchedule
 Perl data type class for the XML Schema defined complexType
 AdSchedule from the namespace https://adwords.google.com/api/adwords/cm/v201209.
 
-Represents an AdSchedule Criterion. AdSchedule is specified as day and time of the week criteria to target the Ads. <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span> 
+Represents an AdSchedule Criterion. AdSchedule is specified as day and time of the week criteria to target the Ads. <p><b>Note:</b> An AdSchedule may not have more than <b>six</b> intervals in a day.</p> <span class="constraint AdxEnabled">This is enabled for AdX.</span> 
 
 
 
@@ -137,13 +137,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::AdSchedule
-   dayOfWeek => $some_value, # DayOfWeek
-   startHour =>  $some_value, # int
-   startMinute => $some_value, # MinuteOfHour
-   endHour =>  $some_value, # int
-   endMinute => $some_value, # MinuteOfHour
- },
+
 
 
 

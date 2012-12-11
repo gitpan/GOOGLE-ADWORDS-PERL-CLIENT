@@ -15,7 +15,7 @@ sub __get_attr_class {
 }
 
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -199,23 +199,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201206::Campaign
-   id =>  $some_value, # long
-   name =>  $some_value, # string
-   status => $some_value, # CampaignStatus
-   servingStatus => $some_value, # ServingStatus
-   startDate =>  $some_value, # string
-   endDate =>  $some_value, # string
-   budget =>  $a_reference_to, # see Google::Ads::AdWords::v201206::Budget
-   biddingStrategy =>  $a_reference_to, # see Google::Ads::AdWords::v201206::BiddingStrategy
-   conversionOptimizerEligibility =>  $a_reference_to, # see Google::Ads::AdWords::v201206::ConversionOptimizerEligibility
-   campaignStats =>  $a_reference_to, # see Google::Ads::AdWords::v201206::CampaignStats
-   adServingOptimizationStatus => $some_value, # AdServingOptimizationStatus
-   frequencyCap =>  $a_reference_to, # see Google::Ads::AdWords::v201206::FrequencyCap
-   settings =>  $a_reference_to, # see Google::Ads::AdWords::v201206::Setting
-   networkSetting =>  $a_reference_to, # see Google::Ads::AdWords::v201206::NetworkSetting
-   forwardCompatibilityMap =>  $a_reference_to, # see Google::Ads::AdWords::v201206::String_StringMapEntry
- },
+
 
 
 

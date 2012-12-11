@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201209::ApiError);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -150,14 +150,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::PolicyViolationError
-   key =>  $a_reference_to, # see Google::Ads::AdWords::v201209::PolicyViolationKey
-   externalPolicyName =>  $some_value, # string
-   externalPolicyUrl =>  $some_value, # string
-   externalPolicyDescription =>  $some_value, # string
-   isExemptable =>  $some_value, # boolean
-   violatingParts =>  $a_reference_to, # see Google::Ads::AdWords::v201209::PolicyViolationError::Part
- },
+
 
 
 

@@ -15,7 +15,7 @@ sub __get_attr_class {
 }
 
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -119,13 +119,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201206::AdGroupChangeData
-   adGroupId =>  $some_value, # long
-   adGroupChangeStatus => $some_value, # ChangeStatus
-   changedAds =>  $some_value, # long
-   changedCriteria =>  $some_value, # long
-   deletedCriteria =>  $some_value, # long
- },
+
 
 
 

@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201206::Target);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -135,14 +135,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201206::AdScheduleTarget
-   dayOfWeek => $some_value, # DayOfWeek
-   startHour =>  $some_value, # int
-   startMinute => $some_value, # MinuteOfHour
-   endHour =>  $some_value, # int
-   endMinute => $some_value, # MinuteOfHour
-   bidMultiplier =>  $some_value, # double
- },
+
 
 
 

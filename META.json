@@ -31,7 +31,6 @@
       },
       "runtime" : {
          "requires" : {
-            "CHI" : 0,
             "Class::Std::Fast" : 0,
             "Cwd" : 0,
             "Data::Uniqid" : 0,
@@ -62,35 +61,35 @@
    "provides" : {
       "Google::Ads::AdWords::AuthTokenHandler" : {
          "file" : "lib/Google/Ads/AdWords/AuthTokenHandler.pm",
-         "version" : "v2.7.4"
+         "version" : "v2.7.5"
       },
       "Google::Ads::AdWords::Client" : {
          "file" : "lib/Google/Ads/AdWords/Client.pm",
-         "version" : "v2.7.4"
+         "version" : "v2.7.5"
       },
       "Google::Ads::AdWords::Constants" : {
          "file" : "lib/Google/Ads/AdWords/Constants.pm",
-         "version" : "v2.7.4"
+         "version" : "v2.7.5"
       },
       "Google::Ads::AdWords::Deserializer" : {
          "file" : "lib/Google/Ads/AdWords/Deserializer.pm",
-         "version" : "v2.7.4"
+         "version" : "v2.7.5"
       },
       "Google::Ads::AdWords::FaultDetail" : {
          "file" : "lib/Google/Ads/AdWords/FaultDetail.pm",
-         "version" : "v2.7.4"
+         "version" : "v2.7.5"
       },
       "Google::Ads::AdWords::Logging" : {
          "file" : "lib/Google/Ads/AdWords/Logging.pm",
-         "version" : "v2.7.4"
+         "version" : "v2.7.5"
       },
       "Google::Ads::AdWords::OAuth1_0aHandler" : {
          "file" : "lib/Google/Ads/AdWords/OAuth1_0aHandler.pm",
-         "version" : "v2.7.4"
+         "version" : "v2.7.5"
       },
       "Google::Ads::AdWords::OAuth2Handler" : {
          "file" : "lib/Google/Ads/AdWords/OAuth2Handler.pm",
-         "version" : "v2.7.4"
+         "version" : "v2.7.5"
       },
       "Google::Ads::AdWords::RequestStats" : {
          "file" : "lib/Google/Ads/AdWords/RequestStats.pm",
@@ -98,7 +97,7 @@
       },
       "Google::Ads::AdWords::Serializer" : {
          "file" : "lib/Google/Ads/AdWords/Serializer.pm",
-         "version" : "v2.7.4"
+         "version" : "v2.7.5"
       },
       "Google::Ads::AdWords::v201206::AccessReason" : {
          "file" : "lib/Google/Ads/AdWords/v201206/AccessReason.pm",
@@ -6912,16 +6911,20 @@
          "file" : "lib/Google/Ads/Common/XPathSAXParser.pm",
          "version" : "v2.0.0"
       },
-      "Google::Ads::ThirdParty::SOAPWSDLPatches" : {
-         "file" : "lib/Google/Ads/ThirdParty/SOAPWSDLPatches.pm",
+      "Google::Ads::SOAP::Deserializer::MessageParser" : {
+         "file" : "lib/Google/Ads/SOAP/Deserializer/MessageParser.pm",
          "version" : 0
       },
-      "SOAP::WSDL::Expat::MessageParser" : {
-         "file" : "lib/Google/Ads/ThirdParty/SOAPWSDLPatches.pm",
+      "Google::Ads::SOAP::Generator::Generator" : {
+         "file" : "lib/Google/Ads/SOAP/Generator/Generator.pm",
          "version" : 0
       },
-      "SOAP::WSDL::XSD::Typelib::ComplexType" : {
-         "file" : "lib/Google/Ads/ThirdParty/SOAPWSDLPatches.pm",
+      "Google::Ads::SOAP::Generator::TypemapVisitor" : {
+         "file" : "lib/Google/Ads/SOAP/Generator/TypemapVisitor.pm",
+         "version" : 0
+      },
+      "Google::Ads::SOAP::Typelib::ComplexType" : {
+         "file" : "lib/Google/Ads/SOAP/Typelib/ComplexType.pm",
          "version" : 0
       }
    },
@@ -6931,5 +6934,5 @@
          "http://apache.org/licenses/LICENSE-2.0"
       ]
    },
-   "version" : "v2.7.4"
+   "version" : "v2.7.5"
 }

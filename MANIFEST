@@ -1826,7 +1826,14 @@ lib/Google/Ads/Common/OAuthHandlerInterface.pm
 lib/Google/Ads/Common/ReportDownloadError.pm
 lib/Google/Ads/Common/ReportUtils.pm
 lib/Google/Ads/Common/XPathSAXParser.pm
-lib/Google/Ads/ThirdParty/SOAPWSDLPatches.pm
+lib/Google/Ads/SOAP/Deserializer/MessageParser.pm
+lib/Google/Ads/SOAP/Generator/Generator.pm
+lib/Google/Ads/SOAP/Generator/Template/complexType.tt
+lib/Google/Ads/SOAP/Generator/Template/complexType/all.tt
+lib/Google/Ads/SOAP/Generator/Template/element.tt
+lib/Google/Ads/SOAP/Generator/Template/element/POD/structure.tt
+lib/Google/Ads/SOAP/Generator/TypemapVisitor.pm
+lib/Google/Ads/SOAP/Typelib/ComplexType.pm
 MANIFEST			This list of files
 README
 t/001_require.t

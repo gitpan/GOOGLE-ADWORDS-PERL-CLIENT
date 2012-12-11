@@ -24,34 +24,15 @@ use strict;
 
 use File::Basename;
 use File::Spec;
-use Test::More (tests => 39);
+use Test::More (tests => 38);
 
 # Set up @INC at runtime with an absolute path.
 my $lib_path = File::Spec->catdir(dirname($0), "..", "lib");
 push(@INC, $lib_path);
 
-# Test Google::Ads::AdWords::Client module should be included before any
-# other Google::Ads module.
-{
-  $INC{"Google/Ads/Fake/Module/Load.pm"} = 'for testing only';
-  my $warnings_found;
-  local $SIG{__WARN__} = sub {
-    my $warning = shift;
-    my $expected = "Google::Ads::AdWords::Client should be loaded before " .
-        "other Google::Ads::";
-    like $warning, qr/$expected/,
-        "Warnings for modules loaded in the wrong order"
-        and $warnings_found = 1;
-  };
-
-  # Testing is ok to use the Client class
-  use_ok("Google::Ads::AdWords::Client")
-      or die "Cannot load 'Google::Ads::AdWords::Client'";
-
-  if (not $warnings_found) {
-    fail "A warning for module load order should have occurred, but did not";
-  }
-}
+# Testing is ok to use the Client class
+use_ok("Google::Ads::AdWords::Client")
+    or die "Cannot load 'Google::Ads::AdWords::Client'";
 
 # Test client initialization, including reading from properties files.
 my $properties_file =

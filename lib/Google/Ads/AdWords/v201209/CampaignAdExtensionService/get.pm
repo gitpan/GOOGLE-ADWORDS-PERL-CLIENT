@@ -15,7 +15,7 @@ __PACKAGE__->__set_ref();
 
 use base qw(
     SOAP::WSDL::XSD::Typelib::Element
-    SOAP::WSDL::XSD::Typelib::ComplexType
+    Google::Ads::SOAP::Typelib::ComplexType
 );
 
 our $XML_ATTRIBUTE_CLASS;
@@ -26,7 +26,7 @@ sub __get_attr_class {
 }
 
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 

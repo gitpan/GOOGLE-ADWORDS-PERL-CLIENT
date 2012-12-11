@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201206::EstimateRequest);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -127,13 +127,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201206::CampaignEstimateRequest
-   campaignId =>  $some_value, # long
-   adGroupEstimateRequests =>  $a_reference_to, # see Google::Ads::AdWords::v201206::AdGroupEstimateRequest
-   criteria =>  $a_reference_to, # see Google::Ads::AdWords::v201206::Criterion
-   networkSetting =>  $a_reference_to, # see Google::Ads::AdWords::v201206::NetworkSetting
-   dailyBudget =>  $a_reference_to, # see Google::Ads::AdWords::v201206::Money
- },
+
 
 
 

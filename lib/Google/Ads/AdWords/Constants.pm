@@ -19,14 +19,11 @@ package Google::Ads::AdWords::Constants;
 use strict;
 use version;
 
-# Ensuring patches are loaded before anything else.
-use Google::Ads::ThirdParty::SOAPWSDLPatches;
-
 use File::HomeDir;
 use File::Spec::Functions;
 
 # Main version number that the rest of the modules pick up off of.
-our $VERSION = qv("2.7.4");
+our $VERSION = qv("2.7.5");
 
 use constant DEFAULT_PROPERTIES_FILE => catfile(File::HomeDir->my_home,
     "adwords.properties");

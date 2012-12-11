@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201209::AdGroupCriterion);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -195,19 +195,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::BiddableAdGroupCriterion
-   userStatus => $some_value, # UserStatus
-   systemServingStatus => $some_value, # SystemServingStatus
-   approvalStatus => $some_value, # ApprovalStatus
-   disapprovalReasons =>  $some_value, # string
-   destinationUrl =>  $some_value, # string
-   bids =>  $a_reference_to, # see Google::Ads::AdWords::v201209::AdGroupCriterionBids
-   experimentData =>  $a_reference_to, # see Google::Ads::AdWords::v201209::BiddableAdGroupCriterionExperimentData
-   firstPageCpc =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Bid
-   topOfPageCpc =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Bid
-   qualityInfo =>  $a_reference_to, # see Google::Ads::AdWords::v201209::QualityInfo
-   stats =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Stats
- },
+
 
 
 

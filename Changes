@@ -1,3 +1,9 @@
+2.7.5
+- Removed re-definitions of SOAP::WSDL packages. Implemented a cleaner solution
+  based on inheritance. No more need to import the Client module before any
+  other SOAP::WSDL object.
+- Removed unneeded dependency on the CHI module.
+
 2.7.4
 - Removed support of versions v201109 and v201109_1.
 - Bug fixes to issues #50 and #51.

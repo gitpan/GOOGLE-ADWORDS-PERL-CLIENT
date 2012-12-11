@@ -6,7 +6,6 @@ WriteMakefile
   'NAME' => 'Google::Ads::AdWords::Client',
   'VERSION_FROM' => 'lib/Google/Ads/AdWords/Client.pm',
   'PREREQ_PM' => {
-                   'CHI' => 0,
                    'Class::Std::Fast' => '0.000005',
                    'Config::Properties' => 0,
                    'Cwd' => 0,

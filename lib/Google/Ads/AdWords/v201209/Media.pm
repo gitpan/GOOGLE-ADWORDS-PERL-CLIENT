@@ -15,7 +15,7 @@ sub __get_attr_class {
 }
 
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -173,19 +173,7 @@ perl code only, XML output uses the original name:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::Media
-   mediaId =>  $some_value, # long
-   type => $some_value, # Media.MediaType
-   referenceId =>  $some_value, # long
-   dimensions =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Media_Size_DimensionsMapEntry
-   urls =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Media_Size_StringMapEntry
-   mimeType => $some_value, # Media.MimeType
-   sourceUrl =>  $some_value, # string
-   name =>  $some_value, # string
-   fileSize =>  $some_value, # long
-   creationTime =>  $some_value, # string
-   Media__Type =>  $some_value, # string
- },
+
 
 
 

@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201209::AdGroupBids);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -116,11 +116,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::ManualCPCAdGroupBids
-   keywordMaxCpc =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Bid
-   keywordContentMaxCpc =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Bid
-   enhancedCpcEnabled =>  $some_value, # boolean
- },
+
 
 
 

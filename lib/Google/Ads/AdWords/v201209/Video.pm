@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201209::Media);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -185,14 +185,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::Video
-   durationMillis =>  $some_value, # long
-   streamingUrl =>  $some_value, # string
-   readyToPlayOnTheWeb =>  $some_value, # boolean
-   industryStandardCommercialIdentifier =>  $some_value, # string
-   advertisingId =>  $some_value, # string
-   youTubeVideoIdString =>  $some_value, # string
- },
+
 
 
 

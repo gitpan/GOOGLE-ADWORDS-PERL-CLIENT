@@ -18,7 +18,7 @@ sub __get_attr_class {
 use base qw(Google::Ads::AdWords::v201209::AdExtension);
 # Variety: sequence
 use Class::Std::Fast::Storable constructor => 'none';
-use base qw(SOAP::WSDL::XSD::Typelib::ComplexType);
+use base qw(Google::Ads::SOAP::Typelib::ComplexType);
 
 Class::Std::initialize();
 
@@ -156,16 +156,7 @@ methods:
 
 Constructor. The following data structure may be passed to new():
 
- { # Google::Ads::AdWords::v201209::LocationExtension
-   address =>  $a_reference_to, # see Google::Ads::AdWords::v201209::Address
-   geoPoint =>  $a_reference_to, # see Google::Ads::AdWords::v201209::GeoPoint
-   encodedLocation =>  $some_value, # base64Binary
-   companyName =>  $some_value, # string
-   phoneNumber =>  $some_value, # string
-   source => $some_value, # LocationExtension.Source
-   iconMediaId =>  $some_value, # long
-   imageMediaId =>  $some_value, # long
- },
+
 
 
 
