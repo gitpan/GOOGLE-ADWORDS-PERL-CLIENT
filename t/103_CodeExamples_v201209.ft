@@ -24,7 +24,7 @@ use lib qw(t/util);
 use lib qw(lib);
 
 use File::Temp qw(tempfile);
-use Test::More (tests => 52);
+use Test::More (tests => 54);
 use TestClientUtils qw(get_test_client);
 use TestAPIUtils;
 
@@ -41,6 +41,9 @@ my $client_email = TestAPIUtils::get_any_child_client_email($client);
 my $campaign = TestAPIUtils::create_campaign(
     $client, TestAPIUtils::get_api_package($client, "ManualCPC", 1));
 my $campaign_id = $campaign->get_id()->get_value();
+my $campaign_2 = TestAPIUtils::create_campaign(
+    $client, TestAPIUtils::get_api_package($client, "ManualCPC", 1));
+my $campaign_2_id = $campaign_2->get_id()->get_value();
 my $ad_group = TestAPIUtils::create_ad_group($client, $campaign_id);
 my $ad_group_id = $ad_group->get_id()->get_value();
 my $text_ad = TestAPIUtils::create_text_ad($client, $ad_group_id);
@@ -126,6 +129,12 @@ ok(add_experiment($client, $campaign_id, $ad_group_id, $keyword_id),
 require qw(examples/v201209/campaign_management/set_ad_parameters.pl);
 ok(set_ad_parameters($client, $ad_group_id, $keyword_id),
    "Test of set_ad_parameters example");
+require qw(examples/v201209/campaign_management/set_campaign_enhanced.pl);
+ok(set_campaign_enhanced($client, $campaign_2_id),
+   "Test of set_campaign_enhanced example");
+require qw(examples/v201209/campaign_management/set_bid_modifier.pl);
+ok(set_bid_modifier($client, $campaign_2_id),
+   "Test of set_bid_modifier example");
 require qw(examples/v201209/campaign_management/validate_text_ad.pl);
 ok(validate_text_ad($client, $ad_group_id), "Test of validate_text_ad example");
 $client = get_test_client("v201209");

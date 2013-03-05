@@ -118,28 +118,13 @@ from a sub-directory of the "examples/" directory,
 Some examples require you replace object IDs in where you see placeholder
 like "INSERT_***_HERE"
 
+Using test accounts for development
+-----------------------------------
 
-Running in the sandbox environment
-----------------------------------
+It is recommended that during development of your library, you use AdWords Test
+Accounts, to find more information about these type of accounts visit:
 
-It is recommended that during development of your library, you use the sandbox
-envinroment:
-
-  http://code.google.com/apis/adwords/docs/developer/adwords_api_sandbox.html
-
-To run in this enviroment, you can make one of two changes to your library:
-
-  1) Change the default server (alternateUrl) in the adwords.properties file,
-     located at your home directory, to "https://adwords-sandbox.google.com".
-
-  2) Instanciate your Google::Ads::AdWords::Client specifying the sandbox
-     enviroment URL.
-
-     my $client = Google::Ads::AdWords::Client->new({
-      alternate_url => "https://adwords-sandbox.google.com"
-      version => "v201209"
-     });
-
+  https://developers.google.com/adwords/api/docs/test-accounts
 
 Authorization Options
 ---------------------

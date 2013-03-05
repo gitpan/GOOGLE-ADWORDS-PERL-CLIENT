@@ -21,6 +21,9 @@ use version;
 # eval() to determine module versions.
 use Google::Ads::Common::Constants; our $VERSION = ${Google::Ads::Common::Constants::VERSION};
 
+use Exporter 'import';
+
+our @EXPORT_OK = qw(get_map build_api_map);
 
 # Gets a map (associative array) from an array of map entries. A map entry is
 # any object that has a key and value field.
@@ -31,6 +34,17 @@ sub get_map($) {
     $result{$map_entry->get_key()} = $map_entry->get_value();
   }
   return \%result;
+}
+
+sub build_api_map {
+  my $map = shift;
+
+  my $result = [];
+  foreach my $key (keys %{$map}) {
+    push $result, { key => $key, value => $map->{$key} };
+  }
+
+  return $result;
 }
 
 return 1;
@@ -66,6 +80,20 @@ An array of map entries.
 =head3 Returns
 
 A map built from the keys and values of the map entries.
+
+=head2 build_api_map
+
+Builds an API map as defined in the WSDLs, which is really a list of key-value
+maps from a given native Perl map.
+
+=head3 Parameters
+
+A native Perl map to be translated to "map" as expected by the API.
+
+=head3 Returns
+
+A list of maps in which each map represents an entry of a key and value from the
+given map.
 
 =head1 LICENSE AND COPYRIGHT
 

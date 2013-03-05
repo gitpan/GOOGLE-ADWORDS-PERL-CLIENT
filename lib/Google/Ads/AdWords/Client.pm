@@ -16,7 +16,7 @@ package Google::Ads::AdWords::Client;
 
 use strict;
 use version;
-our $VERSION = qv("2.7.5");
+our $VERSION = qv("2.8.0");
 
 use Google::Ads::AdWords::AuthTokenHandler;
 use Google::Ads::AdWords::Constants;
@@ -123,14 +123,6 @@ sub START {
   $version_of{$ident} ||= Google::Ads::AdWords::Constants::DEFAULT_VERSION;
   $partial_failure_of{$ident} ||= 0;
 
-  # Always prepend the module identifier to the user agent.
-  $user_agent_of{$ident} =
-      sprintf("%s (AwApi-Perl/%s, Common-Perl/%s, SOAP-WSDL/%s, ".
-              "libwww-perl/%s, perl/%s)", $user_agent_of{$ident} || $0,
-              ${Google::Ads::AdWords::Constants::VERSION},
-              ${Google::Ads::Common::Constants::VERSION},
-              ${SOAP::WSDL::VERSION}, ${LWP::UserAgent::VERSION}, $]);
-
   # Setup of auth handlers
   my %auth_handlers = ();
 
@@ -201,6 +193,9 @@ sub AUTOMETHOD {
             $self->get_alternate_url();
         my $service_to_group_name =
             $Google::Ads::AdWords::Constants::SERVICE_TO_GROUP{$method_name};
+        if (!$service_to_group_name) {
+          die("Service " . $method_name . " is not configured in the library.");
+        }
         my $endpoint_url =
             sprintf(Google::Ads::AdWords::Constants::PROXY_FORMAT_STRING,
                     $server_url, $service_to_group_name, $self->get_version(),
@@ -304,8 +299,17 @@ sub __parse_properties_file {
 # Protected method to generate the appropriate SOAP request header.
 sub _get_header {
   my ($self) = @_;
+
+  # Always prepend the module identifier to the user agent.
+  my $user_agent =
+      sprintf("%s (AwApi-Perl/%s, Common-Perl/%s, SOAP-WSDL/%s, ".
+              "libwww-perl/%s, perl/%s)", $self->get_user_agent() || $0,
+              ${Google::Ads::AdWords::Constants::VERSION},
+              ${Google::Ads::Common::Constants::VERSION},
+              ${SOAP::WSDL::VERSION}, ${LWP::UserAgent::VERSION}, $]);
+
   my $headers = {
-    userAgent => $self->get_user_agent(),
+    userAgent => $user_agent,
     developerToken => $self->get_developer_token(),
     validateOnly => $self->get_validate_only(),
     partialFailure => $self->get_partial_failure()

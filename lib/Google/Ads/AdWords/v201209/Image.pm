@@ -119,7 +119,7 @@ Google::Ads::AdWords::v201209::Image
 Perl data type class for the XML Schema defined complexType
 Image from the namespace https://adwords.google.com/api/adwords/cm/v201209.
 
-
+Encapsulates an Image media. For {@code SET},{@code REMOVE} operations in MediaService, use {@code mediaId}. 
 
 
 

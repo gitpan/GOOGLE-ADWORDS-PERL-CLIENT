@@ -144,7 +144,7 @@ Google::Ads::AdWords::v201209::Video
 Perl data type class for the XML Schema defined complexType
 Video from the namespace https://adwords.google.com/api/adwords/cm/v201209.
 
-Encapsulates a Video media identified by a MediaId 
+Encapsulates a Video media identified by a MediaId. 
 
 
 

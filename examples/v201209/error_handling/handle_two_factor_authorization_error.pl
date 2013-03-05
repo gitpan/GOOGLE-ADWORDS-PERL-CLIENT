@@ -45,7 +45,7 @@ sub handle_two_factor_authorization_error {
             "http://adwordsapi.blogspot.com/2011/02/authentication-changes" .
             "-with-2-step.html for more details.\n";
     } else {
-      print "Invalid credentials.";
+      print "Invalid credentials.\n";
     }
   } else {
     printf "Retrieved an authToken = %s for user %s.\n",

@@ -69,7 +69,7 @@ Google::Ads::AdWords::v201209::AdSpecListSearchParameter
 Perl data type class for the XML Schema defined complexType
 AdSpecListSearchParameter from the namespace https://adwords.google.com/api/adwords/o/v201209.
 
-A {@link SearchParameter} for {@code PLACEMENT} {@link IdeaType}s used to filter the results by the list of {@link AdSpec}s. See {@link AdSpec} documentation for details on available options. <p>This element is supported by following {@link IdeaType}s: PLACEMENT. <p>This element is supported by following {@link RequestType}s: IDEAS. 
+A {@link SearchParameter} for {@code PLACEMENT} {@link IdeaType}s used to filter the results by the list of {@link AdSpec}s. See {@link AdSpec} documentation for details on available options. <p>This element is supported by following {@link IdeaType}s: PLACEMENT. <p>This element is supported by following {@link RequestType}s: IDEAS, STATS. 
 
 
 

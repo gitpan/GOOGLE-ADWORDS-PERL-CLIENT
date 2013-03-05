@@ -23,7 +23,7 @@ use File::HomeDir;
 use File::Spec::Functions;
 
 # Main version number that the rest of the modules pick up off of.
-our $VERSION = qv("2.7.5");
+our $VERSION = qv("2.8.0");
 
 use constant DEFAULT_PROPERTIES_FILE => catfile(File::HomeDir->my_home,
     "adwords.properties");
@@ -34,7 +34,7 @@ use constant PROXY_FORMAT_STRING => "%s/api/adwords/%s/%s/%s";
 
 # Default current version used if the client is created without the version
 # parameter.
-use constant DEFAULT_VERSION => "v201209";
+use constant DEFAULT_VERSION => "v201302";
 
 # Default alternate URL that points to production servers.
 use constant DEFAULT_ALTERNATE_URL => "https://adwords.google.com";
@@ -52,6 +52,7 @@ our %SERVICE_TO_GROUP = (
   AdExtensionOverrideService => "cm",
   AdGroupAdService => "cm",
   AdGroupCriterionService => "cm",
+  AdGroupFeedService => "cm",
   AdGroupService => "cm",
   AdParamService => "cm",
   AlertService => "mcm",
@@ -61,7 +62,9 @@ our %SERVICE_TO_GROUP = (
   BulkMutateJobService => "job",
   CampaignAdExtensionService => "cm",
   CampaignCriterionService => "cm",
+  CampaignFeedService => "cm",
   CampaignService => "cm",
+  CampaignSharedSetService => "cm",
   CampaignTargetService => "cm",
   ConstantDataService => "cm",
   ConversionTrackerService => "cm",
@@ -70,14 +73,17 @@ our %SERVICE_TO_GROUP = (
   CustomerSyncService => "ch",
   DataService => "cm",
   ExperimentService => "cm",
+  FeedItemService => "cm",
+  FeedMappingService => "cm",
+  FeedService => "cm",
   GeoLocationService => "cm",
-  InfoService => "info",
   LocationCriterionService => "cm",
   ManagedCustomerService => "mcm",
   MediaService => "cm",
   MutateJobService => "cm",
   ReportDefinitionService => "cm",
   ServicedAccountService => "mcm",
+  SharedCriterionService => "cm",
   BulkOpportunityService => "o",
   TargetingIdeaService => "o",
   TrafficEstimatorService => "o",

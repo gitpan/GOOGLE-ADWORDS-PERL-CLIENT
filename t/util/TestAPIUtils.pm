@@ -52,6 +52,8 @@ sub create_campaign {
   my $client = shift;
   my $bidding_strategy = shift || get_api_package($client, "ManualCPC", 1);
   my $budget;
+  my $campaign;
+
 
   if ($client->get_version() ge "v201209") {
     $budget = get_api_package($client, "Budget", 1)->new({
@@ -74,12 +76,26 @@ sub create_campaign {
       deliveryMethod => "STANDARD"
     });
   }
-
-  my $campaign = get_api_package($client, "Campaign", 1)->new({
-    name => "Campaign #" . uniqid(),
-    biddingStrategy => $bidding_strategy->new(),
-    budget => $budget
-  });
+  if ($client->get_version() ge "v201302") {
+    $campaign = get_api_package($client, "Campaign", 1)->new({
+      name => "Campaign #" . uniqid(),
+      biddingStrategyConfiguration => get_api_package($client,
+          "BiddingStrategyConfiguration", 1)->new({
+            biddingStrategyType => "MANUAL_CPC",
+            biddingScheme =>
+                get_api_package($client, "ManualCpcBiddingScheme")->new({
+                  enhancedCpcEnabled => 0
+                })
+          }),
+      budget => $budget,
+    });
+  } else {
+    $campaign = get_api_package($client, "Campaign", 1)->new({
+      name => "Campaign #" . uniqid(),
+      biddingStrategy => $bidding_strategy->new(),
+      budget => $budget
+    });
+  }
 
   if ($client->get_version() ge "v201206") {
     $campaign->set_settings([
@@ -125,18 +141,36 @@ sub create_ad_group {
   my $campaign_id = shift;
   my $name = shift || uniqid();
   my $bids = shift;
+  my $adgroup;
 
-  my $adgroup = get_api_package($client, "AdGroup", 1)->new({
-    name => $name,
-    campaignId => $campaign_id,
-    bids => $bids || get_api_package($client, "ManualCPCAdGroupBids", 1)->new({
-      keywordMaxCpc => get_api_package($client, "Bid", 1)->new({
-        amount => get_api_package($client, "Money", 1)->new({
-          microAmount => "500000"
+  if ($client->get_version() ge "v201302") {
+    $adgroup = get_api_package($client, "AdGroup", 1)->new({
+      name => $name,
+      campaignId => $campaign_id,
+      biddingStrategyConfiguration =>
+          get_api_package($client, "BiddingStrategyConfiguration", 1)->new({
+            bids =>  $bids || [
+              get_api_package($client, "CpcBid", 1)->new({
+                bid => get_api_package($client, "Money", 1)->new({
+                  microAmount => "500000"
+                })
+              }),
+            ]
+          })
+    });
+  } else {
+    $adgroup = get_api_package($client, "AdGroup", 1)->new({
+      name => $name,
+      campaignId => $campaign_id,
+      bids => $bids || get_api_package($client, "ManualCPCAdGroupBids", 1)->new({
+        keywordMaxCpc => get_api_package($client, "Bid", 1)->new({
+          amount => get_api_package($client, "Money", 1)->new({
+            microAmount => "500000"
+          })
         })
       })
-    })
-  });
+    });
+  }
 
   my $operations = [
     get_api_package($client, "AdGroupOperation", 1)->new({
@@ -145,9 +179,11 @@ sub create_ad_group {
     })
   ];
 
-  return $client->AdGroupService()->mutate({
+  my $return_ad_group = $client->AdGroupService()->mutate({
     operations => $operations
   })->get_value();
+
+  return $return_ad_group;
 }
 
 sub delete_ad_group {

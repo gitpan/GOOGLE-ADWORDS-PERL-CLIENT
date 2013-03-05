@@ -66,7 +66,7 @@ Google::Ads::AdWords::v201209::AdExtension
 Perl data type class for the XML Schema defined complexType
 AdExtension from the namespace https://adwords.google.com/api/adwords/cm/v201209.
 
-Base class for AdExtension objects. An AdExtension is an extension to an existing ad or metadata that will process into an extension. The class is concrete, so ad extensions can be added/removed to campaigns by referring to the id. 
+Base class for AdExtension objects. An AdExtension is an extension to an existing ad or metadata that will process into an extension. 
 
 
 

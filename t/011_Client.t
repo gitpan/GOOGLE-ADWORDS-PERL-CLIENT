@@ -45,12 +45,7 @@ my $client = Google::Ads::AdWords::Client->new({
 is($client->get_email(), "user\@domain.com", "Basic properties file reading");
 is($client->get_password(), $password, "Local param overrides properties file");
 is($client->get_client_id(), "client_1+user\@domain.com", "Read of client id");
-is($client->get_user_agent(),
-   sprintf("perl-unit-tests (AwApi-Perl/%s, Common-Perl/%s, SOAP-WSDL/%s, ".
-           "libwww-perl/%s, perl/%s)",
-           ${Google::Ads::AdWords::Constants::VERSION},
-           ${Google::Ads::Common::Constants::VERSION},
-           ${SOAP::WSDL::VERSION}, ${LWP::UserAgent::VERSION}, $]));
+is($client->get_user_agent(), "perl-unit-tests");
 is($client->get_developer_token(), "dev-token",
    "Read of developer token");
 is($client->get_auth_token(), "auth-token",
@@ -82,7 +77,6 @@ my @services = qw(AdExtensionOverrideService
                   DataService
                   ExperimentService
                   GeoLocationService
-                  InfoService
                   LocationCriterionService
                   ManagedCustomerService
                   MediaService
@@ -112,7 +106,6 @@ $client->set_version("v201209");
                DataService
                ExperimentService
                GeoLocationService
-               InfoService
                LocationCriterionService
                ManagedCustomerService
                MediaService

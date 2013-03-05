@@ -66,7 +66,7 @@ Google::Ads::AdWords::v201209::LongComparisonOperation
 Perl data type class for the XML Schema defined complexType
 LongComparisonOperation from the namespace https://adwords.google.com/api/adwords/o/v201209.
 
-Pojo representing integer comparison operations. This is usually used within a particular {@link com.google.ads.api.services.targetingideas.search.SearchParameter} to specify the valid values requested for the specific {@link com.google.ads.api.services.targetingideas.attributes.Attribute}. 
+Object representing integer comparison operations. This is usually used within a particular {@link com.google.ads.api.services.targetingideas.search.SearchParameter} to specify the valid values requested for the specific {@link com.google.ads.api.services.common.optimization.attributes.Attribute}. 
 
 
 

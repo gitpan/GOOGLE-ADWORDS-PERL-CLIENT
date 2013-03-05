@@ -1,3 +1,10 @@
+2.8.0
+- Added examples and support for v201302
+
+2.7.6
+- Added examples for supporting enhanced campaigns through forward compatibility
+  maps.
+
 2.7.5
 - Removed re-definitions of SOAP::WSDL packages. Implemented a cleaner solution
   based on inheritance. No more need to import the Client module before any

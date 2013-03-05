@@ -69,7 +69,7 @@ Google::Ads::AdWords::v201209::SearchVolumeSearchParameter
 Perl data type class for the XML Schema defined complexType
 SearchVolumeSearchParameter from the namespace https://adwords.google.com/api/adwords/o/v201209.
 
-A {@link SearchParameter} that specifies the level of search volume expected in results, and it has a direct relationship to {@link AttributeType#SEARCH_VOLUME}. Absence of a {@link SearchVolumeSearchParameter} in a {@link com.google.ads.api.services.targetingideas.TargetingIdeaSelector} is equivalent to having no constraint on search volume specified. <p>This element is supported by following {@link IdeaType}s: KEYWORD. <p>This element is supported by following {@link RequestType}s: IDEAS, STATS. 
+A {@link SearchParameter} that specifies the level of search volume expected in results, and it has a direct relationship to {@link com.google.ads.api.services.targetingideas.external.AttributeType#SEARCH_VOLUME}. Absence of a {@link SearchVolumeSearchParameter} in a {@link com.google.ads.api.services.targetingideas.TargetingIdeaSelector} is equivalent to having no constraint on search volume specified. <p>This element is supported by following {@link IdeaType}s: KEYWORD. <p>This element is supported by following {@link RequestType}s: IDEAS, STATS. 
 
 
 

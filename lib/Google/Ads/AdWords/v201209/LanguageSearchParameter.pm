@@ -69,7 +69,7 @@ Google::Ads::AdWords::v201209::LanguageSearchParameter
 Perl data type class for the XML Schema defined complexType
 LanguageSearchParameter from the namespace https://adwords.google.com/api/adwords/o/v201209.
 
-A {@link SearchParameter} for both {@code PLACEMENT} and {@code KEYWORD} {@link IdeaType}s used to indicate the languages being targeted. This can be used, for example, to search for {@code KEYWORD} {@link IdeaType}s that are best for Japanese and Korean languages. <p>This search parameter can be used in bulk keyword requests through the {@link com.google.ads.api.services.targetingideas.TargetingIdeaService#getBulkKeywordIdeas(TargetingIdeaSelector)} method. It must be single-valued when used in a call to that method. <p>This element is supported by following {@link IdeaType}s: KEYWORD, PLACEMENT. <p>This element is supported by following {@link RequestType}s: IDEAS, STATS. 
+A {@link SearchParameter} for both {@code PLACEMENT} and {@code KEYWORD} {@link IdeaType}s used to indicate multiple language being targeted. This can be used, for example, to search for {@code KEYWORD} {@link IdeaType}s that are best for Japanese language. <p> Starting from v201302, we will only allow one language being targeted if IdeaType is KEYWORD. <p>This search parameter can be used in bulk keyword requests through the {@link com.google.ads.api.services.targetingideas.TargetingIdeaService#getBulkKeywordIdeas(TargetingIdeaSelector)} method. It must be single-valued when used in a call to that method. <p>This element is supported by following {@link IdeaType}s: KEYWORD, PLACEMENT. <p>This element is supported by following {@link RequestType}s: IDEAS, STATS. 
 
 
 

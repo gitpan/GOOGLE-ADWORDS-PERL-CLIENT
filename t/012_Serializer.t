@@ -68,7 +68,15 @@ my $envelope = $serializer->serialize({
 my $properties = read_test_properties();
 my $expected_output = "";
 $expected_output = $properties->getProperty("serializer_expected_output_cid");
-$client_properties->{userAgent} = $client->get_user_agent();
+my $user_agent = sprintf("%s (AwApi-Perl/%s, Common-Perl/%s, SOAP-WSDL/%s, ".
+                         "libwww-perl/%s, perl/%s)",
+                         $client->get_user_agent() || $0,
+                         ${Google::Ads::AdWords::Constants::VERSION},
+                         ${Google::Ads::Common::Constants::VERSION},
+                         ${SOAP::WSDL::VERSION},
+                         ${LWP::UserAgent::VERSION},
+                         $]);
+$client_properties->{userAgent} = $user_agent;
 $expected_output = replace_properties($expected_output, $client_properties);
 
 is($envelope, $expected_output, "check serializer output");
