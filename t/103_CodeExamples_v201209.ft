@@ -24,7 +24,7 @@ use lib qw(t/util);
 use lib qw(lib);
 
 use File::Temp qw(tempfile);
-use Test::More (tests => 54);
+use Test::More (tests => 52);
 use TestClientUtils qw(get_test_client);
 use TestAPIUtils;
 
@@ -61,17 +61,12 @@ my $experiment_id = $experiment->get_id()->get_value();
 # Account Management examples.
 require qw(examples/v201209/account_management/get_account_changes.pl);
 ok(get_account_changes($client), "Test of get_account_changes example");
-require qw(examples/v201209/account_management/get_client_unit_usage.pl);
-ok(get_client_unit_usage($client), "Test of get_client_unit_usage example");
 require qw(examples/v201209/account_management/create_account.pl);
 ok(create_account($client), "Test of create_account example");
 require qw(examples/v201209/account_management/get_account_alerts.pl);
 ok(get_account_alerts($client), "Test of get_account_alerts example");
 require qw(examples/v201209/account_management/get_account_hierarchy.pl);
 ok(get_account_hierarchy($client), "Test of get_account_hierarchy example");
-require qw(examples/v201209/account_management/get_client_customer_id.pl);
-ok(get_client_customer_id($client, $client_email),
-   "Test of get_client_customer_id example");
 $client = get_test_client("v201209");
 
 # Basic Operations examples but deletes (deletes at end of the tests).

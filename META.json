@@ -61,35 +61,35 @@
    "provides" : {
       "Google::Ads::AdWords::AuthTokenHandler" : {
          "file" : "lib/Google/Ads/AdWords/AuthTokenHandler.pm",
-         "version" : "v2.8.0"
+         "version" : "v2.8.1"
       },
       "Google::Ads::AdWords::Client" : {
          "file" : "lib/Google/Ads/AdWords/Client.pm",
-         "version" : "v2.8.0"
+         "version" : "v2.8.1"
       },
       "Google::Ads::AdWords::Constants" : {
          "file" : "lib/Google/Ads/AdWords/Constants.pm",
-         "version" : "v2.8.0"
+         "version" : "v2.8.1"
       },
       "Google::Ads::AdWords::Deserializer" : {
          "file" : "lib/Google/Ads/AdWords/Deserializer.pm",
-         "version" : "v2.8.0"
+         "version" : "v2.8.1"
       },
       "Google::Ads::AdWords::FaultDetail" : {
          "file" : "lib/Google/Ads/AdWords/FaultDetail.pm",
-         "version" : "v2.8.0"
+         "version" : "v2.8.1"
       },
       "Google::Ads::AdWords::Logging" : {
          "file" : "lib/Google/Ads/AdWords/Logging.pm",
-         "version" : "v2.8.0"
+         "version" : "v2.8.1"
       },
       "Google::Ads::AdWords::OAuth1_0aHandler" : {
          "file" : "lib/Google/Ads/AdWords/OAuth1_0aHandler.pm",
-         "version" : "v2.8.0"
+         "version" : "v2.8.1"
       },
       "Google::Ads::AdWords::OAuth2Handler" : {
          "file" : "lib/Google/Ads/AdWords/OAuth2Handler.pm",
-         "version" : "v2.8.0"
+         "version" : "v2.8.1"
       },
       "Google::Ads::AdWords::RequestStats" : {
          "file" : "lib/Google/Ads/AdWords/RequestStats.pm",
@@ -97,7 +97,7 @@
       },
       "Google::Ads::AdWords::Serializer" : {
          "file" : "lib/Google/Ads/AdWords/Serializer.pm",
-         "version" : "v2.8.0"
+         "version" : "v2.8.1"
       },
       "Google::Ads::AdWords::v201206::AccessReason" : {
          "file" : "lib/Google/Ads/AdWords/v201206/AccessReason.pm",
@@ -8751,6 +8751,10 @@
          "file" : "lib/Google/Ads/AdWords/v201302/DoubleValue.pm",
          "version" : 0
       },
+      "Google::Ads::AdWords::v201302::DownloadFormat" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/DownloadFormat.pm",
+         "version" : 0
+      },
       "Google::Ads::AdWords::v201302::DynamicSearchAd" : {
          "file" : "lib/Google/Ads/AdWords/v201302/DynamicSearchAd.pm",
          "version" : 0
@@ -10191,6 +10195,14 @@
          "file" : "lib/Google/Ads/AdWords/v201302/RemarketingUserList.pm",
          "version" : 0
       },
+      "Google::Ads::AdWords::v201302::ReportDefinition" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/ReportDefinition.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::ReportDefinition::DateRangeType" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/ReportDefinition/DateRangeType.pm",
+         "version" : 0
+      },
       "Google::Ads::AdWords::v201302::ReportDefinition::ReportType" : {
          "file" : "lib/Google/Ads/AdWords/v201302/ReportDefinition/ReportType.pm",
          "version" : 0
@@ -11054,5 +11066,5 @@
          "http://apache.org/licenses/LICENSE-2.0"
       ]
    },
-   "version" : "v2.8.0"
+   "version" : "v2.8.1"
 }

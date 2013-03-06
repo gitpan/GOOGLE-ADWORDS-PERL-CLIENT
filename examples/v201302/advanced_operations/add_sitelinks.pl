@@ -48,7 +48,7 @@ use Data::Uniqid qw(uniqid);
 my $campaign_id = "INSERT_CAMPAIGN_ID_HERE";
 
 # Example main subroutine.
-sub create_sitelinks {
+sub add_sitelinks {
   my $client = shift;
   my $campaign_id = shift;
 
@@ -292,4 +292,4 @@ my $client = Google::Ads::AdWords::Client->new({version => "v201302"});
 $client->set_die_on_faults(1);
 
 # Call the example
-create_sitelinks($client, $campaign_id);
+add_sitelinks($client, $campaign_id);

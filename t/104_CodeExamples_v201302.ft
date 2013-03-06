@@ -38,13 +38,9 @@ if (!$client) {
 
 # Test dependencies
 my $client_email = TestAPIUtils::get_any_child_client_email($client);
-my $campaign = TestAPIUtils::create_campaign(
-    $client, TestAPIUtils::get_api_package($client,
-        "ManualCpcBiddingScheme", 1));
+my $campaign = TestAPIUtils::create_campaign($client);
 my $campaign_id = $campaign->get_id()->get_value();
-my $campaign_2 = TestAPIUtils::create_campaign(
-    $client, TestAPIUtils::get_api_package($client,
-        "ManualCpcBiddingScheme", 1));
+my $campaign_2 = TestAPIUtils::create_campaign($client);
 my $campaign_2_id = $campaign_2->get_id()->get_value();
 my $ad_group = TestAPIUtils::create_ad_group($client, $campaign_id);
 my $ad_group_id = $ad_group->get_id()->get_value();
@@ -69,13 +65,7 @@ require qw(examples/v201302/account_management/get_account_alerts.pl);
 ok(get_account_alerts($client), "Test of get_account_alerts example");
 require qw(examples/v201302/account_management/get_account_hierarchy.pl);
 ok(get_account_hierarchy($client), "Test of get_account_hierarchy example");
-
-# Advanced Operations examples.
-require qw(examples/v201302/advanced_operations/add_click_to_download_ad.pl);
-ok(add_click_to_download_ad($client, $ad_group_id),
-   "Test of add_click_to_download_ad example");
-require qw(examples/v201302/advanced_operations/create_sitelinks.pl);
-ok(create_account($client, $campaign_id), "Test of create_account example");
+$client = get_test_client("v201302");
 
 # Basic Operations examples but deletes (deletes at end of the tests).
 require qw(examples/v201302/basic_operations/add_campaigns.pl);
@@ -105,6 +95,13 @@ ok(update_keyword($client, $ad_group_id, $keyword_id),
    "Test of update_keyword example");
 require qw(examples/v201302/basic_operations/pause_ad.pl);
 ok(pause_ad($client, $ad_group_id, $text_ad_id), "Test of pause_ad example");
+
+# Advanced Operations examples.
+require qw(examples/v201302/advanced_operations/add_click_to_download_ad.pl);
+ok(add_click_to_download_ad($client, $ad_group_id),
+   "Test of add_click_to_download_ad example");
+require qw(examples/v201302/advanced_operations/add_sitelinks.pl);
+ok(add_sitelinks($client, $campaign_id), "Test of add_sitelinks example");
 
 # Campaign Management examples.
 require qw(examples/v201302/campaign_management/add_keywords_in_bulk.pl);

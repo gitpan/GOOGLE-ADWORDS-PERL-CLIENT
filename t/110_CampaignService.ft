@@ -50,7 +50,7 @@ use_ok(get_api_package($client, "KeywordMatchSetting"));
 my $ budget = get_api_package($client, "Budget")->new({
   # Required attributes.
   name => "Test budget #" . uniqid(),
-  amount => Google::Ads::AdWords::v201209::Money->new({
+  amount => get_api_package($client, "Money")->new({
     microAmount => 5000000
   }),
   deliveryMethod => "STANDARD",
@@ -71,7 +71,10 @@ my $budgetId = $client->BudgetService()->mutate({
 my $campaign_name_1 = "Test Campaign 1 - " . uniqid();
 my $campaign1 = get_api_package($client, "Campaign")->new({
   name => $campaign_name_1,
-  biddingStrategy => get_api_package($client, "ManualCPC")->new(),
+  biddingStrategyConfiguration =>
+      get_api_package($client, "BiddingStrategyConfiguration")->new({
+        biddingStrategyType => "MANUAL_CPC"
+      }),
   budget => get_api_package($client, "Budget")->new({
     budgetId => $budgetId
   }),
@@ -84,7 +87,10 @@ my $campaign1 = get_api_package($client, "Campaign")->new({
 my $campaign_name_2 = "Test Campaign 2 - " . uniqid();
 my $campaign2 = get_api_package($client, "Campaign")->new({
   name => $campaign_name_2,
-  biddingStrategy => get_api_package($client, "ManualCPC")->new(),
+  biddingStrategyConfiguration =>
+      get_api_package($client, "BiddingStrategyConfiguration")->new({
+        biddingStrategyType => "MANUAL_CPC"
+      }),
   budget => get_api_package($client, "Budget")->new({
     budgetId => $budgetId
   }),

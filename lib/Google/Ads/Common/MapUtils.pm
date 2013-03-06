@@ -39,12 +39,12 @@ sub get_map($) {
 sub build_api_map {
   my $map = shift;
 
-  my $result = [];
+  my @result = ();
   foreach my $key (keys %{$map}) {
-    push $result, { key => $key, value => $map->{$key} };
+    push @result, { key => $key, value => $map->{$key} };
   }
 
-  return $result;
+  return \@result;
 }
 
 return 1;

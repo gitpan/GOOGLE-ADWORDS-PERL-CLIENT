@@ -24,10 +24,11 @@ use lib "../../../lib";
 
 use Google::Ads::AdWords::Client;
 use Google::Ads::AdWords::Logging;
+use Google::Ads::AdWords::v201302::BiddingStrategyConfiguration;
 use Google::Ads::AdWords::v201302::Budget;
 use Google::Ads::AdWords::v201302::Campaign;
 use Google::Ads::AdWords::v201302::CampaignOperation;
-use Google::Ads::AdWords::v201302::ConversionOptimizer;
+use Google::Ads::AdWords::v201302::ConversionOptimizerBiddingScheme;
 use Google::Ads::AdWords::v201302::Money;
 
 use Cwd qw(abs_path);
@@ -50,12 +51,18 @@ sub handle_server_faults {
   });
 
   # Set an invalid bidding strategy this will trigger a server error.
-  my $biddingStrategy =
-      Google::Ads::AdWords::v201302::ConversionOptimizer->new({
-        pricingModel => "CLICKS",
-        conversionOptimizerBidType => "TARGET_CPA"
+  my $biddingStrategyConfiguration =
+      Google::Ads::AdWords::v201302::BiddingStrategyConfiguration->new({
+        biddingStrategyType => "CONVERSION_OPTIMIZER",
+        biddingScheme =>
+            Google::Ads::AdWords::v201302::ConversionOptimizerBiddingScheme->
+                new({
+                  pricingMode => "CLICKS",
+                  bidType => "TARGET_CPA"
+                })
       });
-  $campaign->set_biddingStrategy($biddingStrategy);
+
+  $campaign->set_biddingStrategyConfiguration($biddingStrategyConfiguration);
   my $budget = Google::Ads::AdWords::v201302::Budget->new({
     amount => Google::Ads::AdWords::v201302::Money->new({
       microAmount => 50000000

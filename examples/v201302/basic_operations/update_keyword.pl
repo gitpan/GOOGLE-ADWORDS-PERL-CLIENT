@@ -56,14 +56,15 @@ sub update_keyword {
 
   # Create bids.
   my $bids =
-      Google::Ads::AdWords::v201302::ManualCPCAdGroupCriterionBids->new({
-        maxCpc => Google::Ads::AdWords::v201302::Bid->new({
-          amount => Google::Ads::AdWords::v201302::Money->new({
-            microAmount => 1000000
-          })
-        }),
-      });
-  $ad_group_criterion->set_bids($bids);
+      Google::Ads::AdWords::v201302::BiddingStrategyConfiguration->new({
+        bids => [
+          Google::Ads::AdWords::v201302::CpcBid->new({
+            bid => Google::Ads::AdWords::v201302::Money->new({
+              microAmount => 1000000
+            })
+          }),
+        ]});
+  $ad_group_criterion->set_biddingStrategyConfiguration($bids);
 
   # Create operation.
   my $operation = Google::Ads::AdWords::v201302::AdGroupCriterionOperation->new({
@@ -83,8 +84,8 @@ sub update_keyword {
            "amount = \"%d\" micros.\n",
            $ad_group_criterion->get_adGroupId(),
            $ad_group_criterion->get_criterion()->get_id,
-           $ad_group_criterion->get_bids()->get_maxCpc()->get_amount()->
-               get_microAmount();
+           $ad_group_criterion->get_biddingStrategyConfiguration()->
+               get_bids()->[0]->get_bid()->get_microAmount();
   } else {
     print "No keyword was updated.\n";
   }

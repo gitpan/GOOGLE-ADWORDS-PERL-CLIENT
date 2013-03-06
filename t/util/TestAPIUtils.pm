@@ -50,7 +50,21 @@ sub get_api_package {
 
 sub create_campaign {
   my $client = shift;
-  my $bidding_strategy = shift || get_api_package($client, "ManualCPC", 1);
+  my $bidding_strategy = shift;
+  if (!$bidding_strategy) {
+    if ($client->get_version() ge "v201302") {
+      $bidding_strategy =
+          get_api_package($client, "BiddingStrategyConfiguration", 1)->new({
+            biddingStrategyType => "MANUAL_CPC",
+            biddingScheme =>
+                get_api_package($client, "ManualCpcBiddingScheme", 1)->new({
+                  enhancedCpcEnabled => 0
+                })
+          });
+    } else {
+      $bidding_strategy = get_api_package($client, "ManualCPC", 1);
+    }
+  }
   my $budget;
   my $campaign;
 
@@ -79,14 +93,7 @@ sub create_campaign {
   if ($client->get_version() ge "v201302") {
     $campaign = get_api_package($client, "Campaign", 1)->new({
       name => "Campaign #" . uniqid(),
-      biddingStrategyConfiguration => get_api_package($client,
-          "BiddingStrategyConfiguration", 1)->new({
-            biddingStrategyType => "MANUAL_CPC",
-            biddingScheme =>
-                get_api_package($client, "ManualCpcBiddingScheme")->new({
-                  enhancedCpcEnabled => 0
-                })
-          }),
+      biddingStrategyConfiguration => $bidding_strategy,
       budget => $budget,
     });
   } else {

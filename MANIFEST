@@ -6,8 +6,6 @@ examples/v201206/account_management/create_account.pl
 examples/v201206/account_management/get_account_alerts.pl
 examples/v201206/account_management/get_account_changes.pl
 examples/v201206/account_management/get_account_hierarchy.pl
-examples/v201206/account_management/get_client_customer_id.pl
-examples/v201206/account_management/get_client_unit_usage.pl
 examples/v201206/basic_operations/add_ad_groups.pl
 examples/v201206/basic_operations/add_campaigns.pl
 examples/v201206/basic_operations/add_keywords.pl
@@ -61,8 +59,6 @@ examples/v201209/account_management/create_account.pl
 examples/v201209/account_management/get_account_alerts.pl
 examples/v201209/account_management/get_account_changes.pl
 examples/v201209/account_management/get_account_hierarchy.pl
-examples/v201209/account_management/get_client_customer_id.pl
-examples/v201209/account_management/get_client_unit_usage.pl
 examples/v201209/basic_operations/add_ad_groups.pl
 examples/v201209/basic_operations/add_campaigns.pl
 examples/v201209/basic_operations/add_keywords.pl
@@ -2346,6 +2342,7 @@ lib/Google/Ads/AdWords/v201302/DistinctError/Reason.pm
 lib/Google/Ads/AdWords/v201302/DomainInfoExtension.pm
 lib/Google/Ads/AdWords/v201302/DoubleAttribute.pm
 lib/Google/Ads/AdWords/v201302/DoubleValue.pm
+lib/Google/Ads/AdWords/v201302/DownloadFormat.pm
 lib/Google/Ads/AdWords/v201302/DynamicSearchAd.pm
 lib/Google/Ads/AdWords/v201302/EntityAccessDenied.pm
 lib/Google/Ads/AdWords/v201302/EntityAccessDenied/Reason.pm
@@ -2706,6 +2703,8 @@ lib/Google/Ads/AdWords/v201302/RejectedError/Reason.pm
 lib/Google/Ads/AdWords/v201302/RelatedToQuerySearchParameter.pm
 lib/Google/Ads/AdWords/v201302/RelatedToUrlSearchParameter.pm
 lib/Google/Ads/AdWords/v201302/RemarketingUserList.pm
+lib/Google/Ads/AdWords/v201302/ReportDefinition.pm
+lib/Google/Ads/AdWords/v201302/ReportDefinition/DateRangeType.pm
 lib/Google/Ads/AdWords/v201302/ReportDefinition/ReportType.pm
 lib/Google/Ads/AdWords/v201302/ReportDefinitionError.pm
 lib/Google/Ads/AdWords/v201302/ReportDefinitionError/Reason.pm

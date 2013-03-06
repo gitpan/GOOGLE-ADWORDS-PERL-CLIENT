@@ -16,7 +16,7 @@ package Google::Ads::AdWords::Client;
 
 use strict;
 use version;
-our $VERSION = qv("2.8.0");
+our $VERSION = qv("2.8.1");
 
 use Google::Ads::AdWords::AuthTokenHandler;
 use Google::Ads::AdWords::Constants;
