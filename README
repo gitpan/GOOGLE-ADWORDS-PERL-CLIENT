@@ -135,19 +135,25 @@ authorization protocols:
 
   - OAuth 2:
 
-    This protocol provides a way to access an AdWords account without need to
+    This protocol provides a way to access an AdWords account without needing to
     retain the user credentials such as email and password, and it is the
     preferred way for you to authorize your API requests. An access token is
-    required by the library to be able to prepared authorized requests against
-    the API. This access token can be generated with the library with an
-    authorization code issued by the user via the browser.
+    required by the library to be able to send authorized requests against
+    the API. This access token can be generated with the library via two
+    different OAuth 2 handlers.
 
-    The library Client object provides the get_oauth_2_handler() method, that
-    allows you to get a reference of the OAuth2 authorization handler.
+    The library Client object provides the get_oauth_2_applications_handler
+    and the get_oauth_2_service_accounts_handler methods that
+    allows you to get a reference of the OAuth2 authorization handler for
+    Web/Installed Applications and the handler for Service Accounts,
+    respectively.
 
-    The handler provides methods such as get_authorization_url() and
-    issue_access_token() that can be used to follow the authorization flow and
-    generation of access tokens.
+    OAuth2 for Web/Installed Applications
+
+    The handler for applications provides methods such as
+    get_authorization_url() and issue_access_token() that can be used to follow
+    the authorization flow (i.e. user request for consent) and generation of
+    access and refresh tokens.
 
     Also pre-stored access and refresh tokens can be passed to the authorization
     handler using the method set_access_token() and set_refresh_token() to
@@ -160,29 +166,29 @@ authorization protocols:
     See the example use_oauth2.pl for a comprehensive example on how to use
     this authorization protocol.
 
-  - OAuth 1.0a:
+    OAuth2 for Service Accounts
 
-    ** This authorization protocol is consider deprecated given the
-       support of OAuth2 and should not be used for future development while
-       strongly consider migrating old code to OAuth2 **
+    The handler for service accounts provides methods such as
+    set_email_address(), set_pem_file() and set_delegated_email_address()
+    that can be used to set the service account email address, private key
+    file and the delegated account email address, respectively. These values
+    can also be configured using the adwords.properties file.
 
-    As with OAuth2 this protocol provides a way to access an AdWords account
-    without the need to have possesion of the use email and password. Instead a
-    permanent OAuth token is requested and authorized by the user, and then
-    upgraded for access.
+    Keep in mind that the use of service accounts for accessing AdWords API
+    requires user impersonation because a service account itself can't have
+    direct access to an AdWords Account, that is why the delegated email address
+    is a required parameter. Setting up impersonation requires setup a Google
+    Apps Domain for business. Refer to this Help Center article for more
+    information on this matter
+    http://support.google.com/a/bin/answer.py?hl=en&answer=162106&topic=2759255&ctx=topic
 
-    The Client object provides the get_oauth_1_0a_handler() method to get a
-    reference of the OAuth1.0a authorization handler.
+    Additionally to use service accounts with the library you must transform
+    the private key file as provided by the API Console from PKCS12 format to
+    PEM format with NO password (usually the API console sets its password as
+    'notasecret'). In Linux/Unix environments with openssl installed this
+    transformation can be easily done as follows:
+    > openssl pkcs12 -in yourfile.p12 -out yourfile.pem -nodes
 
-    The methods get_authorization_url() and issue_access_token() of the
-    authorization handler can be used to follow the authorization flow.
-
-    Pre-stored OAuth tokens can be passed to the authorization handler using the
-    method set_token() and set_token_secret(), it is up to you to code the
-    mechanism to preserve and restore these tokens.
-
-    See the example use_oauth1_0a.pl for a comprehensive example on how to use
-    this authorization protocol.
 
   - ClientLogin:
 

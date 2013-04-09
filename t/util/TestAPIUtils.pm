@@ -104,7 +104,7 @@ sub create_campaign {
     });
   }
 
-  if ($client->get_version() ge "v201206") {
+  if ($client->get_version() ge "v201209") {
     $campaign->set_settings([
       get_api_package($client, "KeywordMatchSetting", 1)->new({
         optIn => 1
@@ -421,7 +421,7 @@ sub get_any_child_client_email {
   $client->set_client_id(undef);
 
   my $email;
-  if ($client->get_version() lt "v201206") {
+  if ($client->get_version() lt "v201209") {
     my $selector = get_api_package($client, "ServicedAccountSelector", 1)->new({
       enablePaging => 0
     });

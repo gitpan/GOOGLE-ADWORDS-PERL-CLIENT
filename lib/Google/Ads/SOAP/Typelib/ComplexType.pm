@@ -33,7 +33,7 @@ use version;
 use Google::Ads::Common::XPathSAXParser;
 
 use Carp;
-
+use Data::Dumper;
 use Scalar::Util qw(blessed);
 use SOAP::WSDL::Expat::Base;
 use SOAP::WSDL::Expat::MessageParser;
@@ -162,6 +162,7 @@ sub _factory {
           eval {
             $self->$method($_[1]->{$_});
           };
+          warn $@ if $@;
         }:
         # PATCH Ignoring xsi_type as a regular attribute of a given HASH since
         # is treated specially later.
@@ -169,9 +170,9 @@ sub _factory {
                   xmlns|xsi_type
                }xms?():
               do {
-                croak "unknown field $_ in $class. Valid fields are:\n" .
+                croak "Unknown field $_ in $class.\nValid fields are:\n" .
                       join(', ', @{$ELEMENTS_FROM->{$class}}) . "\n" .
-                      "Structure given:\n" . Dumper (@_)
+                      "Structure given:\n" . Dumper ($_[1])
               };
         # END PATCH
     } keys %{$_[1]};

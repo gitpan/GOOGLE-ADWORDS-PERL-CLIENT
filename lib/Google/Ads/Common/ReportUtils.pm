@@ -71,10 +71,7 @@ sub download_report {
 
   my $auth_handler = $client->_get_auth_handler();
 
-  if ($auth_handler->isa("Google::Ads::Common::OAuth1_0aHandler")) {
-    # At this point we prepare the request for OAuth1.0a.
-    $url = $auth_handler->get_protected_resource_url($url);
-  } elsif ($auth_handler->isa("Google::Ads::Common::OAuth2Handler")) {
+  if ($auth_handler->isa("Google::Ads::Common::OAuth2BaseHandler")) {
     # In this case we use the client OAuth2
     push @headers, "Authorization" => "Bearer " .
         $auth_handler->get_access_token();
@@ -119,18 +116,21 @@ sub download_report {
 
   # Request the report.
   my $request;
+  my $format;
   if (isdigit($report_definition)) {
     $request = HTTP::Request->new("GET", $url, \@headers);
   } elsif (ref($report_definition) eq "HASH") {
     push @headers, "Content-Type" => "application/x-www-form-urlencoded";
     $request = HTTP::Request->new("POST", $url, \@headers, "__rdquery=" .
-        uri_escape($report_definition->{query}) . "&__fmt=" .
-        uri_escape($report_definition->{format}));
+        uri_escape_utf8($report_definition->{query}) . "&__fmt=" .
+        uri_escape_utf8($report_definition->{format}));
+    $format = $report_definition->{format};
   } else {
     push @headers, "Content-Type" => "application/x-www-form-urlencoded";
     $request = HTTP::Request->new("POST", $url, \@headers, "__rdxml=" .
-        uri_escape("<reportDefinition>" . $report_definition .
-                   "</reportDefinition>"));
+        uri_escape_utf8("<reportDefinition>" . $report_definition .
+                        "</reportDefinition>"));
+    $format = $report_definition->get_downloadFormat() . "";
   }
 
   my $response;
@@ -140,7 +140,12 @@ sub download_report {
       # If not gzip support then we can stream directly to a file.
       $response = $lwp->request($request, $file_path);
     } else {
-      open(FH, ">", $file_path) or warn "Can't write to '$file_path': $!";
+      my $mode = ">:utf8";
+      if ($format =~ /^GZIPPED|PDF/) {
+        # Binary format can't dump as UTF8.
+        $mode = ">";
+      }
+      open(FH, $mode, $file_path) or warn "Can't write to '$file_path': $!";
       $response = $lwp->request($request);
       # Need to decode in a file.
       print FH $response->decoded_content();

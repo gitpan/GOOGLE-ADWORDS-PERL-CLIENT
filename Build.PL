@@ -25,7 +25,13 @@ use lib "lib";
 
 my $build_sc = Module::Build->subclass(
     code => q(
+      sub ACTION_testsmall {shift->generic_test(type => "small");}
+      sub ACTION_testmedium {shift->generic_test(type => "medium");}
+      sub ACTION_testnondeterministic {
+        shift->generic_test(type => "nondeterministic");
+      }
       sub ACTION_testfunctional {shift->generic_test(type => "functional");}
+      sub ACTION_testsmoke {shift->generic_test(type => "smoke");}
     )
 );
 
@@ -35,9 +41,10 @@ $build_sc->new(module_name => "Google::Ads::AdWords::Client",
                create_makefile_pl => "traditional",
                dist_abstract      => "AdWords API Perl Client Library",
                dist_name          => "GOOGLE-ADWORDS-PERL-CLIENT",
-               dist_version       => "2.8.1",
+               dist_version       => "2.9.0",
                requires => {
                  "Class::Std::Fast" => 0,
+                 "Crypt::OpenSSL::RSA" => 0,
                  "Cwd" => 0,
                  "Data::Uniqid" => 0,
                  "Date::Parse" => 0,
@@ -53,7 +60,6 @@ $build_sc->new(module_name => "Google::Ads::AdWords::Client",
                  "Log::Log4perl" => 0,
                  "LWP::UserAgent" => 0,
                  "Math::Random::MT" => 0,
-                 "Net::OAuth" => "0.27",
                  "POSIX" => 0,
                  "SOAP::WSDL" => "2.00.10",
                  "Template" => 0,
@@ -71,5 +77,17 @@ $build_sc->new(module_name => "Google::Ads::AdWords::Client",
                  "Test::More" => 0
                },
                test_types => {
-                 functional => ".ft"
+                 small => ["010_AuthTokenHandler.t",
+                           "011_Client.t",
+                           "012_Serialiazer.t",
+                           "013_Deserializer.t",
+                           "014_XPathSAXParser.t",
+                           "015_RequestStats.t",
+                           "017_OAuth2ApplicationsHandler.t",
+                           "018_MapUtils.t",
+                           "019_OAuth2ServiceAccountsHandler.t"],
+                 medium => ["001_require.t"],
+                 nondeterministic => [".ft"],
+                 functional => [".ft"],
+                 smoke => [".t"],
                })->create_build_script();

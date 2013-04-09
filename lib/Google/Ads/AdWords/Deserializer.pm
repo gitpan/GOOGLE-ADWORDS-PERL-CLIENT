@@ -58,7 +58,7 @@ sub deserialize {
     $request_stats = Google::Ads::AdWords::RequestStats->new({
       authentication =>
           !$auth_handler ? "" :
-          $auth_handler->isa("Google::Ads::Common::OAuthHandlerInterface") ?
+          $auth_handler->isa("Google::Ads::Common::OAuth2BaseHandler") ?
           "OAuth" : "ClientLogin:" . $auth_handler->get_email(),
       client_id => $client->get_client_id(),
       service_name => $service_name,

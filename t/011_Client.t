@@ -24,7 +24,7 @@ use strict;
 
 use File::Basename;
 use File::Spec;
-use Test::More (tests => 38);
+use Test::More (tests => 23);
 
 # Set up @INC at runtime with an absolute path.
 my $lib_path = File::Spec->catdir(dirname($0), "..", "lib");
@@ -50,7 +50,7 @@ is($client->get_developer_token(), "dev-token",
    "Read of developer token");
 is($client->get_auth_token(), "auth-token",
    "Read of auth token");
-is($client->get_alternate_url(), "https://adwords-sandbox.google.com",
+is($client->get_alternate_url(), "https://adwords.google.com",
    "Read of alternate url");
 
 # Test basic get/set methods.
@@ -58,37 +58,8 @@ $client->set_die_on_faults(1);
 is($client->get_die_on_faults(), 1, "get/set die_on_faults()");
 
 # Make sure this supports all the services we think it should for each version.
-$client->set_version("v201206");
-my @services = qw(AdExtensionOverrideService
-                  AdGroupAdService
-                  AdGroupCriterionService
-                  AdGroupService
-                  AdParamService
-                  AlertService
-                  BudgetOrderService
-                  BulkMutateJobService
-                  CampaignAdExtensionService
-                  CampaignCriterionService
-                  CampaignService
-                  ConstantDataService
-                  ConversionTrackerService
-                  CustomerService
-                  CustomerSyncService
-                  DataService
-                  ExperimentService
-                  GeoLocationService
-                  LocationCriterionService
-                  ManagedCustomerService
-                  MediaService
-                  MutateJobService
-                  ReportDefinitionService
-                  TargetingIdeaService
-                  TrafficEstimatorService
-                  UserListService);
-can_ok($client, @services);
-
 $client->set_version("v201209");
-@services = qw(AdExtensionOverrideService
+my @services = qw(AdExtensionOverrideService
                AdGroupAdService
                AdGroupCriterionService
                AdGroupService
@@ -121,24 +92,6 @@ ok(Google::Ads::AdWords::Client->new && Google::Ads::AdWords::Client->new,
 
 # Make sure auth initialization through Client constructor gets propagated to
 # the appropiate auth handlers.
-my $test_consumer_key = "test_consumer_key";
-my $test_consumer_secret = "test_consumer_secret";
-my $test_display_name = "test_display_name";
-my $test_token = "test_token";
-my $test_token_secret = "test_token_secret";
-$client = Google::Ads::AdWords::Client->new({
-  oauth_consumer_key => $test_consumer_key,
-  oauth_consumer_secret => $test_consumer_secret,
-  oauth_display_name => $test_display_name,
-  oauth_token => $test_token,
-  oauth_token_secret => $test_token_secret
-});
-is($client->get_oauth_1_0a_handler()->get_consumer_key(), $test_consumer_key);
-is($client->get_oauth_1_0a_handler()->get_consumer_secret(), $test_consumer_secret);
-is($client->get_oauth_1_0a_handler()->get_display_name(), $test_display_name);
-is($client->get_oauth_1_0a_handler()->get_token(), $test_token);
-is($client->get_oauth_1_0a_handler()->get_token_secret(), $test_token_secret);
-
 my $test_email = "my_email\@test.com";
 my $test_password = "my_password";
 my $test_auth_token = "my_auth_token";
@@ -170,24 +123,3 @@ is($client->get_auth_token_handler()->get_auth_server(), "auth-server");
 $client->set_auth_token("token");
 is($client->get_auth_token(), "token");
 is($client->get_auth_token_handler()->get_auth_token(), "token");
-
-$client->set_oauth_consumer_key("consumer-key");
-is($client->get_oauth_consumer_key(), "consumer-key");
-is($client->get_oauth_1_0a_handler()->get_consumer_key(), "consumer-key");
-
-$client->set_oauth_consumer_secret("consumer-secret");
-is($client->get_oauth_consumer_secret(), "consumer-secret");
-is($client->get_oauth_1_0a_handler()->get_consumer_secret(),
-   "consumer-secret");
-
-$client->set_oauth_token("token");
-is($client->get_oauth_token(), "token");
-is($client->get_oauth_1_0a_handler()->get_token(), "token");
-
-$client->set_oauth_display_name("display-name");
-is($client->get_oauth_display_name(), "display-name");
-is($client->get_oauth_1_0a_handler()->get_display_name(), "display-name");
-
-# Test get the default auth handler.
-isa_ok($client->_get_auth_handler(), "Google::Ads::AdWords::AuthTokenHandler");
-

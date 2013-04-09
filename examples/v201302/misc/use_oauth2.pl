@@ -68,7 +68,7 @@ sub use_oauth2 {
   # $client->get_oauth_2_handler()->set_access_token($access_token);
   # $client->get_oauth_2_handler()->set_refresh_token($refresh_token);
   print "OAuth2 Access Token: ", $auth_handler->get_access_token(), "\n",
-        "OAuth2 Refresh Token: ", $auth_handler->get_refresh_token(), "%s\n\n";
+        "OAuth2 Refresh Token: ", $auth_handler->get_refresh_token(), "\n\n";
 
   # Create selector.
   my $selector = Google::Ads::AdWords::v201302::Selector->new({

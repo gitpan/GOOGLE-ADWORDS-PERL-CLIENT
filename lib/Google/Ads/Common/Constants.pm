@@ -20,6 +20,6 @@ use strict;
 use version;
 
 # Main version number that the rest of the modules on this package pick up of.
-our $VERSION = qv("2.0.0");
+our $VERSION = qv("2.9.0");
 
 1;

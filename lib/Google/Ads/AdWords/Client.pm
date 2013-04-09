@@ -16,24 +16,27 @@ package Google::Ads::AdWords::Client;
 
 use strict;
 use version;
-our $VERSION = qv("2.8.1");
+our $VERSION = qv("2.9.0");
 
 use Google::Ads::AdWords::AuthTokenHandler;
 use Google::Ads::AdWords::Constants;
 use Google::Ads::AdWords::Deserializer;
-use Google::Ads::AdWords::OAuth2Handler;
-use Google::Ads::AdWords::OAuth1_0aHandler;
+use Google::Ads::AdWords::OAuth2ApplicationsHandler;
+use Google::Ads::AdWords::OAuth2ServiceAccountsHandler;
 use Google::Ads::AdWords::Serializer;
 use Google::Ads::Common::HTTPTransport;
 
 use Class::Std::Fast;
 use SOAP::WSDL qv("2.00.10");
 
-use constant OAUTH_2_HANDLER => "OAUTH_2_HANDLER";
-use constant OAUTH_1_0A_HANDLER => "OAUTH_1_0A_HANDLER";
-use constant AUTH_TOKEN_HANDLER => "AUTH_TOKEN_HANDLER";
-use constant AUTH_HANDLERS_ORDER =>
-    (OAUTH_2_HANDLER, OAUTH_1_0A_HANDLER, AUTH_TOKEN_HANDLER);
+use constant OAUTH_2_APPLICATIONS_HANDLER => "OAUTH_2_APPLICATIONS_HANDLER";
+use constant OAUTH_2_SERVICE_ACCOUNTS_HANDLER =>
+  "OAUTH_2_SERVICE_ACCOUNTS_HANDLER";
+use constant AUTH_TOKEN_HANDLER  => "AUTH_TOKEN_HANDLER";
+use constant AUTH_HANDLERS_ORDER => (
+  OAUTH_2_APPLICATIONS_HANDLER, OAUTH_2_SERVICE_ACCOUNTS_HANDLER,
+  AUTH_TOKEN_HANDLER
+);
 
 # Class::Std-style attributes. Most values read from adwords.properties file.
 # These need to go in the same line for older Perl interpreters to understand.
@@ -48,8 +51,9 @@ my %partial_failure_of : ATTR(:name<partial_failure> :default<0>);
 
 my %properties_file_of : ATTR(:init_arg<properties_file> :default<>);
 my %services_of : ATTR(:name<services> :default<{}>);
-my %transport_of : ATTR(:name<transport> :default<0>);
-my %auth_handlers_of : ATTR(:name<auth_handlers> :default<0>);
+my %transport_of : ATTR(:name<transport> :default<>);
+my %auth_handlers_of : ATTR(:name<auth_handlers> :default<>);
+my %__enabled_auth_handler_of : ATTR(:name<__enabled_auth_handler> :default<>);
 
 # All these auth related properties are now considered deprecated, to be
 # removed in a later release.
@@ -57,12 +61,8 @@ my %email_of : ATTR(:init_arg<email> :get<email> :default<>);
 my %password_of : ATTR(:init_arg<password> :get<password> :default<>);
 my %auth_server_of : ATTR(:init_arg<auth_server> :get<auth_server> :default<0>);
 my %auth_token_of : ATTR(:init_arg<auth_token> :get<auth_token> :default<>);
-my %use_auth_token_cache_of : ATTR(:init_arg<use_auth_token_cache> :get<use_auth_token_cache> :default<>);
-my %oauth_consumer_key_of : ATTR(:init_arg<oauth_consumer_key> :get<oauth_consumer_key> :default<>);
-my %oauth_consumer_secret_of : ATTR(:init_arg<oauth_consumer_secret> :get<oauth_consumer_secret> :default<>);
-my %oauth_token_of : ATTR(:init_arg<oauth_token> :get<oauth_token> :default<>);
-my %oauth_token_secret_of : ATTR(:init_arg<oauth_token_secret> :get<oauth_token_secret> :default<>);
-my %oauth_display_name_of : ATTR(:init_arg<oauth_display_name> :get<oauth_display_name> :default<>);
+my %use_auth_token_cache_of :
+  ATTR(:init_arg<use_auth_token_cache> :get<use_auth_token_cache> :default<>);
 
 # Runtime statistics.
 my %requests_count_of : ATTR(:name<requests_count> :default<0>);
@@ -78,75 +78,69 @@ my %last_soap_response_of : ATTR(:name<last_soap_response> :default<>);
 # Automatically called by Class::Std after the values for all the attributes
 # have been populated but before the constuctor returns the new object.
 sub START {
-  my ($self, $ident) = @_;
+  my ( $self, $ident ) = @_;
 
-  my $default_properties_file = Google::Ads::AdWords::Constants::DEFAULT_PROPERTIES_FILE;
-  if (not $properties_file_of{$ident} and -e $default_properties_file) {
+  my $default_properties_file =
+    Google::Ads::AdWords::Constants::DEFAULT_PROPERTIES_FILE;
+  if ( not $properties_file_of{$ident} and -e $default_properties_file ) {
     $properties_file_of{$ident} = $default_properties_file;
   }
 
   my %properties = ();
-  if ($properties_file_of{$ident}) {
+  if ( $properties_file_of{$ident} ) {
+
     # If there's a valid properties file to read from, parse it and use the
     # config values to fill in any missing attributes.
-    %properties = __parse_properties_file($properties_file_of{$ident});
+    %properties = __parse_properties_file( $properties_file_of{$ident} );
     $client_id_of{$ident} ||= $properties{clientId};
     $user_agent_of{$ident} ||= $properties{useragent} || $properties{userAgent};
     $developer_token_of{$ident} ||= $properties{developerToken};
-    $version_of{$ident} ||= $properties{version};
-    $alternate_url_of{$ident} ||= $properties{alternateUrl};
-    $validate_only_of{$ident} ||= $properties{validateOnly};
+    $version_of{$ident}         ||= $properties{version};
+    $alternate_url_of{$ident}   ||= $properties{alternateUrl};
+    $validate_only_of{$ident}   ||= $properties{validateOnly};
     $partial_failure_of{$ident} ||= $properties{partialFailure};
 
     # Deprecated: To be removed in a later release.
-    $email_of{$ident} ||= $properties{email};
-    $password_of{$ident} ||= $properties{password};
-    $auth_server_of{$ident} ||= $properties{authServer};
-    $auth_token_of{$ident} ||= $properties{authToken};
+    $email_of{$ident}                ||= $properties{email};
+    $password_of{$ident}             ||= $properties{password};
+    $auth_server_of{$ident}          ||= $properties{authServer};
+    $auth_token_of{$ident}           ||= $properties{authToken};
     $use_auth_token_cache_of{$ident} ||= $properties{useAuthTokenCache};
-    $oauth_consumer_key_of{$ident} ||= $properties{oAuthConsumerKey};
-    $oauth_consumer_secret_of{$ident} ||= $properties{oAuthConsumerSecret};
-    $oauth_token_of{$ident} ||= $properties{oAuthToken};
-    $oauth_token_secret_of{$ident} ||= $properties{oAuthTokenSecret};
-    $oauth_display_name_of{$ident} ||= $properties{oAuthDisplayName};
 
     # SSL Peer validation setup.
-    $self->__setup_SSL($properties{CAPath}, $properties{CAFile});
+    $self->__setup_SSL( $properties{CAPath}, $properties{CAFile} );
   }
 
   # We want to provide default values for these  attributes if they weren't
   # set by parameters to new() or the properties file.
   $alternate_url_of{$ident} ||=
-      Google::Ads::AdWords::Constants::DEFAULT_ALTERNATE_URL;
+    Google::Ads::AdWords::Constants::DEFAULT_ALTERNATE_URL;
   $validate_only_of{$ident} ||=
-      Google::Ads::AdWords::Constants::DEFAULT_VALIDATE_ONLY;
+    Google::Ads::AdWords::Constants::DEFAULT_VALIDATE_ONLY;
   $version_of{$ident} ||= Google::Ads::AdWords::Constants::DEFAULT_VERSION;
   $partial_failure_of{$ident} ||= 0;
 
   # Setup of auth handlers
   my %auth_handlers = ();
 
-  my $auth_handler = Google::Ads::AdWords::OAuth2Handler->new();
-  $auth_handler->initialize($self, \%properties);
-  $auth_handlers{OAUTH_2_HANDLER} = $auth_handler;
+  my $auth_handler = Google::Ads::AdWords::OAuth2ApplicationsHandler->new();
+  $auth_handler->initialize( $self, \%properties );
+  $auth_handlers{OAUTH_2_APPLICATIONS_HANDLER} = $auth_handler;
 
-  $auth_handler = Google::Ads::AdWords::OAuth1_0aHandler->new();
-  $auth_handler->initialize($self, {
-    oAuthConsumerKey => $oauth_consumer_key_of{$ident},
-    oAuthConsumerSecret => $oauth_consumer_secret_of{$ident},
-    oAuthDisplayName => $oauth_display_name_of{$ident},
-    oAuthToken => $oauth_token_of{$ident},
-    oAuthTokenSecret => $oauth_token_secret_of{$ident}
-  });
-  $auth_handlers{OAUTH_1_0A_HANDLER} = $auth_handler;
+  $auth_handler = Google::Ads::AdWords::OAuth2ServiceAccountsHandler->new();
+  $auth_handler->initialize( $self, \%properties );
+  $auth_handlers{OAUTH_2_SERVICE_ACCOUNTS_HANDLER} = $auth_handler;
 
   $auth_handler = Google::Ads::AdWords::AuthTokenHandler->new();
-  $auth_handler->initialize($self, {
-    email => $email_of{$ident},
-    password => $password_of{$ident},
-    authServer => $auth_server_of{$ident},
-    authToken => $auth_token_of{$ident},
-  });
+  $auth_handler->initialize(
+    $self,
+    {
+      email      => $email_of{$ident},
+      password   => $password_of{$ident},
+      authServer => $auth_server_of{$ident},
+      authToken  => $auth_token_of{$ident},
+    }
+  );
   $auth_handlers{AUTH_TOKEN_HANDLER} = $auth_handler;
 
   $auth_handlers_of{$ident} = \%auth_handlers;
@@ -161,68 +155,78 @@ sub START {
 # each Google::Ads::AdWords::Client instance) of all the SOAP services. The
 # names of the services may change and shouldn't be hardcoded.
 sub AUTOMETHOD {
-  my ($self, $ident) = @_;
+  my ( $self, $ident ) = @_;
   my $method_name = $_;
 
   # All SOAP services should end in "Service"; fail early if the requested
   # method doesn't.
-  if ($method_name =~ /^\w+Service$/) {
-    if ($self->get_services()->{$method_name}) {
+  if ( $method_name =~ /^\w+Service$/ ) {
+    if ( $self->get_services()->{$method_name} ) {
+
       # To emulate a singleton, return the existing instance of the service if
       # we already have it. The return value of AUTOMETHOD must be a sub
       # reference which is then invoked, so wrap the service in sub { }.
       return sub {
         return $self->get_services()->{$method_name};
       };
-    } else {
+    }
+    else {
       my $version = $self->get_version();
 
       # Check to see if there is a module with that name under
       # Google::Ads::AdWords::$version if not we warn and return nothing.
       my $module_name = "Google::Ads::AdWords::${version}::${method_name}"
-          . "::${method_name}InterfacePort";
+        . "::${method_name}InterfacePort";
       eval("require $module_name");
       if ($@) {
         warn("Module $module_name was not found.");
         return;
-      } else {
+      }
+      else {
+
         # Generating the service endpoint url of the form
         # https://{server_url}/{group_name(cm/job/info/o)}/{version}/{service}.
-        my $server_url = $self->get_alternate_url() =~ /\/$/ ?
-            substr($self->get_alternate_url(), 0, -1) :
-            $self->get_alternate_url();
+        my $server_url =
+          $self->get_alternate_url() =~ /\/$/
+          ? substr( $self->get_alternate_url(), 0, -1 )
+          : $self->get_alternate_url();
         my $service_to_group_name =
-            $Google::Ads::AdWords::Constants::SERVICE_TO_GROUP{$method_name};
-        if (!$service_to_group_name) {
-          die("Service " . $method_name . " is not configured in the library.");
+          $Google::Ads::AdWords::Constants::SERVICE_TO_GROUP{$method_name};
+        if ( !$service_to_group_name ) {
+          die(
+            "Service " . $method_name . " is not configured in the library." );
         }
         my $endpoint_url =
-            sprintf(Google::Ads::AdWords::Constants::PROXY_FORMAT_STRING,
-                    $server_url, $service_to_group_name, $self->get_version(),
-                    $method_name);
+          sprintf( Google::Ads::AdWords::Constants::PROXY_FORMAT_STRING,
+          $server_url, $service_to_group_name, $self->get_version(),
+          $method_name );
 
         # If a suitable module is found, instantiate it and store it in
         # instance-specific storage to emulate a singleton.
-        my $service_port =
-            $module_name->new({
-              # Setting the server endpoint of the service.
-              proxy => [$endpoint_url],
-              # Associating our custom serializer.
-              serializer =>
-                  Google::Ads::AdWords::Serializer->new({client => $self}),
-              # Associating our custom deserializer.
-              deserializer =>
-                  Google::Ads::AdWords::Deserializer->new({client => $self})
-            });
+        my $service_port = $module_name->new(
+          {
+
+            # Setting the server endpoint of the service.
+            proxy => [$endpoint_url],
+
+            # Associating our custom serializer.
+            serializer =>
+              Google::Ads::AdWords::Serializer->new( { client => $self } ),
+
+            # Associating our custom deserializer.
+            deserializer =>
+              Google::Ads::AdWords::Deserializer->new( { client => $self } )
+          }
+        );
 
         # Injecting our own transport.
-        $service_port->set_transport($self->get_transport());
+        $service_port->set_transport( $self->get_transport() );
 
-        if ($ENV{HTTP_PROXY}) {
-          $service_port->get_transport()->proxy(['http'], $ENV{HTTP_PROXY});
+        if ( $ENV{HTTP_PROXY} ) {
+          $service_port->get_transport()->proxy( ['http'], $ENV{HTTP_PROXY} );
         }
-        if ($ENV{HTTPS_PROXY}) {
-          $service_port->get_transport()->proxy(['https'], $ENV{HTTPS_PROXY});
+        if ( $ENV{HTTPS_PROXY} ) {
+          $service_port->get_transport()->proxy( ['https'], $ENV{HTTPS_PROXY} );
         }
 
         $self->get_services()->{$method_name} = $service_port;
@@ -238,34 +242,40 @@ sub AUTOMETHOD {
 sub _get_auth_handler {
   my $self = shift;
 
+  # Check if we have cached the enabled auth_handler.
+  if ( $self->get___enabled_auth_handler() ) {
+    return $self->get___enabled_auth_handler();
+  }
+
   my $auth_handlers = $self->get_auth_handlers();
 
   foreach my $handler_id (AUTH_HANDLERS_ORDER) {
-    if ($auth_handlers->{$handler_id}->is_auth_enabled()) {
-      return $auth_handlers->{$handler_id};
+    if ( $auth_handlers->{$handler_id}->is_auth_enabled() ) {
+      $self->set___enabled_auth_handler( $auth_handlers->{$handler_id} );
+      last;
     }
   }
 
-  return undef;
+  return $self->get___enabled_auth_handler();
 }
 
 # Private method to setup IO::Socket::SSL and Crypt::SSLeay variables
 # for certificate and hostname validation.
 sub __setup_SSL {
-  my ($self, $ca_path, $ca_file) = @_;
-  if($ca_path || $ca_file) {
-    $ENV{HTTPS_CA_DIR} = $ca_path;
+  my ( $self, $ca_path, $ca_file ) = @_;
+  if ( $ca_path || $ca_file ) {
+    $ENV{HTTPS_CA_DIR}  = $ca_path;
     $ENV{HTTPS_CA_FILE} = $ca_file;
     eval {
       require IO::Socket::SSL;
       require Net::SSLeay;
       IO::Socket::SSL::set_ctx_defaults(
-          verify_mode => Net::SSLeay->VERIFY_PEER(),
-          SSL_verifycn_scheme => "www",
-          ca_file => $ca_file,
-          ca_path => $ca_path
+        verify_mode         => Net::SSLeay->VERIFY_PEER(),
+        SSL_verifycn_scheme => "www",
+        ca_file             => $ca_file,
+        ca_path             => $ca_path
       );
-    }
+    };
   }
 }
 
@@ -277,20 +287,22 @@ sub __parse_properties_file {
   # glob() to expand any metacharacters.
   ($properties_file) = glob($properties_file);
 
-  if (open(PROP_FILE, $properties_file)) {
+  if ( open( PROP_FILE, $properties_file ) ) {
+
     # The data in the file should be in the following format:
     #   key1=value1
     #   key2=value2
-    while (my $line = <PROP_FILE>) {
+    while ( my $line = <PROP_FILE> ) {
       chomp($line);
 
       # Skip comments.
-      next if ($line =~ /^#/ || $line =~ /^\s*$/);
-      my ($key, $value) = split(/=/, $line, 2);
+      next if ( $line =~ /^#/ || $line =~ /^\s*$/ );
+      my ( $key, $value ) = split( /=/, $line, 2 );
       $properties{$key} = $value;
     }
     close(PROP_FILE);
-  } else {
+  }
+  else {
     die("Couldn't open properties file $properties_file for reading: $!\n");
   }
   return %properties;
@@ -301,17 +313,21 @@ sub _get_header {
   my ($self) = @_;
 
   # Always prepend the module identifier to the user agent.
-  my $user_agent =
-      sprintf("%s (AwApi-Perl/%s, Common-Perl/%s, SOAP-WSDL/%s, ".
-              "libwww-perl/%s, perl/%s)", $self->get_user_agent() || $0,
-              ${Google::Ads::AdWords::Constants::VERSION},
-              ${Google::Ads::Common::Constants::VERSION},
-              ${SOAP::WSDL::VERSION}, ${LWP::UserAgent::VERSION}, $]);
+  my $user_agent = sprintf(
+    "%s (AwApi-Perl/%s, Common-Perl/%s, SOAP-WSDL/%s, "
+      . "libwww-perl/%s, perl/%s)",
+    $self->get_user_agent() || $0,
+    ${Google::Ads::AdWords::Constants::VERSION},
+    ${Google::Ads::Common::Constants::VERSION},
+    ${SOAP::WSDL::VERSION},
+    ${LWP::UserAgent::VERSION},
+    $]
+  );
 
   my $headers = {
-    userAgent => $user_agent,
+    userAgent      => $user_agent,
     developerToken => $self->get_developer_token(),
-    validateOnly => $self->get_validate_only(),
+    validateOnly   => $self->get_validate_only(),
     partialFailure => $self->get_partial_failure()
   };
   my $clientId = $self->get_client_id();
@@ -319,10 +335,12 @@ sub _get_header {
   # $clientId may not be set, in which case we're operating on the account
   # specified in the email header.
   if ($clientId) {
+
     # Not the most sophisticated check, but it should do the trick.
-    if ($clientId =~ /@/) {
+    if ( $clientId =~ /@/ ) {
       $headers->{clientEmail} = $clientId;
-    } else {
+    }
+    else {
       $headers->{clientCustomerId} = $clientId;
     }
   }
@@ -336,32 +354,39 @@ sub get_auth_token_handler {
   return $self->get_auth_handlers()->{AUTH_TOKEN_HANDLER};
 }
 
-sub get_oauth_1_0a_handler {
-  my ($self) = @_;
-
-  return $self->get_auth_handlers()->{OAUTH_1_0A_HANDLER};
-}
-
 sub get_oauth_2_handler {
   my ($self) = @_;
 
-  return $self->get_auth_handlers()->{OAUTH_2_HANDLER};
+  return $self->get_auth_handlers()->{OAUTH_2_APPLICATIONS_HANDLER};
+}
+
+sub get_oauth_2_applications_handler {
+  my ($self) = @_;
+
+  return $self->get_auth_handlers()->{OAUTH_2_APPLICATIONS_HANDLER};
+}
+
+sub get_oauth_2_service_accounts_handler {
+  my ($self) = @_;
+
+  return $self->get_auth_handlers()->{OAUTH_2_SERVICE_ACCOUNTS_HANDLER};
 }
 
 # Adds a new RequestStats object to the client and updates the aggregated
 # stats. It also checks against the MAX_NUM_OF_REQUEST_STATS constant to
 # not make the array of lastest stats grow infinitely.
 sub _push_new_request_stats {
-  my ($self, $request_stats) = @_;
+  my ( $self, $request_stats ) = @_;
 
   $self->set_last_request_stats($request_stats);
-  $self->set_requests_count($self->get_requests_count() + 1);
-  $request_stats->get_is_fault() and
-      $self->set_failed_requests_count($self->get_failed_requests_count() + 1);
-  $self->set_operations_count($self->get_operations_count() +
-      $request_stats->get_operations());
-  $self->set_units_count($self->get_units_count() +
-      $request_stats->get_units());
+  $self->set_requests_count( $self->get_requests_count() + 1 );
+  $request_stats->get_is_fault()
+    and
+    $self->set_failed_requests_count( $self->get_failed_requests_count() + 1 );
+  $self->set_operations_count(
+    $self->get_operations_count() + $request_stats->get_operations() );
+  $self->set_units_count(
+    $self->get_units_count() + $request_stats->get_units() );
 }
 
 # Deprecated methods. These can be removed in a later release.
@@ -374,7 +399,7 @@ sub refresh_auth_token {
   my ($self) = @_;
 
   my $auth_token_handler = $self->get_auth_token_handler();
-  my $error = $auth_token_handler->refresh_auth_token();
+  my $error              = $auth_token_handler->refresh_auth_token();
   if ($error) {
     $self->get_die_on_faults() ? die($error) : warn($error);
   }
@@ -382,96 +407,34 @@ sub refresh_auth_token {
   return $auth_token_handler->get_auth_token();
 }
 
-## Retrieves an authorization URL that can be presented to the user for
-## granting permissions to this client.
-sub get_oauth_authorization_url {
-  my ($self, $callback) = @_;
-
-  my $oauth_handler = $self->get_oauth_1_0a_handler();
-  $oauth_handler->set_consumer_key($self->get_oauth_consumer_key());
-  $oauth_handler->set_consumer_secret($self->get_oauth_consumer_secret());
-  $oauth_handler->set_display_name($self->get_oauth_display_name());
-  my $url = $oauth_handler->get_authorization_url($callback);
-  $self->set_oauth_token($oauth_handler->get_token());
-  $self->set_oauth_token_secret($oauth_handler->get_token_secret());
-
-  return $url;
-}
-
-## Upgrades an authorized request token generated by the
-## get_oauth_authorization_url method.
-sub upgrade_oauth_token {
-  my ($self, $verification_code) = @_;
-
-  my $oauth_handler = $self->get_oauth_1_0a_handler();
-  $oauth_handler->issue_access_token($verification_code);
-  $self->set_oauth_token($oauth_handler->get_token());
-  $self->set_oauth_token_secret($oauth_handler->get_token_secret());
-}
-
 # Overriding default setter to also set underlying auth handlers.
 
 sub set_email {
-  my ($self, $email) = @_;
+  my ( $self, $email ) = @_;
 
-  $email_of{ident $self} = $email;
+  $email_of{ ident $self} = $email;
   $self->get_auth_token_handler()->set_email($email);
 }
 
 sub set_password {
-  my ($self, $password) = @_;
+  my ( $self, $password ) = @_;
 
-  $password_of{ident $self} = $password;
+  $password_of{ ident $self} = $password;
   $self->get_auth_token_handler()->set_password($password);
 }
 
 sub set_auth_server {
-  my ($self, $auth_server) = @_;
+  my ( $self, $auth_server ) = @_;
 
-  $auth_server_of{ident $self} = $auth_server;
+  $auth_server_of{ ident $self} = $auth_server;
   $self->get_auth_token_handler()->set_auth_server($auth_server);
 }
 
 sub set_auth_token {
-  my ($self, $auth_token) = @_;
+  my ( $self, $auth_token ) = @_;
 
-  $auth_token_of{ident $self} = $auth_token;
+  $auth_token_of{ ident $self} = $auth_token;
   $self->get_auth_token_handler()->set_auth_token($auth_token);
-}
-
-sub set_oauth_consumer_key {
-  my ($self, $consumer_key) = @_;
-
-  $oauth_consumer_key_of{ident $self} = $consumer_key;
-  $self->get_oauth_1_0a_handler()->set_consumer_key($consumer_key);
-}
-
-sub set_oauth_consumer_secret {
-  my ($self, $consumer_secret) = @_;
-
-  $oauth_consumer_secret_of{ident $self} = $consumer_secret;
-  $self->get_oauth_1_0a_handler()->set_consumer_secret($consumer_secret);
-}
-
-sub set_oauth_token {
-  my ($self, $oauth_token) = @_;
-
-  $oauth_token_of{ident $self} = $oauth_token;
-  $self->get_oauth_1_0a_handler()->set_token($oauth_token);
-}
-
-sub set_oauth_token_secret {
-  my ($self, $oauth_token_secret) = @_;
-
-  $oauth_token_secret_of{ident $self} = $oauth_token_secret;
-  $self->get_oauth_1_0a_handler()->set_token_secret($oauth_token_secret);
-}
-
-sub set_oauth_display_name {
-  my ($self, $oauth_display_name) = @_;
-
-  $oauth_display_name_of{ident $self} = $oauth_display_name;
-  $self->get_oauth_1_0a_handler()->set_display_name($oauth_display_name);
 }
 
 1;
@@ -555,15 +518,9 @@ specified, the name of your script (i.e. $0) will be used instead.
 
 A string used to tie usage of the AdWords API to a specific MCC account.
 
-In the Sandbox environment, the value should be
-
- email++CUR
-
-i.e. the L</email> value, two plus signs, and then a currency code like C<USD>.
-
-In the Production environment, the value should be a character string
-assigned to you by Google. This string will tie AdWords API usage to your MCC
-account for billing purposes. You can apply for a Developer Token at
+The value should be a character string assigned to you by Google. This string
+will tie AdWords API usage to your MCC account for billing purposes. You can
+apply for a Developer Token at
 
 https://adwords.google.com/select/ApiWelcome
 
@@ -574,12 +531,9 @@ only supported version.
 
 =head2 alternate_url
 
-The URL of an alternate AdWords API server to use. The most common use case
-would be to specify the address of the Sandbox server.
+The URL of an alternate AdWords API server to use.
 
 The default value is C<https://adwords.google.com>
-
-To access the Sandbox, use C<https://adwords-sandbox.google.com>
 
 =head2 validate_only
 
@@ -631,41 +585,6 @@ if an error has ocurred at the server side, however if this flag is set to true,
 then the client will issue a die command on received SOAP faults.
 
 The default is "false".
-
-=head2 oauth_consumer_key & oauth_consumer_secret
-
-The OAuth consumer key and secret pair to use when your client is OAuth enabled.
-Refer to
-http://code.google.com/apis/accounts/docs/RegistrationForWebAppsAuto.html on how
-to obtain these values.
-
-B<This property is demeed deprecated and should not be referenced>. Instead use
-$client->get_oauth_1_0a_handler()->get_consumer_[key|secret]().
-
-=head2 oauth_token & oauth_token_secret
-
-The OAuth access token and secret pair to use when your client is OAuth enabled.
-Refer to the methods L<get_oauth_authorization_url> & L<upgrade_oauth_token> to
-generate these pair of keys.
-
-B<This property is demeed deprecated and should not be referenced>. Instead use
-$client->get_oauth_1_0a_handler()->get_token[_secret]().
-
-=head2 oauth_display_name
-
-Used to identify your application when requesting access to the user to use
-his account via OAuth, refer to L<get_oauth_authorization_url> for more
-information.
-
-B<This property is demeed deprecated and should not be referenced>. Instead use
-$client->get_oauth_1_0a_handler()->get_display_name().
-
-=head2 oauth_handler
-
-Implementation of L<Google::Ads::Common::OAuthHandler> to handle all
-the required logic to access AdWords API authorized via OAuth. This attribute
-can be overriden to use your own implementation, it defaults to
-L<Google::Ads::AdWords::OAuthHandler>.
 
 =head2 requests_count
 
@@ -767,49 +686,6 @@ die() with an error message describing the failure.
    user_agent => "My Sample Program",
  });
 
-=head2 {ServiceName}
-
-The client object contains a method for every service provided by the API.
-So for example it can invoked as $client->AdGroupService() and it will return
-an object of type
-L<Google::Ads::AdWords::v201209::AdGroupService::AdGroupServiceInterfacePort>
-when using version v201209 of the API.
-For a list of all available services please refer to
-http://code.google.com/apis/adwords/docs/ and for examples on
-how to invoke the services please refer to scripts in the examples folder.
-
-=head2 __setup_SSL (Private)
-
-Setups IO::Socket::SSL and Crypt::SSLeay enviroment variables to work with
-SSL certificate validation.
-
-=head3 Parameters
-
-The path to the certificate authorites folder and the path to the certificate
-authorites file. Either can be null.
-
-=head3 Returns
-
-Nothing.
-
-=head2 __parse_properties_file (Private)
-
-=head3 Parameters
-
-The path to a properties file on disk. The data in the file should be in the
-following format:
-
- key1=value1
- key2=value2
-
-=head3 Returns
-
-A hash corresponding to the keys and values in the properties file.
-
-=head3 Exceptions
-
-die()s with an error message if the properties file could not be read.
-
 =head2 set_die_on_faults
 
 This module supports two approaches to handling SOAP faults (i.e. errors
@@ -872,6 +748,89 @@ The input parameter is returned.
 A true or false value indicating whether the Google::Ads::AdWords::Client
 instance is set to die() on SOAP faults.
 
+=head2 {ServiceName}
+
+The client object contains a method for every service provided by the API.
+So for example it can invoked as $client->AdGroupService() and it will return
+an object of type
+L<Google::Ads::AdWords::v201209::AdGroupService::AdGroupServiceInterfacePort>
+when using version v201209 of the API.
+For a list of all available services please refer to
+http://code.google.com/apis/adwords/docs/ and for examples on
+how to invoke the services please refer to scripts in the examples folder.
+
+=head2 get_oauth_2_applications_handler
+
+Returns the OAuth2 for Web/Installed applications authorization handler
+attached to the client, for programmatically setting/overriding its properties.
+
+$client->get_oauth_2_applications_handler()->set_client_id('client-id');
+$client->get_oauth_2_applications_handler()->set_client_secret('client-secret');
+$client->get_oauth_2_applications_handler()->set_access_token('access-token');
+$client->get_oauth_2_applications_handler()->set_refresh_token('refresh-token');
+$client->get_oauth_2_applications_handler()->set_access_type('access-type');
+$client->get_oauth_2_applications_handler()->set_approval_prompt('prompt');
+$client->get_oauth_2_applications_handler()->set_redirect_uri('redirect-url');
+
+Refer to L<Google::Ads::AdWords::OAuth2ApplicationsHandler> for more details.
+
+=head2 get_oauth_2_service_accounts_handler
+
+Returns the OAuth2 authorization handler attached to the client, for
+programmatically setting/overriding its specific properties.
+
+$client->get_oauth_2_service_accounts_handler()->set_client_id('email');
+$client->get_oauth_2_service_accounts_handler()->set_email_address('email');
+$client->get_oauth_2_service_accounts_handler()->
+    set_delegated_email_address('delegated-email');
+$client->get_oauth_2_service_accounts_handler()->
+    set_pem_file('path-to-certificate');
+$client->get_oauth_2_service_accounts_handler()->set_display_name('email');
+
+Refer to L<Google::Ads::AdWords::OAuth2ApplicationsHandler> for more details.
+
+=head2 get_auth_token_handler
+
+Returns the ClientLogin authorization handler attached to the client, for
+manully setting its specific properties.
+
+$client->get_auth_token_handler()->set_email('email');
+$client->get_auth_token_handler()->set_password('email');
+
+Refer to L<Google::Ads::AdWords::AuthTokenHandler> for more details.
+
+=head2 __setup_SSL (Private)
+
+Setups IO::Socket::SSL and Crypt::SSLeay enviroment variables to work with
+SSL certificate validation.
+
+=head3 Parameters
+
+The path to the certificate authorites folder and the path to the certificate
+authorites file. Either can be null.
+
+=head3 Returns
+
+Nothing.
+
+=head2 __parse_properties_file (Private)
+
+=head3 Parameters
+
+The path to a properties file on disk. The data in the file should be in the
+following format:
+
+ key1=value1
+ key2=value2
+
+=head3 Returns
+
+A hash corresponding to the keys and values in the properties file.
+
+=head3 Exceptions
+
+die()s with an error message if the properties file could not be read.
+
 =head2 _get_header (Protected)
 
 Used by the L<Google::Ads::AdWords::Serializer> class to get a valid request
@@ -886,43 +845,12 @@ included in the request header.
 =head2 _auth_handler (Protected)
 
 Retrieves the active AuthHandler. All handlers are checked in the order
-OAuth2 -> OAuth1_0a -> AuthToken, given preference of OAuth2 over OAuth1_0a and
-OAuth1_0a over AuthToken.
+OAuth2 Applications -> OAuth2 Service Accounts -> AuthToken, given preference of
+OAuth2 over AuthToken.
 
 =head3 Returns
 
 An implementation of L<Google::Ads::Common::AuthHandlerInterface>.
-
-=head2 get_oauth_authorization_url
-
-Used to generate a request token and return an authorization URL that should be
-presented to the user to authorize the token.
-
-B<This method is demeed deprecated and should not be used>. Instead use
-$client->get_oauth_1_0a_handler()->get_authorization_url().
-
-=head3 Parameters
-
-A callback URL to which the user will be redirect after granting access. A value
-"oob" out-of-band can be passed to have the server print out the verification
-code in screen.
-
-=head3 Returns
-
-The URL that should be presented to the user to grant access to the application.
-
-=head2 upgrade_oauth_token
-
-Used to upgrade a request token (generated by the
-L<get_oauth_authorization_url>)
-to an access token, that can then be used to access the API via OAuth.
-
-B<This method is demeed deprecated and should not be used>. Instead use
-$client->get_oauth_1_0a_handler()->issue_access_token().
-
-=head3 Parameters
-
-A verification code returned by the server.
 
 =head1 LICENSE AND COPYRIGHT
 

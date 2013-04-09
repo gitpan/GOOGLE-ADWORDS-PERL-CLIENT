@@ -1,8 +1,14 @@
+2.9.0
+- Removed support for OAuth1.0a.
+- Added support for OAuth2 Service Accounts.
+- Removed support for sunset v201206 version.
+- Bug fixes to issues #56, #57, #58.
+
 2.8.1
 - Bug fixes to issues #54 and #55.
 
 2.8.0
-- Added examples and support for v201302
+- Added examples and support for v201302.
 
 2.7.6
 - Added examples for supporting enhanced campaigns through forward compatibility
