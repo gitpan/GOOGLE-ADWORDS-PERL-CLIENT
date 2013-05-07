@@ -23,7 +23,7 @@ use File::HomeDir;
 use File::Spec::Functions;
 
 # Main version number that the rest of the modules pick up off of.
-our $VERSION = qv("2.9.0");
+our $VERSION = qv("2.10.0");
 
 use constant DEFAULT_PROPERTIES_FILE => catfile(File::HomeDir->my_home,
     "adwords.properties");
@@ -51,15 +51,14 @@ use constant MAX_NUM_OF_REQUEST_STATS => 500;
 our %SERVICE_TO_GROUP = (
   AdExtensionOverrideService => "cm",
   AdGroupAdService => "cm",
+  AdGroupBidModifierService => "cm",
   AdGroupCriterionService => "cm",
   AdGroupFeedService => "cm",
   AdGroupService => "cm",
   AdParamService => "cm",
   AlertService => "mcm",
-  BidLandscapeService => "cm",
   BudgetOrderService => "billing",
   BudgetService => "cm",
-  BulkMutateJobService => "job",
   CampaignAdExtensionService => "cm",
   CampaignCriterionService => "cm",
   CampaignFeedService => "cm",
@@ -68,7 +67,6 @@ our %SERVICE_TO_GROUP = (
   CampaignTargetService => "cm",
   ConstantDataService => "cm",
   ConversionTrackerService => "cm",
-  CreateAccountService => "mcm",
   CustomerService => "mcm",
   CustomerSyncService => "ch",
   DataService => "cm",
@@ -82,9 +80,8 @@ our %SERVICE_TO_GROUP = (
   MediaService => "cm",
   MutateJobService => "cm",
   ReportDefinitionService => "cm",
-  ServicedAccountService => "mcm",
   SharedCriterionService => "cm",
-  BulkOpportunityService => "o",
+  SharedSetService => "cm",
   TargetingIdeaService => "o",
   TrafficEstimatorService => "o",
   UserListService => "cm",

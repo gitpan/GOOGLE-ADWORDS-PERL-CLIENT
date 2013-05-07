@@ -84,7 +84,7 @@ Google::Ads::AdWords::v201302::StringLengthError
 Perl data type class for the XML Schema defined complexType
 StringLengthError from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-A list of all errors associated with the @ContentsString constraint. 
+Errors associated with the length of the given string being out of bounds. 
 
 
 

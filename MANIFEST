@@ -32,12 +32,12 @@ examples/v201209/campaign_management/get_all_disapproved_ads_with_awql.pl
 examples/v201209/campaign_management/promote_experiment.pl
 examples/v201209/campaign_management/set_ad_parameters.pl
 examples/v201209/campaign_management/set_bid_modifier.pl
-examples/v201209/campaign_management/set_campaign_enhanced.pl
 examples/v201209/campaign_management/validate_text_ad.pl
 examples/v201209/error_handling/handle_captcha_challenge.pl
 examples/v201209/error_handling/handle_partial_failures.pl
 examples/v201209/error_handling/handle_server_faults.pl
 examples/v201209/error_handling/handle_two_factor_authorization_error.pl
+examples/v201209/migration/set_campaign_enhanced.pl
 examples/v201209/misc/get_all_images_and_video.pl
 examples/v201209/misc/upload_image.pl
 examples/v201209/misc/use_hashes.pl
@@ -61,8 +61,10 @@ examples/v201302/account_management/create_account.pl
 examples/v201302/account_management/get_account_alerts.pl
 examples/v201302/account_management/get_account_changes.pl
 examples/v201302/account_management/get_account_hierarchy.pl
+examples/v201302/advanced_operations/add_ad_group_bid_modifier.pl
 examples/v201302/advanced_operations/add_click_to_download_ad.pl
 examples/v201302/advanced_operations/add_sitelinks.pl
+examples/v201302/advanced_operations/get_ad_group_bid_modifier.pl
 examples/v201302/basic_operations/add_ad_groups.pl
 examples/v201302/basic_operations/add_campaigns.pl
 examples/v201302/basic_operations/add_keywords.pl
@@ -89,12 +91,13 @@ examples/v201302/campaign_management/get_all_disapproved_ads_with_awql.pl
 examples/v201302/campaign_management/promote_experiment.pl
 examples/v201302/campaign_management/set_ad_parameters.pl
 examples/v201302/campaign_management/set_bid_modifier.pl
-examples/v201302/campaign_management/set_campaign_enhanced.pl
 examples/v201302/campaign_management/validate_text_ad.pl
 examples/v201302/error_handling/handle_captcha_challenge.pl
 examples/v201302/error_handling/handle_partial_failures.pl
 examples/v201302/error_handling/handle_server_faults.pl
 examples/v201302/error_handling/handle_two_factor_authorization_error.pl
+examples/v201302/migration/set_campaign_enhanced.pl
+examples/v201302/migration/upgrade_legacy_extensions.pl
 examples/v201302/misc/get_all_images_and_video.pl
 examples/v201302/misc/upload_image.pl
 examples/v201302/misc/use_hashes.pl
@@ -178,6 +181,18 @@ lib/Google/Ads/AdWords/v201209/AdGroupAdService/ResponseHeader.pm
 lib/Google/Ads/AdWords/v201209/AdGroupBidLandscape.pm
 lib/Google/Ads/AdWords/v201209/AdGroupBidLandscape/Type.pm
 lib/Google/Ads/AdWords/v201209/AdGroupBidLandscapePage.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifier.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierOperation.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierPage.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierReturnValue.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/AdGroupBidModifierServiceInterfacePort.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/ApiExceptionFault.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/get.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/getResponse.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/mutate.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/mutateResponse.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/RequestHeader.pm
+lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/ResponseHeader.pm
 lib/Google/Ads/AdWords/v201209/AdGroupBids.pm
 lib/Google/Ads/AdWords/v201209/AdGroupChangeData.pm
 lib/Google/Ads/AdWords/v201209/AdGroupCriterion.pm
@@ -301,6 +316,7 @@ lib/Google/Ads/AdWords/v201209/BiddingTransitionError/Reason.pm
 lib/Google/Ads/AdWords/v201209/BidLandscape.pm
 lib/Google/Ads/AdWords/v201209/BidLandscape/LandscapePoint.pm
 lib/Google/Ads/AdWords/v201209/BidLandscapeAttribute.pm
+lib/Google/Ads/AdWords/v201209/BidModifierSource.pm
 lib/Google/Ads/AdWords/v201209/BidMultiplier.pm
 lib/Google/Ads/AdWords/v201209/BidSource.pm
 lib/Google/Ads/AdWords/v201209/BillingAccount.pm
@@ -912,6 +928,7 @@ lib/Google/Ads/AdWords/v201209/TriggerTimeSpec.pm
 lib/Google/Ads/AdWords/v201209/Type_AttributeMapEntry.pm
 lib/Google/Ads/AdWords/v201209/TypeMaps/AdExtensionOverrideService.pm
 lib/Google/Ads/AdWords/v201209/TypeMaps/AdGroupAdService.pm
+lib/Google/Ads/AdWords/v201209/TypeMaps/AdGroupBidModifierService.pm
 lib/Google/Ads/AdWords/v201209/TypeMaps/AdGroupCriterionService.pm
 lib/Google/Ads/AdWords/v201209/TypeMaps/AdGroupService.pm
 lib/Google/Ads/AdWords/v201209/TypeMaps/AdParamService.pm
@@ -1026,6 +1043,18 @@ lib/Google/Ads/AdWords/v201302/AdGroupAdService/ResponseHeader.pm
 lib/Google/Ads/AdWords/v201302/AdGroupBidLandscape.pm
 lib/Google/Ads/AdWords/v201302/AdGroupBidLandscape/Type.pm
 lib/Google/Ads/AdWords/v201302/AdGroupBidLandscapePage.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifier.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierOperation.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierPage.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierReturnValue.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/AdGroupBidModifierServiceInterfacePort.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/ApiExceptionFault.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/get.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/getResponse.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/mutate.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/mutateResponse.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/RequestHeader.pm
+lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/ResponseHeader.pm
 lib/Google/Ads/AdWords/v201302/AdGroupBids.pm
 lib/Google/Ads/AdWords/v201302/AdGroupChangeData.pm
 lib/Google/Ads/AdWords/v201302/AdGroupCriterion.pm
@@ -1174,6 +1203,7 @@ lib/Google/Ads/AdWords/v201302/BiddingTransitionError/Reason.pm
 lib/Google/Ads/AdWords/v201302/BidLandscape.pm
 lib/Google/Ads/AdWords/v201302/BidLandscape/LandscapePoint.pm
 lib/Google/Ads/AdWords/v201302/BidLandscapeAttribute.pm
+lib/Google/Ads/AdWords/v201302/BidModifierSource.pm
 lib/Google/Ads/AdWords/v201302/BidMultiplier.pm
 lib/Google/Ads/AdWords/v201302/Bids.pm
 lib/Google/Ads/AdWords/v201302/BidSource.pm
@@ -1937,6 +1967,7 @@ lib/Google/Ads/AdWords/v201302/TriggerTimeSpec.pm
 lib/Google/Ads/AdWords/v201302/Type_AttributeMapEntry.pm
 lib/Google/Ads/AdWords/v201302/TypeMaps/AdExtensionOverrideService.pm
 lib/Google/Ads/AdWords/v201302/TypeMaps/AdGroupAdService.pm
+lib/Google/Ads/AdWords/v201302/TypeMaps/AdGroupBidModifierService.pm
 lib/Google/Ads/AdWords/v201302/TypeMaps/AdGroupCriterionService.pm
 lib/Google/Ads/AdWords/v201302/TypeMaps/AdGroupFeedService.pm
 lib/Google/Ads/AdWords/v201302/TypeMaps/AdGroupService.pm
@@ -2030,7 +2061,6 @@ lib/Google/Ads/SOAP/Generator/Template/element/POD/structure.tt
 lib/Google/Ads/SOAP/Generator/TypemapVisitor.pm
 lib/Google/Ads/SOAP/Typelib/ComplexType.pm
 MANIFEST			This list of files
-PRESUBMIT.py
 README
 t/001_require.t
 t/010_AuthTokenHandler.t

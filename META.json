@@ -61,35 +61,35 @@
    "provides" : {
       "Google::Ads::AdWords::AuthTokenHandler" : {
          "file" : "lib/Google/Ads/AdWords/AuthTokenHandler.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::AdWords::Client" : {
          "file" : "lib/Google/Ads/AdWords/Client.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::AdWords::Constants" : {
          "file" : "lib/Google/Ads/AdWords/Constants.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::AdWords::Deserializer" : {
          "file" : "lib/Google/Ads/AdWords/Deserializer.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::AdWords::FaultDetail" : {
          "file" : "lib/Google/Ads/AdWords/FaultDetail.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::AdWords::Logging" : {
          "file" : "lib/Google/Ads/AdWords/Logging.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::AdWords::OAuth2ApplicationsHandler" : {
          "file" : "lib/Google/Ads/AdWords/OAuth2ApplicationsHandler.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::AdWords::OAuth2ServiceAccountsHandler" : {
          "file" : "lib/Google/Ads/AdWords/OAuth2ServiceAccountsHandler.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::AdWords::RequestStats" : {
          "file" : "lib/Google/Ads/AdWords/RequestStats.pm",
@@ -97,7 +97,7 @@
       },
       "Google::Ads::AdWords::Serializer" : {
          "file" : "lib/Google/Ads/AdWords/Serializer.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::AdWords::v201209::AccessReason" : {
          "file" : "lib/Google/Ads/AdWords/v201209/AccessReason.pm",
@@ -309,6 +309,54 @@
       },
       "Google::Ads::AdWords::v201209::AdGroupBidLandscapePage" : {
          "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidLandscapePage.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifier" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifier.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierOperation.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierPage.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierReturnValue.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierService::AdGroupBidModifierServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/AdGroupBidModifierServiceInterfacePort.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/ApiExceptionFault.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/RequestHeader.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/ResponseHeader.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/get.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/getResponse.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/mutate.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::AdGroupBidModifierService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/AdGroupBidModifierService/mutateResponse.pm",
          "version" : 0
       },
       "Google::Ads::AdWords::v201209::AdGroupBids" : {
@@ -773,6 +821,10 @@
       },
       "Google::Ads::AdWords::v201209::BidLandscapeAttribute" : {
          "file" : "lib/Google/Ads/AdWords/v201209/BidLandscapeAttribute.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201209::BidModifierSource" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/BidModifierSource.pm",
          "version" : 0
       },
       "Google::Ads::AdWords::v201209::BidMultiplier" : {
@@ -3247,6 +3299,10 @@
          "file" : "lib/Google/Ads/AdWords/v201209/TypeMaps/AdGroupAdService.pm",
          "version" : 0
       },
+      "Google::Ads::AdWords::v201209::TypeMaps::AdGroupBidModifierService" : {
+         "file" : "lib/Google/Ads/AdWords/v201209/TypeMaps/AdGroupBidModifierService.pm",
+         "version" : 0
+      },
       "Google::Ads::AdWords::v201209::TypeMaps::AdGroupCriterionService" : {
          "file" : "lib/Google/Ads/AdWords/v201209/TypeMaps/AdGroupCriterionService.pm",
          "version" : 0
@@ -3701,6 +3757,54 @@
       },
       "Google::Ads::AdWords::v201302::AdGroupBidLandscapePage" : {
          "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidLandscapePage.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifier" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifier.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierOperation.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierPage.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierReturnValue.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierService::AdGroupBidModifierServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/AdGroupBidModifierServiceInterfacePort.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/ApiExceptionFault.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/RequestHeader.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/ResponseHeader.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/get.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/getResponse.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/mutate.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::AdGroupBidModifierService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/AdGroupBidModifierService/mutateResponse.pm",
          "version" : 0
       },
       "Google::Ads::AdWords::v201302::AdGroupBids" : {
@@ -4245,6 +4349,10 @@
       },
       "Google::Ads::AdWords::v201302::BidLandscapeAttribute" : {
          "file" : "lib/Google/Ads/AdWords/v201302/BidLandscapeAttribute.pm",
+         "version" : 0
+      },
+      "Google::Ads::AdWords::v201302::BidModifierSource" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/BidModifierSource.pm",
          "version" : 0
       },
       "Google::Ads::AdWords::v201302::BidMultiplier" : {
@@ -7347,6 +7455,10 @@
          "file" : "lib/Google/Ads/AdWords/v201302/TypeMaps/AdGroupAdService.pm",
          "version" : 0
       },
+      "Google::Ads::AdWords::v201302::TypeMaps::AdGroupBidModifierService" : {
+         "file" : "lib/Google/Ads/AdWords/v201302/TypeMaps/AdGroupBidModifierService.pm",
+         "version" : 0
+      },
       "Google::Ads::AdWords::v201302::TypeMaps::AdGroupCriterionService" : {
          "file" : "lib/Google/Ads/AdWords/v201302/TypeMaps/AdGroupCriterionService.pm",
          "version" : 0
@@ -7625,7 +7737,7 @@
       },
       "Google::Ads::Common::AuthError" : {
          "file" : "lib/Google/Ads/Common/AuthError.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::AuthHandlerInterface" : {
          "file" : "lib/Google/Ads/Common/AuthHandlerInterface.pm",
@@ -7633,43 +7745,43 @@
       },
       "Google::Ads::Common::AuthTokenHandler" : {
          "file" : "lib/Google/Ads/Common/AuthTokenHandler.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::CaptchaRequiredError" : {
          "file" : "lib/Google/Ads/Common/CaptchaRequiredError.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::Constants" : {
          "file" : "lib/Google/Ads/Common/Constants.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::ErrorUtils" : {
          "file" : "lib/Google/Ads/Common/ErrorUtils.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::HTTPTransport" : {
          "file" : "lib/Google/Ads/Common/HTTPTransport.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::MapUtils" : {
          "file" : "lib/Google/Ads/Common/MapUtils.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::MediaUtils" : {
          "file" : "lib/Google/Ads/Common/MediaUtils.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::OAuth2ApplicationsHandler" : {
          "file" : "lib/Google/Ads/Common/OAuth2ApplicationsHandler.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::OAuth2BaseHandler" : {
          "file" : "lib/Google/Ads/Common/OAuth2BaseHandler.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::OAuth2ServiceAccountsHandler" : {
          "file" : "lib/Google/Ads/Common/OAuth2ServiceAccountsHandler.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::OAuthApplicationsHandlerInterface" : {
          "file" : "lib/Google/Ads/Common/OAuthApplicationsHandlerInterface.pm",
@@ -7677,15 +7789,15 @@
       },
       "Google::Ads::Common::ReportDownloadError" : {
          "file" : "lib/Google/Ads/Common/ReportDownloadError.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::ReportUtils" : {
          "file" : "lib/Google/Ads/Common/ReportUtils.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::Common::XPathSAXParser" : {
          "file" : "lib/Google/Ads/Common/XPathSAXParser.pm",
-         "version" : "v2.9.0"
+         "version" : "v2.10.0"
       },
       "Google::Ads::SOAP::Deserializer::MessageParser" : {
          "file" : "lib/Google/Ads/SOAP/Deserializer/MessageParser.pm",
@@ -7710,5 +7822,5 @@
          "http://apache.org/licenses/LICENSE-2.0"
       ]
    },
-   "version" : "v2.9.0"
+   "version" : "v2.10.0"
 }

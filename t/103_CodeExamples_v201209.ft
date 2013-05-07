@@ -124,7 +124,7 @@ ok(add_experiment($client, $campaign_id, $ad_group_id, $keyword_id),
 require qw(examples/v201209/campaign_management/set_ad_parameters.pl);
 ok(set_ad_parameters($client, $ad_group_id, $keyword_id),
    "Test of set_ad_parameters example");
-require qw(examples/v201209/campaign_management/set_campaign_enhanced.pl);
+require qw(examples/v201209/migration/set_campaign_enhanced.pl);
 ok(set_campaign_enhanced($client, $campaign_2_id),
    "Test of set_campaign_enhanced example");
 require qw(examples/v201209/campaign_management/set_bid_modifier.pl);

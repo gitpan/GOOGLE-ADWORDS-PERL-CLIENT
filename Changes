@@ -1,3 +1,9 @@
+2.10.0
+- Added support and examples for AdGroupBidModifierService.
+- Created a new migration examples folder and moved set_campaign_enhanced.pl
+  into it.
+- Added an example for upgrading legacy sitelinks.
+
 2.9.0
 - Removed support for OAuth1.0a.
 - Added support for OAuth2 Service Accounts.

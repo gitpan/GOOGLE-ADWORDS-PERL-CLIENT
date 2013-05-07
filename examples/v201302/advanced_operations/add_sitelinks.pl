@@ -148,12 +148,12 @@ sub create_sitelinks_feed_items {
   }
 }
 
-# TODO(pmatthews): add link to reference page.
+# See https://developers.google.com/adwords/api/docs/appendix/placeholders
 # See the Placeholder reference page for a list of all the placeholder types
 # and fields.
 use constant PLACEHOLDER_SITELINKS => 1;
 
-# TODO(pmatthews): add link to reference page.
+# See https://developers.google.com/adwords/api/docs/appendix/placeholders
 # See the Placeholder reference page for a list of all the placeholder types
 # and fields.
 use constant PLACEHOLDER_FIELD_SITELINK_LINK_TEXT => 1;
