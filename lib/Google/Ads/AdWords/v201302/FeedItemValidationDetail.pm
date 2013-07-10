@@ -76,7 +76,7 @@ Google::Ads::AdWords::v201302::FeedItemValidationDetail
 Perl data type class for the XML Schema defined complexType
 FeedItemValidationDetail from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+Contains offline-validation and approval results for a given FeedItem and FeedMapping. Each validation detail indicates any issues found on the feed item when used in the context of the feed mapping. 
 
 
 

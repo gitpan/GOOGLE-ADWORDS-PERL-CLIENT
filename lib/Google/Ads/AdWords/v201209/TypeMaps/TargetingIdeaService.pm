@@ -88,7 +88,6 @@ our $typemap_1 = {
                'get/selector/searchParameters[RelatedToQuerySearchParameter]' => 'Google::Ads::AdWords::v201209::RelatedToQuerySearchParameter',
                'getBulkKeywordIdeasResponse/rval/entries/data/value[CriterionAttribute]/value[Location]/parentLocations/parentLocations/targetingStatus' => 'Google::Ads::AdWords::v201209::LocationTargetingStatus',
                'getBulkKeywordIdeasResponse/rval/entries/data/value[CriterionAttribute]/value[Location]/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/displayType' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-               'Fault/detail/ApiExceptionFault/errors[CollectionSizeError]/reason' => 'Google::Ads::AdWords::v201209::CollectionSizeError::Reason',
                'getBulkKeywordIdeasResponse/rval/entries/data/value[CriterionAttribute]/value[Location]/displayType' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'Fault/detail/ApiExceptionFault/errors[AdGroupCriterionLimitExceeded]/ApiError.Type' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'getBulkKeywordIdeas/selector/searchParameters[DeviceTypeSearchParameter]' => 'Google::Ads::AdWords::v201209::DeviceTypeSearchParameter',

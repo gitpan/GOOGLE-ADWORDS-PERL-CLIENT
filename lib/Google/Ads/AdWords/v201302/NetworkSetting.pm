@@ -76,7 +76,7 @@ Google::Ads::AdWords::v201302::NetworkSetting
 Perl data type class for the XML Schema defined complexType
 NetworkSetting from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-Network settings for a Campaign. <p class="caution"><b>Note:</b> Setting {@code targetContentContextual} for new campaigns or existing campaigns that have enabled Flexible Reach ({@code TargetRestrictSetting.useAdGroup=true}) will fail with {@code TargetError.CANNOT_MODIFY_CONTENT_CONTEXTUAL}.</p> 
+Network settings for a Campaign. 
 
 
 

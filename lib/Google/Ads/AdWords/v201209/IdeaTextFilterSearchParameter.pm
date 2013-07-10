@@ -74,7 +74,7 @@ Google::Ads::AdWords::v201209::IdeaTextFilterSearchParameter
 Perl data type class for the XML Schema defined complexType
 IdeaTextFilterSearchParameter from the namespace https://adwords.google.com/api/adwords/o/v201209.
 
-A {@link SearchParameter} for {@code KEYWORD} {@link IdeaType}s that specifies a collection of strings by which the results should be constrained. This guarantees that each idea in the result will match at least one of the {@code included} values. For this {@link SearchParameter}, excluded items will always take priority over included ones. This can handle a maximum of 200 (included + excluded) elements. <p>This element is supported by following {@link IdeaType}s: KEYWORD. <p>This element is supported by following {@link RequestType}s: IDEAS. 
+A {@link SearchParameter} for {@code KEYWORD} {@link IdeaType}s that specifies a collection of strings by which the results should be constrained. This guarantees that each idea in the result will match at least one of the {@code included} values. For this {@link SearchParameter}, excluded items will always take priority over included ones. This can handle a maximum of 200 (included + excluded) elements. <p>This element is supported by following {@link IdeaType}s: KEYWORD. <p>This element is supported by following {@link RequestType}s: IDEAS, STATS. 
 
 
 

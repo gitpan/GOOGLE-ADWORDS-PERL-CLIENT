@@ -84,7 +84,7 @@ Google::Ads::AdWords::v201302::MatchesRegexError
 Perl data type class for the XML Schema defined complexType
 MatchesRegexError from the namespace https://adwords.google.com/api/adwords/o/v201302.
 
-A list of all errors associated with the {@link com.google.ads.api.services.common.validation.constraints.MatchesRegex} constraint. 
+Errors associated with a given string not matching the provided regular expression. 
 
 
 

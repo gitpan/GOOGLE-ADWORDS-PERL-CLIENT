@@ -66,7 +66,7 @@ Google::Ads::AdWords::v201302::TargetingSettingDetail
 Perl data type class for the XML Schema defined complexType
 TargetingSettingDetail from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-Specifies if we should serve ads broadly, ignoring positive criteria of this type group, or if we should restrict to only serve ads that match the criteria of this type group specified in the AdGroup or Campaign. 
+Specifies if criteria of this type group should be used to restrict targeting, or if ads can serve anywhere and criteria are only used in determining the bid. 
 
 
 

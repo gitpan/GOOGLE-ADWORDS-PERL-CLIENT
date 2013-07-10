@@ -22,4 +22,18 @@ use version;
 # Main version number that the rest of the modules on this package pick up of.
 our $VERSION = qv("2.10.0");
 
+use constant CLIENT_LOGIN_DEPRECATION_MESSAGE =>
+    "ClientLogin has been officially deprecated" .
+    " as of April 20, 2012, for more information consult our documentation at" .
+    " https://developers.google.com/accounts/docs/AuthForInstalledApps.\n" .
+    "Instead, we strongly recommend you migrate to OAuth2.0, read our" .
+    " client library guide to get started today at" .
+    " https://code.google.com/p/google-api-adwords-perl/wiki/OAuth2";
+
+use constant NO_AUTH_HANDLER_IS_SETUP_MESSAGE =>
+    "The library couldn't find any authorization mechanism set up to " .
+    "properly sign the requests against the API. Please read the following " .
+    "guide on how to setup OAuth2 " .
+    "https://code.google.com/p/google-api-adwords-perl/wiki/OAuth2 ";
+
 1;

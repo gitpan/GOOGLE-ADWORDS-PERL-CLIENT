@@ -76,7 +76,7 @@ Google::Ads::AdWords::v201302::FeedAttribute
 Perl data type class for the XML Schema defined complexType
 FeedAttribute from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+FeedAttributes define the types of data expected to be present in a Feed. A single FeedAttribute specifies the expected type of the FeedItemAttributes with the same FeedAttributeId. Optionally, a FeedAttribute can be marked as being part of a FeedItem's unique key. 
 
 
 

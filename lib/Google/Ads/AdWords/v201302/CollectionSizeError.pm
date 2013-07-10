@@ -5,7 +5,7 @@ use warnings;
 
 __PACKAGE__->_set_element_form_qualified(1);
 
-sub get_xmlns { 'https://adwords.google.com/api/adwords/o/v201302' };
+sub get_xmlns { 'https://adwords.google.com/api/adwords/cm/v201302' };
 
 our $XML_ATTRIBUTE_CLASS;
 undef $XML_ATTRIBUTE_CLASS;
@@ -28,14 +28,12 @@ my %fieldPath_of :ATTR(:get<fieldPath>);
 my %trigger_of :ATTR(:get<trigger>);
 my %errorString_of :ATTR(:get<errorString>);
 my %ApiError__Type_of :ATTR(:get<ApiError__Type>);
-my %reason_of :ATTR(:get<reason>);
 
 __PACKAGE__->_factory(
     [ qw(        fieldPath
         trigger
         errorString
         ApiError__Type
-        reason
 
     ) ],
     {
@@ -43,14 +41,12 @@ __PACKAGE__->_factory(
         'trigger' => \%trigger_of,
         'errorString' => \%errorString_of,
         'ApiError__Type' => \%ApiError__Type_of,
-        'reason' => \%reason_of,
     },
     {
         'fieldPath' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
         'trigger' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
         'errorString' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
         'ApiError__Type' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-        'reason' => 'Google::Ads::AdWords::v201302::CollectionSizeError::Reason',
     },
     {
 
@@ -58,7 +54,6 @@ __PACKAGE__->_factory(
         'trigger' => 'trigger',
         'errorString' => 'errorString',
         'ApiError__Type' => 'ApiError.Type',
-        'reason' => 'reason',
     }
 );
 
@@ -82,9 +77,9 @@ Google::Ads::AdWords::v201302::CollectionSizeError
 =head1 DESCRIPTION
 
 Perl data type class for the XML Schema defined complexType
-CollectionSizeError from the namespace https://adwords.google.com/api/adwords/o/v201302.
+CollectionSizeError from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-A list of all errors associated with the @ContentsSize constraint. 
+Errors associated with the size of the given collection being out of bounds. 
 
 
 
@@ -95,9 +90,6 @@ The following properties may be accessed using get_PROPERTY / set_PROPERTY
 methods:
 
 =over
-
-=item * reason
-
 
 
 

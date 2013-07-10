@@ -15,9 +15,11 @@
 package Google::Ads::AdWords::Deserializer;
 
 use strict;
+use utf8;
 use version;
-use base qw(SOAP::WSDL::Deserializer::XSD);
 use Scalar::Util qw(blessed);
+
+use base qw(SOAP::WSDL::Deserializer::XSD);
 
 # The following needs to be on one line because CPAN uses a particularly hacky
 # eval() to determine module versions.
@@ -34,6 +36,7 @@ sub deserialize {
   my $self = shift;
   my ($response_xml) = @_;
   my $client = $self->get_client();
+  utf8::is_utf8 $response_xml and utf8::encode $response_xml;
 
   Google::Ads::AdWords::Logging::get_soap_logger->info("Incoming response:\n" .
       $response_xml);

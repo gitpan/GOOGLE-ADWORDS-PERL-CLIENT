@@ -56,8 +56,8 @@ our $typemap_1 = {
                'Fault/detail/ApiExceptionFault/errors[NotEmptyError]/ApiError.Type' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'Fault/detail/ApiExceptionFault/errors[SizeLimitError]/ApiError.Type' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'get' => 'Google::Ads::AdWords::v201209::CustomerSyncService::get',
-               'ApiExceptionFault/message' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'Fault/detail/ApiExceptionFault/errors[DistinctError]/ApiError.Type' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
+               'ApiExceptionFault/message' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'getResponse/rval/changedCampaigns/changedAdGroups/changedAds' => 'SOAP::WSDL::XSD::Typelib::Builtin::long',
                'Fault' => 'SOAP::WSDL::SOAP::Typelib::Fault11',
                'getResponse/rval/changedCampaigns/campaignTargetingChanged' => 'SOAP::WSDL::XSD::Typelib::Builtin::boolean',
@@ -141,8 +141,8 @@ our $typemap_1 = {
                'get/selector/dateTimeRange/min' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'Fault/detail/ApiExceptionFault/errors[RateExceededError]/rateName' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'ApiExceptionFault/errors/trigger' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-               'get/selector' => 'Google::Ads::AdWords::v201209::CustomerSyncSelector',
                'Fault/detail/ApiExceptionFault/errors[CustomerSyncError]' => 'Google::Ads::AdWords::v201209::CustomerSyncError',
+               'get/selector' => 'Google::Ads::AdWords::v201209::CustomerSyncSelector',
                'get/selector/campaignIds' => 'SOAP::WSDL::XSD::Typelib::Builtin::long'
              };
 ;

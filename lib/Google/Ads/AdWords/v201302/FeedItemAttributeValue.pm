@@ -81,7 +81,7 @@ Google::Ads::AdWords::v201302::FeedItemAttributeValue
 Perl data type class for the XML Schema defined complexType
 FeedItemAttributeValue from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+Represents a feed item's value for a particular feed attribute. A feed item's value is composed of a collection of these attribute values. 
 
 
 

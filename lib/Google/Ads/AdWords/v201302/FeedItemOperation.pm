@@ -74,7 +74,7 @@ Google::Ads::AdWords::v201302::FeedItemOperation
 Perl data type class for the XML Schema defined complexType
 FeedItemOperation from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+FeedItem service mutate operation. 
 
 
 

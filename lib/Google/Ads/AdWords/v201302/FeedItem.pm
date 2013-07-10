@@ -96,7 +96,7 @@ Google::Ads::AdWords::v201302::FeedItem
 Perl data type class for the XML Schema defined complexType
 FeedItem from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+Represents an item in a feed. 
 
 
 

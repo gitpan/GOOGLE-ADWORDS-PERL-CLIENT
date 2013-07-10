@@ -94,7 +94,7 @@ Google::Ads::AdWords::v201302::MobileDevice
 Perl data type class for the XML Schema defined complexType
 MobileDevice from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-Represents a Mobile Device Criterion. <p>A criterion of this type can only be created using an ID. A criterion of this type is only targetable. <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span> <span class="constraint Beta">This is a beta feature.</span> 
+Represents a Mobile Device Criterion. <p>A criterion of this type can only be created using an ID. A criterion of this type is only targetable. <span class="constraint AdxEnabled">This is enabled for AdX.</span> <span class="constraint Beta">This is a beta feature.</span> 
 
 
 

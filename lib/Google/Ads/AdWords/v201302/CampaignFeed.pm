@@ -81,7 +81,7 @@ Google::Ads::AdWords::v201302::CampaignFeed
 Perl data type class for the XML Schema defined complexType
 CampaignFeed from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-CampaignFeeds are used to link a feed to an campaign using a matching function, making the feed's feed items available in the campaign's ads for substitution. 
+CampaignFeeds are used to link a feed to a campaign using a matching function, making the feed's feed items available in the campaign's ads for substitution. 
 
 
 

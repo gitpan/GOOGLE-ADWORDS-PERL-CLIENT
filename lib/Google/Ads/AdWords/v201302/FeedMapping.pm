@@ -81,7 +81,7 @@ Google::Ads::AdWords::v201302::FeedMapping
 Perl data type class for the XML Schema defined complexType
 FeedMapping from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-A FeedMapping represents a mapping between feed attributes in a specific feed and placeholder fields for a specific placeholder type. This will tell the ads serving system what parts of the feed item should be used when populating a placeholder. Without this mapping the placeholder cannot be populated and the extension can not be displayed. 
+A FeedMapping represents a mapping between feed attributes in a specific feed and placeholder fields for a specific placeholder type. This will tell the ads serving system which parts of the feed item should be used when populating a placeholder. Without this mapping the placeholder cannot be populated and the extension can not be displayed. <p>For a list of feed placeholders, see <a href="/adwords/api/docs/appendix/placeholders"> https://developers.google.com/adwords/api/docs/appendix/placeholders </a></p> 
 
 
 

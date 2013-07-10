@@ -81,7 +81,7 @@ Google::Ads::AdWords::v201302::AdGroupFeed
 Perl data type class for the XML Schema defined complexType
 AdGroupFeed from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+AdGroupFeeds are used to link a feed to an adgroup using a matching function, making the feed's feed items available in the adgroup's ads for substitution. 
 
 
 

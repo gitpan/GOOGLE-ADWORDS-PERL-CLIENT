@@ -81,7 +81,7 @@ Google::Ads::AdWords::v201209::AdGroupBidModifier
 Perl data type class for the XML Schema defined complexType
 AdGroupBidModifier from the namespace https://adwords.google.com/api/adwords/cm/v201209.
 
-Represents an adgroup level bid modifier override for campaign level criterion bid modifier values. <span class="constraint AdxEnabled">This is disabled for AdX.</span> 
+Represents an adgroup level bid modifier override for campaign level criterion bid modifier values. 
 
 
 

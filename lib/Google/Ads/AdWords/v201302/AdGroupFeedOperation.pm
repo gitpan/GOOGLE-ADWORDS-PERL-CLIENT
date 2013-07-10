@@ -74,7 +74,7 @@ Google::Ads::AdWords::v201302::AdGroupFeedOperation
 Perl data type class for the XML Schema defined complexType
 AdGroupFeedOperation from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+Operation used to create or mutate an AdGroupFeed. 
 
 
 

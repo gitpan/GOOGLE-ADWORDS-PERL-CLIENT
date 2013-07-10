@@ -15,11 +15,14 @@
 package Google::Ads::AdWords::Serializer;
 
 use strict;
+use utf8;
 use version;
+
 use base qw(SOAP::WSDL::Serializer::XSD);
 
 # The following needs to be on one line because CPAN uses a particularly hacky
 # eval() to determine module versions.
+use Google::Ads::Common::Constants;
 use Google::Ads::AdWords::Constants; our $VERSION = ${Google::Ads::AdWords::Constants::VERSION};
 use Google::Ads::AdWords::Logging;
 
@@ -38,7 +41,16 @@ sub serialize {
   my $self = shift;
   my $client = $self->get_client();
   my $request = $self->SUPER::serialize(@_);
+  utf8::is_utf8 $request and utf8::encode $request;
+
   my $sanitized_request = __scrub_request($request);
+
+  my $auth_handler = $client->_get_auth_handler();
+  if ($auth_handler && $client->_get_auth_handler()->isa(
+      "Google::Ads::Common::AuthTokenHandler")) {
+    Google::Ads::AdWords::Logging::get_soap_logger->warn(
+        Google::Ads::Common::Constants::CLIENT_LOGIN_DEPRECATION_MESSAGE);
+  }
 
   Google::Ads::AdWords::Logging::get_soap_logger->info("Outgoing Request:\n" .
       $sanitized_request);

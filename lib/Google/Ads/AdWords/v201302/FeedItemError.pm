@@ -84,7 +84,7 @@ Google::Ads::AdWords::v201302::FeedItemError
 Perl data type class for the XML Schema defined complexType
 FeedItemError from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+FeedItemService related errors. 
 
 
 

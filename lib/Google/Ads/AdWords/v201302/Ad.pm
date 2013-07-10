@@ -86,7 +86,7 @@ Google::Ads::AdWords::v201302::Ad
 Perl data type class for the XML Schema defined complexType
 Ad from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-The base class of all ad types. To update basic ad fields, you can construct an {@code Ad} object (instead of the ad's concrete type) with the appropriate fields set. <span class="constraint AdxEnabled">This is disabled for AdX when it is contained within Operators: ADD, SET.</span> 
+The base class of all ad types. To update basic ad fields, you can construct an {@code Ad} object (instead of the ad's concrete type) with the appropriate fields set. <span class="constraint AdxEnabled">This is enabled for AdX.</span> 
 
 
 

@@ -74,7 +74,7 @@ Google::Ads::AdWords::v201302::AdGroupFeedPage
 Perl data type class for the XML Schema defined complexType
 AdGroupFeedPage from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+The result of a call to AdGroupFeedService#get. Contains a list of associations between ad groups and feeds. 
 
 
 

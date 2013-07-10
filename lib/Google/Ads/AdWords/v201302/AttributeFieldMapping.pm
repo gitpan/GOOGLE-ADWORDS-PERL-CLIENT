@@ -66,7 +66,7 @@ Google::Ads::AdWords::v201302::AttributeFieldMapping
 Perl data type class for the XML Schema defined complexType
 AttributeFieldMapping from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-Represents a mapping between a feed attribute and a placeholder field 
+Represents a mapping between a feed attribute and a placeholder field. <p>For a list of feed placeholders, see <a href="/adwords/api/docs/appendix/placeholders"> https://developers.google.com/adwords/api/docs/appendix/placeholders </a></p> 
 
 
 

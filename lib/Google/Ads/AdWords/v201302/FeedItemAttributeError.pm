@@ -66,7 +66,7 @@ Google::Ads::AdWords::v201302::FeedItemAttributeError
 Perl data type class for the XML Schema defined complexType
 FeedItemAttributeError from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+Contains validation error details for a set of feed attributes. 
 
 
 

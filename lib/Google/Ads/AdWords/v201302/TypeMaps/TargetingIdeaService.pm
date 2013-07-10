@@ -90,7 +90,6 @@ our $typemap_1 = {
                'get/selector/searchParameters[RelatedToQuerySearchParameter]' => 'Google::Ads::AdWords::v201302::RelatedToQuerySearchParameter',
                'getBulkKeywordIdeasResponse/rval/entries/data/value[CriterionAttribute]/value[Location]/parentLocations/parentLocations/targetingStatus' => 'Google::Ads::AdWords::v201302::LocationTargetingStatus',
                'getBulkKeywordIdeasResponse/rval/entries/data/value[CriterionAttribute]/value[Location]/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/parentLocations/displayType' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
-               'Fault/detail/ApiExceptionFault/errors[CollectionSizeError]/reason' => 'Google::Ads::AdWords::v201302::CollectionSizeError::Reason',
                'getBulkKeywordIdeasResponse/rval/entries/data/value[CriterionAttribute]/value[Location]/displayType' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'Fault/detail/ApiExceptionFault/errors[AdGroupCriterionLimitExceeded]/ApiError.Type' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',
                'getResponse/rval/entries/data/value[BidLandscapeAttribute]/value[CriterionBidLandscape]/DataEntry.Type' => 'SOAP::WSDL::XSD::Typelib::Builtin::string',

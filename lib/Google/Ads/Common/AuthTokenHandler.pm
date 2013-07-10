@@ -109,6 +109,10 @@ sub set_auth_token {
 # Uses the ClientLogin web service to request a new auth token.
 sub issue_new_token {
   my ($self, $captcha_token, $captcha_code) = @_;
+
+  warnings::warnif("deprecated",
+      Google::Ads::Common::Constants::CLIENT_LOGIN_DEPRECATION_MESSAGE);
+
   my $error;
   my $service = uri_escape($self->_service())
     or $error = Google::Ads::Common::AuthError->new({

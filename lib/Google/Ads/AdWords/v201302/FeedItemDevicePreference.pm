@@ -61,7 +61,7 @@ Google::Ads::AdWords::v201302::FeedItemDevicePreference
 Perl data type class for the XML Schema defined complexType
 FeedItemDevicePreference from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+Represents a FeedItem device preference. 
 
 
 

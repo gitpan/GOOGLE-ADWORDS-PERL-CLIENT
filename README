@@ -163,8 +163,8 @@ authorization protocols:
     After setting access and refresh tokens the library will handle the refresh
     of access tokens automatically for you.
 
-    See the example use_oauth2.pl for a comprehensive example on how to use
-    this authorization protocol.
+    See the example examples/oauth/generate_offline_credentials.pl for a
+    comprehensive example on how to use this authorization protocol.
 
     OAuth2 for Service Accounts
 
@@ -295,9 +295,18 @@ before any other of the library modules.
 Where do I submit bug reports and/or feature requests?
 ---------------------------------------------------
 
-Use the issue tracker at
+Use the issue tracker at:
 
   http://code.google.com/p/google-api-adwords-perl/issues/list
+
+Questions can be asked on forum:
+
+  http://groups.google.com/group/adwords-api
+
+Make sure to subscribe to our Google Plus page for API change announcements and
+other news:
+
+  https://plus.google.com/+GoogleAdsDevelopers
 
 
 External Dependencies:

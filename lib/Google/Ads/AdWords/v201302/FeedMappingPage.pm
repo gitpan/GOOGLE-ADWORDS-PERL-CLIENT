@@ -74,7 +74,7 @@ Google::Ads::AdWords::v201302::FeedMappingPage
 Perl data type class for the XML Schema defined complexType
 FeedMappingPage from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-The result of a call to FeedMappingService#get 
+The result of a call to {@link FeedMappingService#get}. 
 
 
 

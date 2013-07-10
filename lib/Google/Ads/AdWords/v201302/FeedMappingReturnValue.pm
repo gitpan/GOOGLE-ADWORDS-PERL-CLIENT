@@ -69,7 +69,7 @@ Google::Ads::AdWords::v201302::FeedMappingReturnValue
 Perl data type class for the XML Schema defined complexType
 FeedMappingReturnValue from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-The result of a call to FeedMappingService#mutate. 
+The result of a call to {@link FeedMappingService#mutate}. 
 
 
 

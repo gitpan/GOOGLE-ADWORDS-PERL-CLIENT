@@ -1,3 +1,8 @@
+2.11.0
+- Added examples and support for v201306.
+- Added package Google::Ads::AdWords::Reports for reporting classes.
+- Removed units count from the Client, units are not longer used.
+
 2.10.0
 - Added support and examples for AdGroupBidModifierService.
 - Created a new migration examples folder and moved set_campaign_enhanced.pl

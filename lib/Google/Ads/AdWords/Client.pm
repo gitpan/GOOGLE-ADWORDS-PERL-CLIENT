@@ -16,7 +16,7 @@ package Google::Ads::AdWords::Client;
 
 use strict;
 use version;
-our $VERSION = qv("2.10.0");
+our $VERSION = qv("2.11.0");
 
 use Google::Ads::AdWords::AuthTokenHandler;
 use Google::Ads::AdWords::Constants;
@@ -67,7 +67,6 @@ my %use_auth_token_cache_of :
 # Runtime statistics.
 my %requests_count_of : ATTR(:name<requests_count> :default<0>);
 my %failed_requests_count_of : ATTR(:name<failed_requests_count> :default<0>);
-my %units_count_of : ATTR(:name<units_count> :default<0>);
 my %operations_count_of : ATTR(:name<operations_count> :default<0>);
 my %last_request_stats_of : ATTR(:name<last_request_stats> :default<>);
 my %last_soap_request_of : ATTR(:name<last_soap_request> :default<>);
@@ -385,8 +384,6 @@ sub _push_new_request_stats {
     $self->set_failed_requests_count( $self->get_failed_requests_count() + 1 );
   $self->set_operations_count(
     $self->get_operations_count() + $request_stats->get_operations() );
-  $self->set_units_count(
-    $self->get_units_count() + $request_stats->get_units() );
 }
 
 # Deprecated methods. These can be removed in a later release.
@@ -593,10 +590,6 @@ Number of requests performed with this client so far.
 =head2 failed_requests_count
 
 Number of failed requests performed with this client so far.
-
-=head2 units_count
-
-Number of API units consumed by requests made with this client so far.
 
 =head2 operations_count
 

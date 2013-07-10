@@ -74,7 +74,7 @@ Google::Ads::AdWords::v201302::FeedItemReturnValue
 Perl data type class for the XML Schema defined complexType
 FeedItemReturnValue from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+A container for return values from FeedItemService.mutate(). 
 
 
 

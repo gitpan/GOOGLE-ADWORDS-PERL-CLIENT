@@ -84,7 +84,7 @@ Google::Ads::AdWords::v201302::FeedError
 Perl data type class for the XML Schema defined complexType
 FeedError from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+An error caused by an invalid Feed in a FeedService request. 
 
 
 

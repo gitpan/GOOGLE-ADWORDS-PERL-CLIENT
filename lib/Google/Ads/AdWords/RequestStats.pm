@@ -26,7 +26,6 @@ my %method_name_of : ATTR(:name<method_name> :default<>);
 my %response_time_of : ATTR(:name<response_time> :default<0>);
 my %request_id_of : ATTR(:name<request_id> :default<>);
 my %operations_of : ATTR(:name<operations> :default<0>);
-my %units_of : ATTR(:name<units> :default<0>);
 my %is_fault_of : ATTR(:name<is_fault> :default<0>);
 
 sub as_str : STRINGIFY {
@@ -38,7 +37,6 @@ sub as_str : STRINGIFY {
   my $response_time = $self->get_response_time() || "";
   my $request_id = $self->get_request_id() || "";
   my $operations = $self->get_operations() || "";
-  my $units = $self->get_units() || "";
   my $is_fault = $self->get_is_fault() ? "yes" : "no";
   return "auth=${auth}" .
       " client_id=${client_id}" .
@@ -47,7 +45,6 @@ sub as_str : STRINGIFY {
       " response_time=${response_time}" .
       " request_id=${request_id}" .
       " operations=${operations}" .
-      " units=${units}" .
       " is_fault=${is_fault}";
 }
 

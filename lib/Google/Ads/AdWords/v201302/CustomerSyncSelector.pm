@@ -66,7 +66,7 @@ Google::Ads::AdWords::v201302::CustomerSyncSelector
 Perl data type class for the XML Schema defined complexType
 CustomerSyncSelector from the namespace https://adwords.google.com/api/adwords/ch/v201302.
 
-A filter for selecting changehistory events for a customer. 
+A filter for selecting change history data for a customer. 
 
 
 

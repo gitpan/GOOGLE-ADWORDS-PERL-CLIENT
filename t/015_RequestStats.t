@@ -24,7 +24,7 @@ use lib qw(t/util lib);
 
 use File::Basename;
 use File::Spec;
-use Test::More (tests => 25);
+use Test::More (tests => 21);
 use TestClientUtils qw(get_test_client_no_auth);
 use TestUtils qw(read_test_properties replace_properties);
 
@@ -60,12 +60,10 @@ is($client->get_last_request_stats()->get_response_time(), 442);
 is($client->get_last_request_stats()->get_request_id(),
     "cb09bce743f82da6de62ea4dcf18a9a8");
 is($client->get_last_request_stats()->get_operations(), 2);
-is($client->get_last_request_stats()->get_units(), 4);
 is($client->get_last_request_stats()->get_is_fault(), "");
 
 is($client->get_requests_count(), 1);
 is($client->get_operations_count(), 2);
-is($client->get_units_count(), 4);
 is($client->get_failed_requests_count(), 0);
 
 @results = $deserializer->deserialize($deserializer_fault_input);
@@ -76,10 +74,8 @@ is($client->get_last_request_stats()->get_response_time(), 2429);
 is($client->get_last_request_stats()->get_request_id(),
     "07a93c67b1dd3ff5242c98d436ba7043");
 is($client->get_last_request_stats()->get_operations(), 1);
-is($client->get_last_request_stats()->get_units(), 1);
 is($client->get_last_request_stats()->get_is_fault(), 1);
 
 is($client->get_requests_count(), 2);
 is($client->get_operations_count(), 3);
-is($client->get_units_count(), 5);
 is($client->get_failed_requests_count(), 1);

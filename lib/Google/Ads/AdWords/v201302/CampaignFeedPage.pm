@@ -74,7 +74,7 @@ Google::Ads::AdWords::v201302::CampaignFeedPage
 Perl data type class for the XML Schema defined complexType
 CampaignFeedPage from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-The result of a call to CampaignFeedService#get. Contains a list of associations between campaign and feeds. 
+The result of a call to {@link CampaignFeedService#get}. Contains a list of associations between campaign and feeds. 
 
 
 

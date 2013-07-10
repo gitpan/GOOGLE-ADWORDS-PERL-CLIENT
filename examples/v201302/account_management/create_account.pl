@@ -15,7 +15,11 @@
 # limitations under the License.
 #
 # This example illustrates how to create an account.
-# Note: By default, this account will only be visible via the parent MCC.
+# Note 1: By default, this account will only be visible via the parent MCC.
+#
+# Note 2: This example won't work if your token is not approved and you are only
+# targeting test accounts. See
+# https://developers.google.com/adwords/api/docs/test-accounts
 #
 # Tags: ManagedCustomerService.mutate
 # Author: David Torres <david.t@google.com>

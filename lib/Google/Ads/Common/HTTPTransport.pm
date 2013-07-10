@@ -45,8 +45,8 @@ sub send_receive {
 
   if (!$auth_handler) {
     $self->{_client}->get_die_on_faults() ?
-        die("Couldn't find an authorization handler properly setup") :
-        warn("Couldn't find an authorization handler properly setup");
+        die(Google::Ads::Common::Constants::NO_AUTH_HANDLER_IS_SETUP_MESSAGE) :
+        warn(Google::Ads::Common::Constants::NO_AUTH_HANDLER_IS_SETUP_MESSAGE);
     return;
   }
 

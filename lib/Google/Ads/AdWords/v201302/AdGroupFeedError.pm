@@ -84,7 +84,7 @@ Google::Ads::AdWords::v201302::AdGroupFeedError
 Perl data type class for the XML Schema defined complexType
 AdGroupFeedError from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+Represents an error for the AdGroupFeedService. 
 
 
 

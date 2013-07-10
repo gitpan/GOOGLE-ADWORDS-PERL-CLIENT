@@ -81,7 +81,7 @@ Google::Ads::AdWords::v201302::Feed
 Perl data type class for the XML Schema defined complexType
 Feed from the namespace https://adwords.google.com/api/adwords/cm/v201302.
 
-
+A Feed identifies a source of data and its schema. The data for the Feed can either be user-entered via the FeedItemService or system-generated, in which case the data is provided automatically. 
 
 
 

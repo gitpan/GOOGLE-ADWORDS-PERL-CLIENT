@@ -23,7 +23,8 @@ use lib qw(t/util);
 
 use File::Basename;
 use File::Spec;
-use Test::More (tests => 6);
+use Test::MockObject;
+use Test::More (tests => 7);
 use TestClientUtils qw(get_test_client_no_auth);
 use TestUtils qw(read_test_properties read_client_properties
                  replace_properties);
@@ -59,6 +60,19 @@ my $body = "Google::Ads::AdWords::${current_version}::CampaignService::get"
           "Google::Ads::AdWords::${current_version}::Selector"->new()
     });
 
+my $logger = Test::MockObject->new();
+my $logged_message;
+$client->set_always("_get_auth_handler",
+    Google::Ads::Common::AuthTokenHandler->new());
+$logger->set_always('info', 1);
+$logger->mock('warn', sub {
+  $logged_message = $_[1];
+});
+no warnings 'redefine';
+*Google::Ads::AdWords::Logging::get_soap_logger = sub {
+  return $logger;
+};
+
 my $envelope = $serializer->serialize({
     method => "get",
     header => $header,
@@ -80,3 +94,5 @@ $client_properties->{userAgent} = $user_agent;
 $expected_output = replace_properties($expected_output, $client_properties);
 
 is($envelope, $expected_output, "check serializer output");
+is($logged_message,
+    Google::Ads::Common::Constants::CLIENT_LOGIN_DEPRECATION_MESSAGE);

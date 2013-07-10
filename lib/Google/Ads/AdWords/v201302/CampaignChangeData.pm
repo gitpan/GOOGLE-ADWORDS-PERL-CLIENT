@@ -96,7 +96,7 @@ Google::Ads::AdWords::v201302::CampaignChangeData
 Perl data type class for the XML Schema defined complexType
 CampaignChangeData from the namespace https://adwords.google.com/api/adwords/ch/v201302.
 
-Holds information about a changed campaign and any adgroups under that have changed. 
+Holds information about a changed campaign and any ad groups under that have changed. 
 
 
 
