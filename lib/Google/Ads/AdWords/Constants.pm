@@ -23,7 +23,7 @@ use File::HomeDir;
 use File::Spec::Functions;
 
 # Main version number that the rest of the modules pick up off of.
-our $VERSION = qv("2.11.0");
+our $VERSION = qv("2.12.0");
 
 use constant DEFAULT_PROPERTIES_FILE => catfile(File::HomeDir->my_home,
     "adwords.properties");
@@ -58,6 +58,7 @@ our %SERVICE_TO_GROUP = (
   AdParamService => "cm",
   AdwordsUserListService => "rm",
   AlertService => "mcm",
+  BiddingStrategyService => "cm",
   BudgetOrderService => "billing",
   BudgetService => "cm",
   CampaignAdExtensionService => "cm",
@@ -80,12 +81,12 @@ our %SERVICE_TO_GROUP = (
   ManagedCustomerService => "mcm",
   MediaService => "cm",
   MutateJobService => "cm",
+  OfflineConversionFeedService => "cm",
   ReportDefinitionService => "cm",
   SharedCriterionService => "cm",
   SharedSetService => "cm",
   TargetingIdeaService => "o",
   TrafficEstimatorService => "o",
-  UserListService => "cm",
 );
 
 # Useful constant to translate micros to dollars and viceversa.

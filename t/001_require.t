@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -X
 #
 # Copyright 2011, Google Inc. All Rights Reserved.
 #
@@ -37,9 +37,7 @@ sub test_require {
   return if $File::Find::name =~ m{Google/Ads/AdWords/Client\.pm$};
 
   if ($file_name =~ /\.pm$/) {
-    local $SIG{__WARN__} = sub {
-      warn @_ unless $_[0] =~ /redefine/
-    };
+    delete $INC{$_} for keys %INC;
     require_ok($file_name);
   }
 }

@@ -58,33 +58,43 @@ $client->set_die_on_faults(1);
 is($client->get_die_on_faults(), 1, "get/set die_on_faults()");
 
 # Make sure this supports all the services we think it should for each version.
-$client->set_version("v201209");
-my @services = qw(AdExtensionOverrideService
-               AdGroupAdService
+$client->set_version("v201309");
+my @services = qw(AdGroupAdService
+               AdGroupBidModifierService
                AdGroupCriterionService
+               AdGroupFeedService
                AdGroupService
                AdParamService
+               AdwordsUserListService
                AlertService
+               BiddingStrategyService
                BudgetOrderService
                BudgetService
                CampaignAdExtensionService
                CampaignCriterionService
+               CampaignFeedService
                CampaignService
+               CampaignSharedSetService
                ConstantDataService
                ConversionTrackerService
                CustomerService
                CustomerSyncService
                DataService
                ExperimentService
+               FeedItemService
+               FeedMappingService
+               FeedService
                GeoLocationService
                LocationCriterionService
                ManagedCustomerService
                MediaService
                MutateJobService
+               OfflineConversionFeedService
                ReportDefinitionService
+               SharedCriterionService
+               SharedSetService
                TargetingIdeaService
-               TrafficEstimatorService
-               UserListService);
+               TrafficEstimatorService);
 can_ok($client, @services);
 
 ok(Google::Ads::AdWords::Client->new && Google::Ads::AdWords::Client->new,

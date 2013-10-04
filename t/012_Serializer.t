@@ -24,7 +24,7 @@ use lib qw(t/util);
 use File::Basename;
 use File::Spec;
 use Test::MockObject;
-use Test::More (tests => 7);
+use Test::More (tests => 8);
 use TestClientUtils qw(get_test_client_no_auth);
 use TestUtils qw(read_test_properties read_client_properties
                  replace_properties);
@@ -96,3 +96,12 @@ $expected_output = replace_properties($expected_output, $client_properties);
 is($envelope, $expected_output, "check serializer output");
 is($logged_message,
     Google::Ads::Common::Constants::CLIENT_LOGIN_DEPRECATION_MESSAGE);
+
+# Test error propagation when invalid nested structure is given.
+# Issue #58, http://goo.gl/mZkw6z
+eval {
+  "Google::Ads::AdWords::${current_version}::CampaignService::get"->new({
+    serviceSelector => { invalid_field => 1 }
+  });
+};
+isnt($@, "", "check error propagation on invalid nested objects contruction");

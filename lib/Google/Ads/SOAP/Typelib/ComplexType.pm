@@ -159,10 +159,7 @@ sub _factory {
         do {
           my $method = "set_$_";
           $method =~s{[\.\-]}{_}xmsg;
-          eval {
-            $self->$method($_[1]->{$_});
-          };
-          warn $@ if $@;
+          $self->$method($_[1]->{$_});
         }:
         # PATCH Ignoring xsi_type as a regular attribute of a given HASH since
         # is treated specially later.
