@@ -28,8 +28,10 @@ use TestAPIUtils qw(get_api_package create_campaign delete_campaign
                     delete_text_ad create_campaign_location_extension
                     delete_campaign_ad_extension get_location_for_address);
 
-# Getting API client for functional tests.
-my $client = get_test_client();
+# Getting API client for functional tests.  This service was removed in
+# v201309 so get a v201306 test client.
+# TODO: Delete this test and create a FeedService test.
+my $client = get_test_client("v201306");
 if (!$client) {
   plan skip_all => "Can't create test client, make sure your " .
       "t/testdata/client.properties is properly set. Skipping functional " .

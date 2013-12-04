@@ -21,7 +21,7 @@
 use strict;
 use lib qw(t/util);
 
-use Test::More (tests => 27);
+use Test::More (tests => 26);
 use TestClientUtils qw(get_test_client);
 use TestAPIUtils qw(get_api_package);
 use Data::Uniqid qw(uniqid);
@@ -42,7 +42,6 @@ use_ok(get_api_package($client, "CampaignOperation"));
 use_ok(get_api_package($client, "CampaignReturnValue"));
 use_ok(get_api_package($client, "Predicate"));
 use_ok(get_api_package($client, "Selector"));
-use_ok(get_api_package($client, "ManualCPC"));
 use_ok(get_api_package($client, "Money"));
 use_ok(get_api_package($client, "KeywordMatchSetting"));
 

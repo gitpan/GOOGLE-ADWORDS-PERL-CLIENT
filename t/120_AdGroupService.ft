@@ -21,7 +21,7 @@
 use strict;
 use lib qw(t/util);
 
-use Test::More (tests => 20);
+use Test::More (tests => 19);
 use TestClientUtils qw(get_test_client);
 use TestAPIUtils qw(get_api_package create_campaign delete_campaign
                     create_ad_group);
@@ -40,7 +40,6 @@ use_ok(get_api_package($client, "AdGroupOperation"));
 use_ok(get_api_package($client, "BiddingStrategyConfiguration"));
 use_ok(get_api_package($client, "CpcBid"));
 use_ok(get_api_package($client, "CpmBid"));
-use_ok(get_api_package($client, "ManualCPCAdGroupBids"));
 use_ok(get_api_package($client, "ManualCpcBiddingScheme"));
 use_ok(get_api_package($client, "Money"));
 
@@ -57,13 +56,11 @@ my $campaign_cpm = create_campaign($client,
 # Test create AdGroup with ManualCPC strategy and keywordMaxCPC.
 my $ad_group_manual_cpc_name = "Test AdGroup Manual CPC - " .
     POSIX::strftime("%s", localtime);
-my $bids = get_api_package($client, "BiddingStrategyConfiguration")->new({
-  bids => [
+my $bids = [
     get_api_package($client, "CpcBid")->new({
       bid => get_api_package($client, "Money")->new({microAmount => 180000}),
     })
-  ]
-});
+  ];
 my $result = create_ad_group($client, $campaign_cpc->get_id(),
                             $ad_group_manual_cpc_name, $bids);
 
@@ -74,16 +71,15 @@ is($result->get_name(), $ad_group_manual_cpc_name,
    "Added Manual CPC AdGroup name is set correctly");
 my $manual_cpc_ad_group = $result;
 
-# Test create AdGroup with ManualCPC strategy and keywordMaxCPC.
+# Test create AdGroup with ManualCPC strategy and keywordMaxCPC.  Note that
+# the CpmBid has to be at least 25 cents to avoid BiddingError.BID_TOO_SMALL.
 my $ad_group_manual_cpm_name = "Test AdGroup Manual CPM - " .
     POSIX::strftime("%s", localtime);
-$bids = get_api_package($client, "BiddingStrategyConfiguration")->new({
-  bids => [
+$bids = [
     get_api_package($client, "CpmBid")->new({
-      bid => get_api_package($client, "Money")->new({microAmount => 180000}),
+      bid => get_api_package($client, "Money")->new({microAmount => 250000}),
     })
-  ]
-});
+  ];
 my $manual_cpm_ad_group = create_ad_group($client, $campaign_cpm->get_id(),
                           $ad_group_manual_cpm_name, $bids);
 
