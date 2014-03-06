@@ -17,7 +17,7 @@
 # This example illustrates how to handle 'captcha required' authorization
 # errors. Refer to the best practices guide on how to avoid this error:
 #
-# http://code.google.com/apis/adwords/docs/guides/bestpractices.html#auth_tokens
+# https://developers.google.com/adwords/api/docs/guides/bestpractices#auth_tokens
 #
 # Author: David Torres <david.t@gmail.com>
 

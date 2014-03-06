@@ -36,8 +36,8 @@ sub generate_offline_credentials {
   my $auth_handler = $client->get_oauth_2_handler();
 
   print "Please enter your OAuth 2.0 Client ID and Client Secret.\n" .
-        "These values can be generated from the Google APIs Console, " .
-        "https://code.google.com/apis/console under the API Access tab.\n" .
+        "These values can be generated from the Google Developers Console, " .
+        "https://console.developers.google.com under the Projects tab.\n" .
         "Use a Client ID for Installed applications.\n" .
         "Enter Client ID: ";
   my $client_id = <STDIN>;

@@ -14,8 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# This code example adds text ads to a given ad group. To get ad groups,
-# run basic_operations/get_ad_groups.pl.
+# This example adds a sitelinks feed and associates it with a campaign.
 #
 # Tags: CampaignFeedService.mutate, FeedService.mutate, FeedItemService.mutate,
 #       FeedMappingService.mutate

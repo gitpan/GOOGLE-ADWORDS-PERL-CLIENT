@@ -28,8 +28,20 @@ use Class::Std::Fast;
 sub prepare_request {
   my ($self, $endpoint, $http_headers, $envelope) = @_;
 
-  my $xmlns = "https://adwords.google.com/api/adwords/cm/" .
-      $self->get_api_client()->get_version;
+  my $version = $self->get_api_client()->get_version();
+
+  if ($version gt Google::Ads::AdWords::Constants::LAST_SUPPORTED_CLIENT_LOGIN_VERSION) {
+      my $message = "ClientLogin is not supported in " . $version .
+          " of the AdWords API. Please refer to the ClientLogin to OAuth2" .
+          " migration guide at" .
+          " https://developers.google.com/adwords/api/docs/guides/clientlogin-to-oauth2-migration-guide" .
+          " for more information.";
+      $self->get_api_client()->get_die_on_faults() ?
+          die($message) :
+          warn($message);
+  }
+
+  my $xmlns = "https://adwords.google.com/api/adwords/cm/" . $version;
   my $header = "<authToken xmlns=\"$xmlns\">" . $self->__get_auth_token() .
       "</authToken>";
 

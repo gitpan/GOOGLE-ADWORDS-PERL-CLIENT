@@ -23,7 +23,7 @@ use File::HomeDir;
 use File::Spec::Functions;
 
 # Main version number that the rest of the modules pick up off of.
-our $VERSION = qv("2.13.0");
+our $VERSION = qv("2.14.0");
 
 use constant DEFAULT_PROPERTIES_FILE => catfile(File::HomeDir->my_home,
     "adwords.properties");
@@ -34,7 +34,7 @@ use constant PROXY_FORMAT_STRING => "%s/api/adwords/%s/%s/%s";
 
 # Default current version used if the client is created without the version
 # parameter.
-use constant DEFAULT_VERSION => "v201309";
+use constant DEFAULT_VERSION => "v201402";
 
 # Default alternate URL that points to production servers.
 use constant DEFAULT_ALTERNATE_URL => "https://adwords.google.com";
@@ -70,6 +70,7 @@ our %SERVICE_TO_GROUP = (
   ConstantDataService => "cm",
   ConversionTrackerService => "cm",
   CustomerService => "mcm",
+  CustomerFeedService => "cm",
   CustomerSyncService => "ch",
   DataService => "cm",
   ExperimentService => "cm",
@@ -91,5 +92,8 @@ our %SERVICE_TO_GROUP = (
 
 # Useful constant to translate micros to dollars and viceversa.
 use constant MICROS_PER_DOLLAR => 1000000;
+
+# Last version of the API to support the ClientLogin auth method.
+use constant LAST_SUPPORTED_CLIENT_LOGIN_VERSION => "v201309";
 
 return 1;

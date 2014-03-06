@@ -28,12 +28,12 @@ use constant CLIENT_LOGIN_DEPRECATION_MESSAGE =>
     " https://developers.google.com/accounts/docs/AuthForInstalledApps.\n" .
     "Instead, we strongly recommend you migrate to OAuth2.0, read our" .
     " client library guide to get started today at" .
-    " https://code.google.com/p/google-api-adwords-perl/wiki/OAuth2";
+    " https://github.com/googleads/googleads-perl-lib/wiki/Using-OAuth-2.0";
 
 use constant NO_AUTH_HANDLER_IS_SETUP_MESSAGE =>
     "The library couldn't find any authorization mechanism set up to " .
     "properly sign the requests against the API. Please read the following " .
     "guide on how to setup OAuth2 " .
-    "https://code.google.com/p/google-api-adwords-perl/wiki/OAuth2 ";
+    "https://github.com/googleads/googleads-perl-lib/wiki/Using-OAuth-2.0";
 
 1;

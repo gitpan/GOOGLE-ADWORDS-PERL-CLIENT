@@ -112,6 +112,10 @@ sub create_campaign {
     ]);
   }
 
+  if ($client->get_version() ge "v201402") {
+    $campaign->set_advertisingChannelType("SEARCH");
+  }
+
   my $operation = get_api_package($client, "CampaignOperation", 1)->new({
     operand => $campaign,
     operator => "ADD"

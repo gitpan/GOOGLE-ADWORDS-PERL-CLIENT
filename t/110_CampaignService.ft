@@ -80,7 +80,8 @@ my $campaign1 = get_api_package($client, "Campaign")->new({
   settings => [
     get_api_package($client, "KeywordMatchSetting")->new({
       optIn => 0
-    })]
+    })],
+  advertisingChannelType => "SEARCH"
 });
 
 my $campaign_name_2 = "Test Campaign 2 - " . uniqid();
@@ -96,7 +97,8 @@ my $campaign2 = get_api_package($client, "Campaign")->new({
   settings => [
     get_api_package($client, "KeywordMatchSetting")->new({
       optIn => 0
-    })]
+    })],
+  advertisingChannelType => "SEARCH"
 });
 
 my $operations = [
