@@ -61,35 +61,35 @@
    "provides" : {
       "Google::Ads::AdWords::AuthTokenHandler" : {
          "file" : "lib/Google/Ads/AdWords/AuthTokenHandler.pm",
-         "version" : "v2.15.0"
+         "version" : "v2.16.0"
       },
       "Google::Ads::AdWords::Client" : {
          "file" : "lib/Google/Ads/AdWords/Client.pm",
-         "version" : "v2.15.0"
+         "version" : "v2.16.0"
       },
       "Google::Ads::AdWords::Constants" : {
          "file" : "lib/Google/Ads/AdWords/Constants.pm",
-         "version" : "v2.15.0"
+         "version" : "v2.16.0"
       },
       "Google::Ads::AdWords::Deserializer" : {
          "file" : "lib/Google/Ads/AdWords/Deserializer.pm",
-         "version" : "v2.15.0"
+         "version" : "v2.16.0"
       },
       "Google::Ads::AdWords::FaultDetail" : {
          "file" : "lib/Google/Ads/AdWords/FaultDetail.pm",
-         "version" : "v2.15.0"
+         "version" : "v2.16.0"
       },
       "Google::Ads::AdWords::Logging" : {
          "file" : "lib/Google/Ads/AdWords/Logging.pm",
-         "version" : "v2.15.0"
+         "version" : "v2.16.0"
       },
       "Google::Ads::AdWords::OAuth2ApplicationsHandler" : {
          "file" : "lib/Google/Ads/AdWords/OAuth2ApplicationsHandler.pm",
-         "version" : "v2.15.0"
+         "version" : "v2.16.0"
       },
       "Google::Ads::AdWords::OAuth2ServiceAccountsHandler" : {
          "file" : "lib/Google/Ads/AdWords/OAuth2ServiceAccountsHandler.pm",
-         "version" : "v2.15.0"
+         "version" : "v2.16.0"
       },
       "Google::Ads::AdWords::Reports::DateRange" : {
          "file" : "lib/Google/Ads/AdWords/Reports/DateRange.pm"
@@ -129,7 +129,7 @@
       },
       "Google::Ads::AdWords::Serializer" : {
          "file" : "lib/Google/Ads/AdWords/Serializer.pm",
-         "version" : "v2.15.0"
+         "version" : "v2.16.0"
       },
       "Google::Ads::AdWords::v201309::AccessReason" : {
          "file" : "lib/Google/Ads/AdWords/v201309/AccessReason.pm"
@@ -1877,6 +1877,9 @@
       "Google::Ads::AdWords::v201309::FunctionOperand" : {
          "file" : "lib/Google/Ads/AdWords/v201309/FunctionOperand.pm"
       },
+      "Google::Ads::AdWords::v201309::FunctionParsingError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201309/FunctionParsingError/Reason.pm"
+      },
       "Google::Ads::AdWords::v201309::Gender" : {
          "file" : "lib/Google/Ads/AdWords/v201309/Gender.pm"
       },
@@ -2686,6 +2689,9 @@
       },
       "Google::Ads::AdWords::v201309::SearchVolumeSearchParameter" : {
          "file" : "lib/Google/Ads/AdWords/v201309/SearchVolumeSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201309::SeedAdGroupIdSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201309/SeedAdGroupIdSearchParameter.pm"
       },
       "Google::Ads::AdWords::v201309::Selector" : {
          "file" : "lib/Google/Ads/AdWords/v201309/Selector.pm"
@@ -4184,6 +4190,51 @@
       "Google::Ads::AdWords::v201402::CampaignService::queryResponse" : {
          "file" : "lib/Google/Ads/AdWords/v201402/CampaignService/queryResponse.pm"
       },
+      "Google::Ads::AdWords::v201402::CampaignSharedSet" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSet.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSet::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSet/Status.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetError" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetError.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetOperation.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetPage.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetService::CampaignSharedSetServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetService/CampaignSharedSetServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetService/get.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201402::CampaignSharedSetService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/CampaignSharedSetService/mutateResponse.pm"
+      },
       "Google::Ads::AdWords::v201402::CampaignStatus" : {
          "file" : "lib/Google/Ads/AdWords/v201402/CampaignStatus.pm"
       },
@@ -4990,6 +5041,9 @@
       },
       "Google::Ads::AdWords::v201402::FunctionOperand" : {
          "file" : "lib/Google/Ads/AdWords/v201402/FunctionOperand.pm"
+      },
+      "Google::Ads::AdWords::v201402::FunctionParsingError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/FunctionParsingError/Reason.pm"
       },
       "Google::Ads::AdWords::v201402::Gender" : {
          "file" : "lib/Google/Ads/AdWords/v201402/Gender.pm"
@@ -5900,6 +5954,96 @@
       "Google::Ads::AdWords::v201402::SharedBiddingStrategy::BiddingStrategyStatus" : {
          "file" : "lib/Google/Ads/AdWords/v201402/SharedBiddingStrategy/BiddingStrategyStatus.pm"
       },
+      "Google::Ads::AdWords::v201402::SharedCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionError.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionOperation.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionPage.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionService::SharedCriterionServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionService/SharedCriterionServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionService/get.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedCriterionService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedCriterionService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSet" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSet.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSet::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSet/Status.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetError" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetError.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetOperation.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetPage.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetService::SharedSetServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetService/SharedSetServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetService/get.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201402::SharedSetType" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/SharedSetType.pm"
+      },
       "Google::Ads::AdWords::v201402::ShoppingSetting" : {
          "file" : "lib/Google/Ads/AdWords/v201402/ShoppingSetting.pm"
       },
@@ -6140,6 +6284,9 @@
       "Google::Ads::AdWords::v201402::TypeMaps::CampaignService" : {
          "file" : "lib/Google/Ads/AdWords/v201402/TypeMaps/CampaignService.pm"
       },
+      "Google::Ads::AdWords::v201402::TypeMaps::CampaignSharedSetService" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/TypeMaps/CampaignSharedSetService.pm"
+      },
       "Google::Ads::AdWords::v201402::TypeMaps::ConstantDataService" : {
          "file" : "lib/Google/Ads/AdWords/v201402/TypeMaps/ConstantDataService.pm"
       },
@@ -6190,6 +6337,12 @@
       },
       "Google::Ads::AdWords::v201402::TypeMaps::ReportDefinitionService" : {
          "file" : "lib/Google/Ads/AdWords/v201402/TypeMaps/ReportDefinitionService.pm"
+      },
+      "Google::Ads::AdWords::v201402::TypeMaps::SharedCriterionService" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/TypeMaps/SharedCriterionService.pm"
+      },
+      "Google::Ads::AdWords::v201402::TypeMaps::SharedSetService" : {
+         "file" : "lib/Google/Ads/AdWords/v201402/TypeMaps/SharedSetService.pm"
       },
       "Google::Ads::AdWords::v201402::TypeMaps::TargetingIdeaService" : {
          "file" : "lib/Google/Ads/AdWords/v201402/TypeMaps/TargetingIdeaService.pm"
@@ -6272,6 +6425,3402 @@
       "Google::Ads::AdWords::v201402::WebpageParameter" : {
          "file" : "lib/Google/Ads/AdWords/v201402/WebpageParameter.pm"
       },
+      "Google::Ads::AdWords::v201406::AccessReason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AccessReason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AccountUserListStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AccountUserListStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::Ad" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Ad.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdCallMetricsConversion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdCallMetricsConversion.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdExtension" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdExtension.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdExtensionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdExtensionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdExtensionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdExtensionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdFormatSpec" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdFormatSpec.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdFormatSpecListAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdFormatSpecListAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroup" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroup.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroup::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroup/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAd::ApprovalStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAd/ApprovalStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAd::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAd/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdCountLimitExceeded" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdCountLimitExceeded.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdExperimentData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdExperimentData.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdLabelOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdLabelOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdLabelReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdLabelReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::AdGroupAdServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/AdGroupAdServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::mutateLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/mutateLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::mutateLabelResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/mutateLabelResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupAdService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupAdService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidLandscape" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidLandscape.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidLandscape::Type" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidLandscape/Type.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidLandscapePage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidLandscapePage.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifier" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifier.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::AdGroupBidModifierServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/AdGroupBidModifierServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupBidModifierService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupBidModifierService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupChangeData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupChangeData.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionExperimentBidMultiplier" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionExperimentBidMultiplier.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionLabelOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionLabelOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionLabelReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionLabelReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionLimitExceeded" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionLimitExceeded.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionLimitExceeded::CriteriaLimitType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionLimitExceeded/CriteriaLimitType.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::AdGroupCriterionServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/AdGroupCriterionServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::mutateLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/mutateLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::mutateLabelResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/mutateLabelResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupCriterionService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupCriterionService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupEstimate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupEstimate.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupEstimateRequest" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupEstimateRequest.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupExperimentBidMultipliers" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupExperimentBidMultipliers.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupExperimentData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupExperimentData.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeed" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeed.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeed::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeed/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::AdGroupFeedServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/AdGroupFeedServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupFeedService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupFeedService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupLabelOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupLabelOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupLabelReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupLabelReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::AdGroupServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/AdGroupServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::mutateLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/mutateLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::mutateLabelResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/mutateLabelResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupServiceError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupServiceError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdGroupServiceError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdGroupServiceError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParam" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParam.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamPolicyError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamPolicyError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamService::AdParamServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamService/AdParamServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdParamService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdParamService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdSchedule" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdSchedule.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdScheduleTarget" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdScheduleTarget.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdScheduleTargetList" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdScheduleTargetList.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdServingOptimizationStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdServingOptimizationStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdSpec" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdSpec.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdSpecListAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdSpecListAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdSpecListSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdSpecListSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdUnionId" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdUnionId.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdWordsConversionTracker" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdWordsConversionTracker.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdWordsConversionTracker::MarkupLanguage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdWordsConversionTracker/MarkupLanguage.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdWordsConversionTracker::TextFormat" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdWordsConversionTracker/TextFormat.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdWordsConversionTracker::TrackingCodeType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdWordsConversionTracker/TrackingCodeType.pm"
+      },
+      "Google::Ads::AdWords::v201406::Address" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Address.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdvertisingChannelType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdvertisingChannelType.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdwordsUserListService::AdwordsUserListServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdwordsUserListService/AdwordsUserListServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdwordsUserListService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdwordsUserListService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdwordsUserListService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdwordsUserListService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdwordsUserListService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdwordsUserListService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdwordsUserListService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdwordsUserListService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdwordsUserListService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdwordsUserListService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdwordsUserListService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdwordsUserListService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdwordsUserListService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdwordsUserListService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdxError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdxError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AdxError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AdxError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AgeRange" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AgeRange.pm"
+      },
+      "Google::Ads::AdWords::v201406::AgeRange::AgeRangeType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AgeRange/AgeRangeType.pm"
+      },
+      "Google::Ads::AdWords::v201406::Alert" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Alert.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertQuery" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertQuery.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertSelector" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertSelector.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertService::AlertServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertService/AlertServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertSeverity" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertSeverity.pm"
+      },
+      "Google::Ads::AdWords::v201406::AlertType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AlertType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ApiError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ApiError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ApiErrorReason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ApiErrorReason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ApiException" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ApiException.pm"
+      },
+      "Google::Ads::AdWords::v201406::AppConversion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AppConversion.pm"
+      },
+      "Google::Ads::AdWords::v201406::AppConversion::AppConversionType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AppConversion/AppConversionType.pm"
+      },
+      "Google::Ads::AdWords::v201406::AppConversion::AppPlatform" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AppConversion/AppPlatform.pm"
+      },
+      "Google::Ads::AdWords::v201406::ApplicationException" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ApplicationException.pm"
+      },
+      "Google::Ads::AdWords::v201406::ApprovalStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ApprovalStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::Attribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Attribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::AttributeFieldMapping" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AttributeFieldMapping.pm"
+      },
+      "Google::Ads::AdWords::v201406::AttributeType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AttributeType.pm"
+      },
+      "Google::Ads::AdWords::v201406::Audio" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Audio.pm"
+      },
+      "Google::Ads::AdWords::v201406::AudioError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AudioError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AudioError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AudioError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AuthenticationError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AuthenticationError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AuthenticationError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AuthenticationError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::AuthorizationError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AuthorizationError.pm"
+      },
+      "Google::Ads::AdWords::v201406::AuthorizationError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/AuthorizationError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::BasicJobStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BasicJobStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::BasicUserList" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BasicUserList.pm"
+      },
+      "Google::Ads::AdWords::v201406::BetaError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BetaError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::Bid" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Bid.pm"
+      },
+      "Google::Ads::AdWords::v201406::BidLandscape" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BidLandscape.pm"
+      },
+      "Google::Ads::AdWords::v201406::BidLandscape::LandscapePoint" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BidLandscape/LandscapePoint.pm"
+      },
+      "Google::Ads::AdWords::v201406::BidLandscapeAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BidLandscapeAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::BidModifierSource" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BidModifierSource.pm"
+      },
+      "Google::Ads::AdWords::v201406::BidMultiplier" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BidMultiplier.pm"
+      },
+      "Google::Ads::AdWords::v201406::BidSource" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BidSource.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddableAdGroupCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddableAdGroupCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddableAdGroupCriterionExperimentData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddableAdGroupCriterionExperimentData.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingError.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingErrors" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingErrors.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingErrors::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingErrors/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyConfiguration" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyConfiguration.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyError.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::BiddingStrategyServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/BiddingStrategyServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategySource" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategySource.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingStrategyType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingStrategyType.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingTransitionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingTransitionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::BiddingTransitionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BiddingTransitionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::Bids" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Bids.pm"
+      },
+      "Google::Ads::AdWords::v201406::BillingAccount" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BillingAccount.pm"
+      },
+      "Google::Ads::AdWords::v201406::BillingSummary" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BillingSummary.pm"
+      },
+      "Google::Ads::AdWords::v201406::BooleanAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BooleanAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::Budget" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Budget.pm"
+      },
+      "Google::Ads::AdWords::v201406::Budget::BudgetDeliveryMethod" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Budget/BudgetDeliveryMethod.pm"
+      },
+      "Google::Ads::AdWords::v201406::Budget::BudgetPeriod" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Budget/BudgetPeriod.pm"
+      },
+      "Google::Ads::AdWords::v201406::Budget::BudgetStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Budget/BudgetStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetError.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOptimizerBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOptimizerBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrder" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrder.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderError.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderRequest" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderRequest.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderRequest::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderRequest/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::BudgetOrderServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/BudgetOrderServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::getBillingAccounts" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/getBillingAccounts.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::getBillingAccountsResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/getBillingAccountsResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetOrderService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetOrderService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::BudgetServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/BudgetServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::BudgetService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BudgetService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::BulkMutateJobError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BulkMutateJobError.pm"
+      },
+      "Google::Ads::AdWords::v201406::BulkMutateJobError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BulkMutateJobError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::BulkMutateJobPolicy" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BulkMutateJobPolicy.pm"
+      },
+      "Google::Ads::AdWords::v201406::BulkMutateJobSelector" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/BulkMutateJobSelector.pm"
+      },
+      "Google::Ads::AdWords::v201406::Campaign" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Campaign.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtension" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtension.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtension::ApprovalStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtension/ApprovalStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtension::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtension/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionService::CampaignAdExtensionServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionService/CampaignAdExtensionServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignAdExtensionService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignAdExtensionService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignChangeData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignChangeData.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::CampaignCriterionServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/CampaignCriterionServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignCriterionService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignCriterionService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignEstimate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignEstimate.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignEstimateRequest" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignEstimateRequest.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeed" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeed.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeed::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeed/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::CampaignFeedServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/CampaignFeedServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignFeedService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignFeedService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignLabelOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignLabelOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignLabelReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignLabelReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::CampaignServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/CampaignServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::mutateLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/mutateLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::mutateLabelResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/mutateLabelResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSet" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSet.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSet::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSet/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetService::CampaignSharedSetServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetService/CampaignSharedSetServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignSharedSetService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignSharedSetService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::CampaignTargetOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CampaignTargetOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::Carrier" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Carrier.pm"
+      },
+      "Google::Ads::AdWords::v201406::CategoryProductsAndServicesSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CategoryProductsAndServicesSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::ChangeStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ChangeStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::ClientSpec" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ClientSpec.pm"
+      },
+      "Google::Ads::AdWords::v201406::ClientTermsError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ClientTermsError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ClientTermsError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ClientTermsError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CollectionSizeError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CollectionSizeError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CollectionSizeError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CollectionSizeError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ComparableValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ComparableValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::CompetitionSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CompetitionSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::CompetitionSearchParameter::Level" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CompetitionSearchParameter/Level.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantData.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::ConstantDataServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/ConstantDataServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::UserInterestTaxonomyType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/UserInterestTaxonomyType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getAgeRangeCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getAgeRangeCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getAgeRangeCriterionResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getAgeRangeCriterionResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getCarrierCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getCarrierCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getCarrierCriterionResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getCarrierCriterionResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getGenderCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getGenderCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getGenderCriterionResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getGenderCriterionResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getLanguageCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getLanguageCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getLanguageCriterionResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getLanguageCriterionResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getMobileDeviceCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getMobileDeviceCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getMobileDeviceCriterionResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getMobileDeviceCriterionResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getOperatingSystemVersionCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getOperatingSystemVersionCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getOperatingSystemVersionCriterionResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getOperatingSystemVersionCriterionResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getProductBiddingCategoryData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getProductBiddingCategoryData.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getProductBiddingCategoryDataResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getProductBiddingCategoryDataResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getUserInterestCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getUserInterestCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getUserInterestCriterionResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getUserInterestCriterionResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getVerticalCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getVerticalCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantDataService::getVerticalCriterionResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantDataService/getVerticalCriterionResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantOperand::ConstantType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantOperand/ConstantType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConstantOperand::Unit" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConstantOperand/Unit.pm"
+      },
+      "Google::Ads::AdWords::v201406::ContentLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ContentLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::ContentLabelType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ContentLabelType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionDeduplicationMode" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionDeduplicationMode.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionOptimizerBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionOptimizerBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionOptimizerBiddingScheme::BidType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionOptimizerBiddingScheme/BidType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionOptimizerBiddingScheme::PricingMode" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionOptimizerBiddingScheme/PricingMode.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionOptimizerEligibility" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionOptimizerEligibility.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionOptimizerEligibility::RejectionReason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionOptimizerEligibility/RejectionReason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTracker" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTracker.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTracker::Category" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTracker/Category.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTracker::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTracker/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerService::ConversionTrackerServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerService/ConversionTrackerServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackerStats" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackerStats.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackingError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackingError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackingError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackingError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ConversionTrackingSettings" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ConversionTrackingSettings.pm"
+      },
+      "Google::Ads::AdWords::v201406::CpaBid" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CpaBid.pm"
+      },
+      "Google::Ads::AdWords::v201406::CpcBid" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CpcBid.pm"
+      },
+      "Google::Ads::AdWords::v201406::CpmBid" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CpmBid.pm"
+      },
+      "Google::Ads::AdWords::v201406::Criterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Criterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::Criterion::Type" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Criterion/Type.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionBidLandscape" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionBidLandscape.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionBidLandscapePage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionBidLandscapePage.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionPolicyError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionPolicyError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionTypeGroup" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionTypeGroup.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionUse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionUse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionUserInterest" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionUserInterest.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionUserList" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionUserList.pm"
+      },
+      "Google::Ads::AdWords::v201406::CriterionUserList::MembershipStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CriterionUserList/MembershipStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::CurrencyCodeError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CurrencyCodeError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CurrencyCodeError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CurrencyCodeError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomParameters" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomParameters.pm"
+      },
+      "Google::Ads::AdWords::v201406::Customer" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Customer.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerChangeData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerChangeData.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeed" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeed.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeed::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeed/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::CustomerFeedServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/CustomerFeedServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerFeedService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerFeedService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerOrderLineError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerOrderLineError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerOrderLineError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerOrderLineError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerService::CustomerServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerService/CustomerServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerSyncError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerSyncError.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerSyncError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerSyncError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerSyncSelector" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerSyncSelector.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerSyncService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerSyncService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerSyncService::CustomerSyncServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerSyncService/CustomerSyncServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerSyncService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerSyncService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerSyncService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerSyncService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerSyncService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerSyncService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::CustomerSyncService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/CustomerSyncService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataEntry" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataEntry.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataError.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::DataServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/DataServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::getAdGroupBidLandscape" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/getAdGroupBidLandscape.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::getAdGroupBidLandscapeResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/getAdGroupBidLandscapeResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::getCriterionBidLandscape" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/getCriterionBidLandscape.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::getCriterionBidLandscapeResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/getCriterionBidLandscapeResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::getDomainCategory" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/getDomainCategory.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::getDomainCategoryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/getDomainCategoryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::queryAdGroupBidLandscape" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/queryAdGroupBidLandscape.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::queryAdGroupBidLandscapeResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/queryAdGroupBidLandscapeResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::queryCriterionBidLandscape" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/queryCriterionBidLandscape.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::queryCriterionBidLandscapeResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/queryCriterionBidLandscapeResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::queryDomainCategory" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/queryDomainCategory.pm"
+      },
+      "Google::Ads::AdWords::v201406::DataService::queryDomainCategoryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DataService/queryDomainCategoryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::DatabaseError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DatabaseError.pm"
+      },
+      "Google::Ads::AdWords::v201406::DatabaseError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DatabaseError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::Date" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Date.pm"
+      },
+      "Google::Ads::AdWords::v201406::DateError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DateError.pm"
+      },
+      "Google::Ads::AdWords::v201406::DateError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DateError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::DateRange" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DateRange.pm"
+      },
+      "Google::Ads::AdWords::v201406::DateRangeError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DateRangeError.pm"
+      },
+      "Google::Ads::AdWords::v201406::DateRangeError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DateRangeError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::DateTimeRange" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DateTimeRange.pm"
+      },
+      "Google::Ads::AdWords::v201406::DayOfWeek" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DayOfWeek.pm"
+      },
+      "Google::Ads::AdWords::v201406::DeprecatedAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DeprecatedAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::DeprecatedAd::Type" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DeprecatedAd/Type.pm"
+      },
+      "Google::Ads::AdWords::v201406::Detail" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Detail.pm"
+      },
+      "Google::Ads::AdWords::v201406::DimensionProperties" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DimensionProperties.pm"
+      },
+      "Google::Ads::AdWords::v201406::Dimensions" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Dimensions.pm"
+      },
+      "Google::Ads::AdWords::v201406::DisplayAdSpec" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DisplayAdSpec.pm"
+      },
+      "Google::Ads::AdWords::v201406::DisplayAdSpec::ActivationOption" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DisplayAdSpec/ActivationOption.pm"
+      },
+      "Google::Ads::AdWords::v201406::DisplayAdSpec::AdSizeSpec" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DisplayAdSpec/AdSizeSpec.pm"
+      },
+      "Google::Ads::AdWords::v201406::DisplayType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DisplayType.pm"
+      },
+      "Google::Ads::AdWords::v201406::DistinctError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DistinctError.pm"
+      },
+      "Google::Ads::AdWords::v201406::DistinctError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DistinctError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::DomainCategory" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DomainCategory.pm"
+      },
+      "Google::Ads::AdWords::v201406::DomainCategoryPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DomainCategoryPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::DoubleAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DoubleAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::DoubleValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DoubleValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::DynamicSearchAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DynamicSearchAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::DynamicSearchAdsSetting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/DynamicSearchAdsSetting.pm"
+      },
+      "Google::Ads::AdWords::v201406::EnhancedCpcBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/EnhancedCpcBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::EntityAccessDenied" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/EntityAccessDenied.pm"
+      },
+      "Google::Ads::AdWords::v201406::EntityAccessDenied::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/EntityAccessDenied/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::EntityCountLimitExceeded" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/EntityCountLimitExceeded.pm"
+      },
+      "Google::Ads::AdWords::v201406::EntityCountLimitExceeded::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/EntityCountLimitExceeded/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::EntityNotFound" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/EntityNotFound.pm"
+      },
+      "Google::Ads::AdWords::v201406::EntityNotFound::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/EntityNotFound/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::EnumValuePair" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/EnumValuePair.pm"
+      },
+      "Google::Ads::AdWords::v201406::Estimate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Estimate.pm"
+      },
+      "Google::Ads::AdWords::v201406::EstimateRequest" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/EstimateRequest.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExcludedKeywordSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExcludedKeywordSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExemptionRequest" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExemptionRequest.pm"
+      },
+      "Google::Ads::AdWords::v201406::Experiment" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Experiment.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentDataStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentDataStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentDeltaStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentDeltaStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentService::ExperimentServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentService/ExperimentServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentServiceError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentServiceError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentServiceError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentServiceError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentServingStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentServingStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExperimentSummaryStats" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExperimentSummaryStats.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExplorerAutoOptimizerSetting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExplorerAutoOptimizerSetting.pm"
+      },
+      "Google::Ads::AdWords::v201406::ExternalRemarketingUserList" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ExternalRemarketingUserList.pm"
+      },
+      "Google::Ads::AdWords::v201406::Feed" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Feed.pm"
+      },
+      "Google::Ads::AdWords::v201406::Feed::Origin" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Feed/Origin.pm"
+      },
+      "Google::Ads::AdWords::v201406::Feed::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Feed/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedAttribute::Type" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedAttribute/Type.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedAttributeOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedAttributeOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedChangeData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedChangeData.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedError.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItem" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItem.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItem::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItem/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemAdGroupTargeting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemAdGroupTargeting.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemAttributeError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemAttributeError.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemAttributeValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemAttributeValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemCampaignTargeting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemCampaignTargeting.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemDevicePreference" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemDevicePreference.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemError.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemSchedule" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemSchedule.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemScheduling" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemScheduling.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::FeedItemServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/FeedItemServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemValidationDetail" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemValidationDetail.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemValidationDetail::ApprovalStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemValidationDetail/ApprovalStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedItemValidationDetail::ValidationStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedItemValidationDetail/ValidationStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMapping" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMapping.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMapping::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMapping/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingError.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::FeedMappingServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/FeedMappingServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedMappingService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedMappingService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::FeedServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/FeedServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::FeedService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FeedService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::FilterSpec" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FilterSpec.pm"
+      },
+      "Google::Ads::AdWords::v201406::FlashDisplayType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FlashDisplayType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ForwardCompatibilityError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ForwardCompatibilityError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ForwardCompatibilityError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ForwardCompatibilityError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::FrequencyCap" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FrequencyCap.pm"
+      },
+      "Google::Ads::AdWords::v201406::Function" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Function.pm"
+      },
+      "Google::Ads::AdWords::v201406::Function::Operator" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Function/Operator.pm"
+      },
+      "Google::Ads::AdWords::v201406::FunctionArgumentOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FunctionArgumentOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::FunctionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FunctionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::FunctionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FunctionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::FunctionOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FunctionOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::FunctionParsingError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FunctionParsingError.pm"
+      },
+      "Google::Ads::AdWords::v201406::FunctionParsingError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/FunctionParsingError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::Gender" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Gender.pm"
+      },
+      "Google::Ads::AdWords::v201406::Gender::GenderType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Gender/GenderType.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocation.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocationError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocationError.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocationError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocationError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocationSelector" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocationSelector.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocationService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocationService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocationService::GeoLocationServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocationService/GeoLocationServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocationService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocationService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocationService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocationService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocationService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocationService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoLocationService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoLocationService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoPoint" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoPoint.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoTargetOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoTargetOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoTargetTypeSetting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoTargetTypeSetting.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoTargetTypeSetting::NegativeGeoTargetType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoTargetTypeSetting/NegativeGeoTargetType.pm"
+      },
+      "Google::Ads::AdWords::v201406::GeoTargetTypeSetting::PositiveGeoTargetType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/GeoTargetTypeSetting/PositiveGeoTargetType.pm"
+      },
+      "Google::Ads::AdWords::v201406::HtmlDisplayType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/HtmlDisplayType.pm"
+      },
+      "Google::Ads::AdWords::v201406::HtmlDisplayType::HtmlOption" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/HtmlDisplayType/HtmlOption.pm"
+      },
+      "Google::Ads::AdWords::v201406::IdError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IdError.pm"
+      },
+      "Google::Ads::AdWords::v201406::IdError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IdError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::IdeaTextFilterSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IdeaTextFilterSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::IdeaType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IdeaType.pm"
+      },
+      "Google::Ads::AdWords::v201406::IdeaTypeAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IdeaTypeAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::Image" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Image.pm"
+      },
+      "Google::Ads::AdWords::v201406::ImageAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ImageAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::ImageDisplayType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ImageDisplayType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ImageError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ImageError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ImageError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ImageError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::InStreamAdInfo" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/InStreamAdInfo.pm"
+      },
+      "Google::Ads::AdWords::v201406::InStreamAdInfoAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/InStreamAdInfoAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::InStreamAdSpec" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/InStreamAdSpec.pm"
+      },
+      "Google::Ads::AdWords::v201406::InStreamAdSpec::InStreamType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/InStreamAdSpec/InStreamType.pm"
+      },
+      "Google::Ads::AdWords::v201406::IncludeAdultContentSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IncludeAdultContentSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::IncomeOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IncomeOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::IncomeTier" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IncomeTier.pm"
+      },
+      "Google::Ads::AdWords::v201406::IntegerAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IntegerAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::IntegerSetAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IntegerSetAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::InternalApiError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/InternalApiError.pm"
+      },
+      "Google::Ads::AdWords::v201406::InternalApiError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/InternalApiError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::InvalidGeoLocation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/InvalidGeoLocation.pm"
+      },
+      "Google::Ads::AdWords::v201406::IpBlock" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/IpBlock.pm"
+      },
+      "Google::Ads::AdWords::v201406::Job" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Job.pm"
+      },
+      "Google::Ads::AdWords::v201406::JobError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/JobError.pm"
+      },
+      "Google::Ads::AdWords::v201406::JobError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/JobError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::JobEvent" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/JobEvent.pm"
+      },
+      "Google::Ads::AdWords::v201406::JobResult" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/JobResult.pm"
+      },
+      "Google::Ads::AdWords::v201406::JobSelector" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/JobSelector.pm"
+      },
+      "Google::Ads::AdWords::v201406::JobStats" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/JobStats.pm"
+      },
+      "Google::Ads::AdWords::v201406::Keyword" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Keyword.pm"
+      },
+      "Google::Ads::AdWords::v201406::KeywordAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/KeywordAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::KeywordEstimate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/KeywordEstimate.pm"
+      },
+      "Google::Ads::AdWords::v201406::KeywordEstimateRequest" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/KeywordEstimateRequest.pm"
+      },
+      "Google::Ads::AdWords::v201406::KeywordMatchSetting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/KeywordMatchSetting.pm"
+      },
+      "Google::Ads::AdWords::v201406::KeywordMatchType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/KeywordMatchType.pm"
+      },
+      "Google::Ads::AdWords::v201406::Label" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Label.pm"
+      },
+      "Google::Ads::AdWords::v201406::Label::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Label/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelError.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::LabelServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/LabelServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::LabelService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LabelService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::Language" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Language.pm"
+      },
+      "Google::Ads::AdWords::v201406::LanguageSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LanguageSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::Level" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Level.pm"
+      },
+      "Google::Ads::AdWords::v201406::LevelOfDetail" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LevelOfDetail.pm"
+      },
+      "Google::Ads::AdWords::v201406::LinkOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LinkOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::LinkStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LinkStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::ListReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ListReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::Location" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Location.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionService::LocationCriterionServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionService/LocationCriterionServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionServiceError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionServiceError.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationCriterionServiceError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationCriterionServiceError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationExtension" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationExtension.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationExtension::Source" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationExtension/Source.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationExtensionOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationExtensionOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationGroups" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationGroups.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationSyncExtension" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationSyncExtension.pm"
+      },
+      "Google::Ads::AdWords::v201406::LocationTargetingStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LocationTargetingStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::LogicalUserList" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LogicalUserList.pm"
+      },
+      "Google::Ads::AdWords::v201406::LogicalUserListOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LogicalUserListOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::LongAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LongAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::LongComparisonOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LongComparisonOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::LongRangeAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LongRangeAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::LongValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/LongValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomer" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomer.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerLink" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerLink.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::ManagedCustomerServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/ManagedCustomerServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::getPendingInvitations" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/getPendingInvitations.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::getPendingInvitationsResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/getPendingInvitationsResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::mutateLink" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/mutateLink.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::mutateLinkResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/mutateLinkResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::mutateManager" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/mutateManager.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::mutateManagerResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/mutateManagerResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerServiceError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerServiceError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManagedCustomerServiceError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManagedCustomerServiceError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManualCPCAdGroupCriterionExperimentBidMultiplier" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManualCPCAdGroupCriterionExperimentBidMultiplier.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManualCPCAdGroupExperimentBidMultipliers" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManualCPCAdGroupExperimentBidMultipliers.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManualCPMAdGroupExperimentBidMultipliers" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManualCPMAdGroupExperimentBidMultipliers.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManualCpcBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManualCpcBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::ManualCpmBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ManualCpmBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::MarkupLanguageType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MarkupLanguageType.pm"
+      },
+      "Google::Ads::AdWords::v201406::MatchesRegexError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MatchesRegexError.pm"
+      },
+      "Google::Ads::AdWords::v201406::MatchesRegexError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MatchesRegexError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::Media" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Media.pm"
+      },
+      "Google::Ads::AdWords::v201406::Media::MediaType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Media/MediaType.pm"
+      },
+      "Google::Ads::AdWords::v201406::Media::MimeType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Media/MimeType.pm"
+      },
+      "Google::Ads::AdWords::v201406::Media::Size" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Media/Size.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaError.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::MediaServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/MediaServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::query" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/query.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::queryResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/queryResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::upload" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/upload.pm"
+      },
+      "Google::Ads::AdWords::v201406::MediaService::uploadResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MediaService/uploadResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::Media_Size_DimensionsMapEntry" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Media_Size_DimensionsMapEntry.pm"
+      },
+      "Google::Ads::AdWords::v201406::Media_Size_StringMapEntry" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Media_Size_StringMapEntry.pm"
+      },
+      "Google::Ads::AdWords::v201406::MinuteOfHour" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MinuteOfHour.pm"
+      },
+      "Google::Ads::AdWords::v201406::MobileAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MobileAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::MobileAppCategory" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MobileAppCategory.pm"
+      },
+      "Google::Ads::AdWords::v201406::MobileApplication" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MobileApplication.pm"
+      },
+      "Google::Ads::AdWords::v201406::MobileDevice" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MobileDevice.pm"
+      },
+      "Google::Ads::AdWords::v201406::MobileDevice::DeviceType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MobileDevice/DeviceType.pm"
+      },
+      "Google::Ads::AdWords::v201406::MobileImageAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MobileImageAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::Money" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Money.pm"
+      },
+      "Google::Ads::AdWords::v201406::MoneyAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MoneyAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::MonthlySearchVolume" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MonthlySearchVolume.pm"
+      },
+      "Google::Ads::AdWords::v201406::MonthlySearchVolumeAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MonthlySearchVolumeAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::MoveOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MoveOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::MultiplierError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MultiplierError.pm"
+      },
+      "Google::Ads::AdWords::v201406::MultiplierError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MultiplierError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::MultiplierSource" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MultiplierSource.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::MutateJobServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/MutateJobServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::getResult" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/getResult.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::getResultResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/getResultResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateJobService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateJobService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateLinkResults" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateLinkResults.pm"
+      },
+      "Google::Ads::AdWords::v201406::MutateManagerResults" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/MutateManagerResults.pm"
+      },
+      "Google::Ads::AdWords::v201406::NegativeAdGroupCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NegativeAdGroupCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::NegativeCampaignCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NegativeCampaignCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::NetworkSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NetworkSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::NetworkSetting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NetworkSetting.pm"
+      },
+      "Google::Ads::AdWords::v201406::NewEntityCreationError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NewEntityCreationError.pm"
+      },
+      "Google::Ads::AdWords::v201406::NewEntityCreationError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NewEntityCreationError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::NoStatsPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NoStatsPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::NotEmptyError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NotEmptyError.pm"
+      },
+      "Google::Ads::AdWords::v201406::NotEmptyError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NotEmptyError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::NotWhitelistedError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NotWhitelistedError.pm"
+      },
+      "Google::Ads::AdWords::v201406::NotWhitelistedError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NotWhitelistedError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::NullError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NullError.pm"
+      },
+      "Google::Ads::AdWords::v201406::NullError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NullError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::NullStatsPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NullStatsPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::NumberValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/NumberValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::OAuthInfo" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OAuthInfo.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionFeed" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionFeed.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionFeedOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionFeedOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionFeedReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionFeedReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionFeedService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionFeedService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionFeedService::OfflineConversionFeedServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionFeedService/OfflineConversionFeedServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionFeedService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionFeedService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionFeedService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionFeedService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionFeedService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionFeedService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::OfflineConversionFeedService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OfflineConversionFeedService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::Operand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Operand.pm"
+      },
+      "Google::Ads::AdWords::v201406::OperatingSystemVersion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OperatingSystemVersion.pm"
+      },
+      "Google::Ads::AdWords::v201406::OperatingSystemVersion::OperatorType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OperatingSystemVersion/OperatorType.pm"
+      },
+      "Google::Ads::AdWords::v201406::Operation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Operation.pm"
+      },
+      "Google::Ads::AdWords::v201406::OperationAccessDenied" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OperationAccessDenied.pm"
+      },
+      "Google::Ads::AdWords::v201406::OperationAccessDenied::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OperationAccessDenied/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::Operator" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Operator.pm"
+      },
+      "Google::Ads::AdWords::v201406::OperatorError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OperatorError.pm"
+      },
+      "Google::Ads::AdWords::v201406::OperatorError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OperatorError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::OpportunityIdeaType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OpportunityIdeaType.pm"
+      },
+      "Google::Ads::AdWords::v201406::OpportunityIdeaTypeAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OpportunityIdeaTypeAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::OrderBy" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/OrderBy.pm"
+      },
+      "Google::Ads::AdWords::v201406::Page" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Page.pm"
+      },
+      "Google::Ads::AdWords::v201406::PageOnePromotedBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PageOnePromotedBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::PageOnePromotedBiddingScheme::StrategyGoal" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PageOnePromotedBiddingScheme/StrategyGoal.pm"
+      },
+      "Google::Ads::AdWords::v201406::Paging" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Paging.pm"
+      },
+      "Google::Ads::AdWords::v201406::PagingError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PagingError.pm"
+      },
+      "Google::Ads::AdWords::v201406::PagingError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PagingError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::PendingInvitation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PendingInvitation.pm"
+      },
+      "Google::Ads::AdWords::v201406::PendingInvitationSelector" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PendingInvitationSelector.pm"
+      },
+      "Google::Ads::AdWords::v201406::PercentCpaBid" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PercentCpaBid.pm"
+      },
+      "Google::Ads::AdWords::v201406::PercentCpaBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PercentCpaBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::PlaceHolder" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PlaceHolder.pm"
+      },
+      "Google::Ads::AdWords::v201406::Placement" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Placement.pm"
+      },
+      "Google::Ads::AdWords::v201406::PlacementAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PlacementAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::PlacementTypeAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PlacementTypeAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::PlacementTypeSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PlacementTypeSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::PlacesLocationFeedData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PlacesLocationFeedData.pm"
+      },
+      "Google::Ads::AdWords::v201406::PlacesOfInterestOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PlacesOfInterestOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::PlacesOfInterestOperand::Category" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PlacesOfInterestOperand/Category.pm"
+      },
+      "Google::Ads::AdWords::v201406::Platform" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Platform.pm"
+      },
+      "Google::Ads::AdWords::v201406::PolicyViolationError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PolicyViolationError.pm"
+      },
+      "Google::Ads::AdWords::v201406::PolicyViolationError::Part" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PolicyViolationError/Part.pm"
+      },
+      "Google::Ads::AdWords::v201406::PolicyViolationError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PolicyViolationError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::PolicyViolationKey" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/PolicyViolationKey.pm"
+      },
+      "Google::Ads::AdWords::v201406::Predicate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Predicate.pm"
+      },
+      "Google::Ads::AdWords::v201406::Predicate::Operator" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Predicate/Operator.pm"
+      },
+      "Google::Ads::AdWords::v201406::Product" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Product.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductAdwordsGrouping" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductAdwordsGrouping.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductAdwordsLabels" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductAdwordsLabels.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductBiddingCategory" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductBiddingCategory.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductBiddingCategoryData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductBiddingCategoryData.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductBrand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductBrand.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductCanonicalCondition" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductCanonicalCondition.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductCanonicalCondition::Condition" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductCanonicalCondition/Condition.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductCondition" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductCondition.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductConditionOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductConditionOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductCustomAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductCustomAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductDimension" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductDimension.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductDimensionType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductDimensionType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductLegacyCondition" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductLegacyCondition.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductOfferId" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductOfferId.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductPartition" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductPartition.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductPartitionType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductPartitionType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductSalesChannel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductSalesChannel.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductScope" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductScope.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ProductTypeFull" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ProductTypeFull.pm"
+      },
+      "Google::Ads::AdWords::v201406::Proximity" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Proximity.pm"
+      },
+      "Google::Ads::AdWords::v201406::Proximity::DistanceUnits" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Proximity/DistanceUnits.pm"
+      },
+      "Google::Ads::AdWords::v201406::QualityInfo" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/QualityInfo.pm"
+      },
+      "Google::Ads::AdWords::v201406::QueryError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/QueryError.pm"
+      },
+      "Google::Ads::AdWords::v201406::QueryError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/QueryError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::QuotaCheckError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/QuotaCheckError.pm"
+      },
+      "Google::Ads::AdWords::v201406::QuotaCheckError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/QuotaCheckError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::QuotaError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/QuotaError.pm"
+      },
+      "Google::Ads::AdWords::v201406::QuotaError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/QuotaError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::Range" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Range.pm"
+      },
+      "Google::Ads::AdWords::v201406::RangeError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RangeError.pm"
+      },
+      "Google::Ads::AdWords::v201406::RangeError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RangeError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::RateExceededError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RateExceededError.pm"
+      },
+      "Google::Ads::AdWords::v201406::RateExceededError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RateExceededError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReadOnlyError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReadOnlyError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReadOnlyError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReadOnlyError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::RealTimeBiddingSetting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RealTimeBiddingSetting.pm"
+      },
+      "Google::Ads::AdWords::v201406::RegionCodeError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RegionCodeError.pm"
+      },
+      "Google::Ads::AdWords::v201406::RegionCodeError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RegionCodeError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::RejectedError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RejectedError.pm"
+      },
+      "Google::Ads::AdWords::v201406::RejectedError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RejectedError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::RelatedToQuerySearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RelatedToQuerySearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::RelatedToUrlSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RelatedToUrlSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinition::ReportType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinition/ReportType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinitionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinitionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinitionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinitionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinitionField" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinitionField.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinitionService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinitionService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinitionService::ReportDefinitionServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinitionService/ReportDefinitionServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinitionService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinitionService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinitionService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinitionService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinitionService::getReportFields" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinitionService/getReportFields.pm"
+      },
+      "Google::Ads::AdWords::v201406::ReportDefinitionService::getReportFieldsResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ReportDefinitionService/getReportFieldsResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::RequestContextOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RequestContextOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::RequestContextOperand::ContextType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RequestContextOperand/ContextType.pm"
+      },
+      "Google::Ads::AdWords::v201406::RequestError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RequestError.pm"
+      },
+      "Google::Ads::AdWords::v201406::RequestError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RequestError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::RequestType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RequestType.pm"
+      },
+      "Google::Ads::AdWords::v201406::RequiredError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RequiredError.pm"
+      },
+      "Google::Ads::AdWords::v201406::RequiredError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RequiredError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::RichMediaAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RichMediaAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::RichMediaAd::AdAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RichMediaAd/AdAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::RichMediaAd::RichMediaAdType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/RichMediaAd/RichMediaAdType.pm"
+      },
+      "Google::Ads::AdWords::v201406::SearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::SearchVolumeSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SearchVolumeSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::SeedAdGroupIdSearchParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SeedAdGroupIdSearchParameter.pm"
+      },
+      "Google::Ads::AdWords::v201406::Selector" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Selector.pm"
+      },
+      "Google::Ads::AdWords::v201406::SelectorError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SelectorError.pm"
+      },
+      "Google::Ads::AdWords::v201406::SelectorError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SelectorError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::ServingStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ServingStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::Setting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Setting.pm"
+      },
+      "Google::Ads::AdWords::v201406::SettingError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SettingError.pm"
+      },
+      "Google::Ads::AdWords::v201406::SettingError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SettingError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedBiddingStrategy" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedBiddingStrategy.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedBiddingStrategy::BiddingStrategyStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedBiddingStrategy/BiddingStrategyStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterion.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionError.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionService::SharedCriterionServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionService/SharedCriterionServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedCriterionService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedCriterionService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSet" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSet.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSet::Status" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSet/Status.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetError.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetService::SharedSetServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetService/SharedSetServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetService::mutate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetService/mutate.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetService::mutateResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetService/mutateResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::SharedSetType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SharedSetType.pm"
+      },
+      "Google::Ads::AdWords::v201406::ShoppingSetting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ShoppingSetting.pm"
+      },
+      "Google::Ads::AdWords::v201406::SimilarUserList" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SimilarUserList.pm"
+      },
+      "Google::Ads::AdWords::v201406::SimpleMutateJob" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SimpleMutateJob.pm"
+      },
+      "Google::Ads::AdWords::v201406::SimpleMutateResult" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SimpleMutateResult.pm"
+      },
+      "Google::Ads::AdWords::v201406::SiteConstants::AdFormat" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SiteConstants/AdFormat.pm"
+      },
+      "Google::Ads::AdWords::v201406::SiteConstants::PlacementType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SiteConstants/PlacementType.pm"
+      },
+      "Google::Ads::AdWords::v201406::SizeLimitError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SizeLimitError.pm"
+      },
+      "Google::Ads::AdWords::v201406::SizeLimitError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SizeLimitError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::SizeRange" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SizeRange.pm"
+      },
+      "Google::Ads::AdWords::v201406::SoapHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SoapHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::SoapResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SoapResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::SortOrder" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SortOrder.pm"
+      },
+      "Google::Ads::AdWords::v201406::StatsEstimate" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/StatsEstimate.pm"
+      },
+      "Google::Ads::AdWords::v201406::StatsQueryError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/StatsQueryError.pm"
+      },
+      "Google::Ads::AdWords::v201406::StatsQueryError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/StatsQueryError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::StringAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/StringAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::StringLengthError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/StringLengthError.pm"
+      },
+      "Google::Ads::AdWords::v201406::StringLengthError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/StringLengthError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::String_StringMapEntry" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/String_StringMapEntry.pm"
+      },
+      "Google::Ads::AdWords::v201406::SystemFeedGenerationData" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SystemFeedGenerationData.pm"
+      },
+      "Google::Ads::AdWords::v201406::SystemServingStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/SystemServingStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::Target" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Target.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetCpaBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetCpaBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetError.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetList" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetList.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetRoasBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetRoasBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetSpendBiddingScheme" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetSpendBiddingScheme.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdea" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdea.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaError.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaSelector" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaSelector.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaService::TargetingIdeaServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaService/TargetingIdeaServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaService::getBulkKeywordIdeas" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaService/getBulkKeywordIdeas.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaService::getBulkKeywordIdeasResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaService/getBulkKeywordIdeasResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingIdeaService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingIdeaService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingSetting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingSetting.pm"
+      },
+      "Google::Ads::AdWords::v201406::TargetingSettingDetail" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TargetingSettingDetail.pm"
+      },
+      "Google::Ads::AdWords::v201406::TempAdUnionId" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TempAdUnionId.pm"
+      },
+      "Google::Ads::AdWords::v201406::TemplateAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TemplateAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::TemplateElement" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TemplateElement.pm"
+      },
+      "Google::Ads::AdWords::v201406::TemplateElementField" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TemplateElementField.pm"
+      },
+      "Google::Ads::AdWords::v201406::TemplateElementField::Type" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TemplateElementField/Type.pm"
+      },
+      "Google::Ads::AdWords::v201406::TextAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TextAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::TextAdSpec" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TextAdSpec.pm"
+      },
+      "Google::Ads::AdWords::v201406::TextLabel" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TextLabel.pm"
+      },
+      "Google::Ads::AdWords::v201406::ThirdPartyRedirectAd" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ThirdPartyRedirectAd.pm"
+      },
+      "Google::Ads::AdWords::v201406::ThirdPartyRedirectAd::ExpandingDirection" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/ThirdPartyRedirectAd/ExpandingDirection.pm"
+      },
+      "Google::Ads::AdWords::v201406::TimeUnit" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TimeUnit.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrackingSetting" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrackingSetting.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorError.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorResult" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorResult.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorSelector" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorSelector.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorService::ApiExceptionFault" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorService/ApiExceptionFault.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorService::RequestHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorService/RequestHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorService::ResponseHeader" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorService/ResponseHeader.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorService::TrafficEstimatorServiceInterfacePort" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorService/TrafficEstimatorServiceInterfacePort.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorService::get" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorService/get.pm"
+      },
+      "Google::Ads::AdWords::v201406::TrafficEstimatorService::getResponse" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TrafficEstimatorService/getResponse.pm"
+      },
+      "Google::Ads::AdWords::v201406::TriggerTimeSpec" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TriggerTimeSpec.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::AdGroupAdService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/AdGroupAdService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::AdGroupBidModifierService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/AdGroupBidModifierService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::AdGroupCriterionService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/AdGroupCriterionService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::AdGroupFeedService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/AdGroupFeedService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::AdGroupService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/AdGroupService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::AdParamService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/AdParamService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::AdwordsUserListService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/AdwordsUserListService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::AlertService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/AlertService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::BiddingStrategyService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/BiddingStrategyService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::BudgetOrderService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/BudgetOrderService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::BudgetService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/BudgetService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::CampaignAdExtensionService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/CampaignAdExtensionService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::CampaignCriterionService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/CampaignCriterionService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::CampaignFeedService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/CampaignFeedService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::CampaignService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/CampaignService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::CampaignSharedSetService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/CampaignSharedSetService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::ConstantDataService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/ConstantDataService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::ConversionTrackerService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/ConversionTrackerService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::CustomerFeedService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/CustomerFeedService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::CustomerService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/CustomerService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::CustomerSyncService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/CustomerSyncService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::DataService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/DataService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::ExperimentService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/ExperimentService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::FeedItemService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/FeedItemService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::FeedMappingService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/FeedMappingService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::FeedService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/FeedService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::GeoLocationService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/GeoLocationService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::LabelService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/LabelService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::LocationCriterionService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/LocationCriterionService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::ManagedCustomerService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/ManagedCustomerService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::MediaService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/MediaService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::MutateJobService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/MutateJobService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::OfflineConversionFeedService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/OfflineConversionFeedService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::ReportDefinitionService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/ReportDefinitionService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::SharedCriterionService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/SharedCriterionService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::SharedSetService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/SharedSetService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::TargetingIdeaService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/TargetingIdeaService.pm"
+      },
+      "Google::Ads::AdWords::v201406::TypeMaps::TrafficEstimatorService" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/TypeMaps/TrafficEstimatorService.pm"
+      },
+      "Google::Ads::AdWords::v201406::Type_AttributeMapEntry" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Type_AttributeMapEntry.pm"
+      },
+      "Google::Ads::AdWords::v201406::UploadConversion" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UploadConversion.pm"
+      },
+      "Google::Ads::AdWords::v201406::UrlError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UrlError.pm"
+      },
+      "Google::Ads::AdWords::v201406::UrlError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UrlError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::UrlList" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UrlList.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserList" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserList.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListConversionType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListConversionType.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListConversionType::Category" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListConversionType/Category.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListError.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListLogicalRule" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListLogicalRule.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListLogicalRule::Operator" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListLogicalRule/Operator.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListMembershipStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListMembershipStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListOperation" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListOperation.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListPage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListPage.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListReturnValue" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListReturnValue.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserListType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserListType.pm"
+      },
+      "Google::Ads::AdWords::v201406::UserStatus" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/UserStatus.pm"
+      },
+      "Google::Ads::AdWords::v201406::Vertical" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Vertical.pm"
+      },
+      "Google::Ads::AdWords::v201406::Video" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Video.pm"
+      },
+      "Google::Ads::AdWords::v201406::VideoError" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/VideoError.pm"
+      },
+      "Google::Ads::AdWords::v201406::VideoError::Reason" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/VideoError/Reason.pm"
+      },
+      "Google::Ads::AdWords::v201406::VideoType" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/VideoType.pm"
+      },
+      "Google::Ads::AdWords::v201406::Webpage" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/Webpage.pm"
+      },
+      "Google::Ads::AdWords::v201406::WebpageCondition" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/WebpageCondition.pm"
+      },
+      "Google::Ads::AdWords::v201406::WebpageConditionOperand" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/WebpageConditionOperand.pm"
+      },
+      "Google::Ads::AdWords::v201406::WebpageDescriptor" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/WebpageDescriptor.pm"
+      },
+      "Google::Ads::AdWords::v201406::WebpageDescriptorAttribute" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/WebpageDescriptorAttribute.pm"
+      },
+      "Google::Ads::AdWords::v201406::WebpageParameter" : {
+         "file" : "lib/Google/Ads/AdWords/v201406/WebpageParameter.pm"
+      },
       "Google::Ads::Common::AuthError" : {
          "file" : "lib/Google/Ads/Common/AuthError.pm",
          "version" : "v2.10.0"
@@ -6353,5 +9902,5 @@
          "http://apache.org/licenses/LICENSE-2.0"
       ]
    },
-   "version" : "v2.15.0"
+   "version" : "v2.16.0"
 }
