@@ -41,7 +41,6 @@ examples/v201402/campaign_management/promote_experiment.pl
 examples/v201402/campaign_management/set_ad_parameters.pl
 examples/v201402/campaign_management/set_bid_modifier.pl
 examples/v201402/campaign_management/validate_text_ad.pl
-examples/v201402/error_handling/handle_captcha_challenge.pl
 examples/v201402/error_handling/handle_partial_failures.pl
 examples/v201402/error_handling/handle_server_faults.pl
 examples/v201402/misc/get_all_images_and_video.pl
@@ -71,6 +70,7 @@ examples/v201406/account_management/create_account.pl
 examples/v201406/account_management/get_account_alerts.pl
 examples/v201406/account_management/get_account_changes.pl
 examples/v201406/account_management/get_account_hierarchy.pl
+examples/v201406/advanced_operations/add_ad_customizer.pl
 examples/v201406/advanced_operations/add_ad_group_bid_modifier.pl
 examples/v201406/advanced_operations/add_click_to_download_ad.pl
 examples/v201406/advanced_operations/add_places_location_extensions.pl
@@ -108,7 +108,6 @@ examples/v201406/campaign_management/promote_experiment.pl
 examples/v201406/campaign_management/set_ad_parameters.pl
 examples/v201406/campaign_management/set_bid_modifier.pl
 examples/v201406/campaign_management/validate_text_ad.pl
-examples/v201406/error_handling/handle_captcha_challenge.pl
 examples/v201406/error_handling/handle_partial_failures.pl
 examples/v201406/error_handling/handle_server_faults.pl
 examples/v201406/misc/get_all_images_and_video.pl
@@ -134,7 +133,6 @@ examples/v201406/targeting/add_demographic_targeting_criteria.pl
 examples/v201406/targeting/get_campaign_targeting_criteria.pl
 examples/v201406/targeting/get_targetable_languages_and_carriers.pl
 examples/v201406/targeting/lookup_location.pl
-lib/Google/Ads/AdWords/AuthTokenHandler.pm
 lib/Google/Ads/AdWords/Client.pm
 lib/Google/Ads/AdWords/Constants.pm
 lib/Google/Ads/AdWords/Deserializer.pm
@@ -1066,7 +1064,6 @@ lib/Google/Ads/AdWords/v201402/RichMediaAd.pm
 lib/Google/Ads/AdWords/v201402/RichMediaAd/AdAttribute.pm
 lib/Google/Ads/AdWords/v201402/RichMediaAd/RichMediaAdType.pm
 lib/Google/Ads/AdWords/v201402/SearchParameter.pm
-lib/Google/Ads/AdWords/v201402/SearchVolumeDeltaSearchParameter.pm
 lib/Google/Ads/AdWords/v201402/SearchVolumeSearchParameter.pm
 lib/Google/Ads/AdWords/v201402/SeedAdGroupIdSearchParameter.pm
 lib/Google/Ads/AdWords/v201402/Selector.pm
@@ -2369,7 +2366,6 @@ lib/Google/Ads/AdWords/v201406/WebpageDescriptorAttribute.pm
 lib/Google/Ads/AdWords/v201406/WebpageParameter.pm
 lib/Google/Ads/Common/AuthError.pm
 lib/Google/Ads/Common/AuthHandlerInterface.pm
-lib/Google/Ads/Common/AuthTokenHandler.pm
 lib/Google/Ads/Common/CaptchaRequiredError.pm
 lib/Google/Ads/Common/Constants.pm
 lib/Google/Ads/Common/ErrorUtils.pm
@@ -2396,7 +2392,6 @@ MANIFEST			This list of files
 README
 README.md
 t/001_require.t
-t/010_AuthTokenHandler.t
 t/011_Client.t
 t/012_Serializer.t
 t/013_Deserializer.t

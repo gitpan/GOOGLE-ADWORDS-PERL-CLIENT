@@ -19,30 +19,27 @@ meta-spec:
   version: 1.4
 name: GOOGLE-ADWORDS-PERL-CLIENT
 provides:
-  Google::Ads::AdWords::AuthTokenHandler:
-    file: lib/Google/Ads/AdWords/AuthTokenHandler.pm
-    version: v2.17.0
   Google::Ads::AdWords::Client:
     file: lib/Google/Ads/AdWords/Client.pm
-    version: v2.17.0
+    version: v3.0.0
   Google::Ads::AdWords::Constants:
     file: lib/Google/Ads/AdWords/Constants.pm
-    version: v2.17.0
+    version: v3.0.0
   Google::Ads::AdWords::Deserializer:
     file: lib/Google/Ads/AdWords/Deserializer.pm
-    version: v2.17.0
+    version: v3.0.0
   Google::Ads::AdWords::FaultDetail:
     file: lib/Google/Ads/AdWords/FaultDetail.pm
-    version: v2.17.0
+    version: v3.0.0
   Google::Ads::AdWords::Logging:
     file: lib/Google/Ads/AdWords/Logging.pm
-    version: v2.17.0
+    version: v3.0.0
   Google::Ads::AdWords::OAuth2ApplicationsHandler:
     file: lib/Google/Ads/AdWords/OAuth2ApplicationsHandler.pm
-    version: v2.17.0
+    version: v3.0.0
   Google::Ads::AdWords::OAuth2ServiceAccountsHandler:
     file: lib/Google/Ads/AdWords/OAuth2ServiceAccountsHandler.pm
-    version: v2.17.0
+    version: v3.0.0
   Google::Ads::AdWords::Reports::DateRange:
     file: lib/Google/Ads/AdWords/Reports/DateRange.pm
     version: 0
@@ -81,7 +78,7 @@ provides:
     version: 0
   Google::Ads::AdWords::Serializer:
     file: lib/Google/Ads/AdWords/Serializer.pm
-    version: v2.17.0
+    version: v3.0.0
   Google::Ads::AdWords::v201402::AccessReason:
     file: lib/Google/Ads/AdWords/v201402/AccessReason.pm
     version: 0
@@ -2814,9 +2811,6 @@ provides:
     version: 0
   Google::Ads::AdWords::v201402::SearchParameter:
     file: lib/Google/Ads/AdWords/v201402/SearchParameter.pm
-    version: 0
-  Google::Ads::AdWords::v201402::SearchVolumeDeltaSearchParameter:
-    file: lib/Google/Ads/AdWords/v201402/SearchVolumeDeltaSearchParameter.pm
     version: 0
   Google::Ads::AdWords::v201402::SearchVolumeSearchParameter:
     file: lib/Google/Ads/AdWords/v201402/SearchVolumeSearchParameter.pm
@@ -6720,52 +6714,49 @@ provides:
     version: 0
   Google::Ads::Common::AuthError:
     file: lib/Google/Ads/Common/AuthError.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::AuthHandlerInterface:
     file: lib/Google/Ads/Common/AuthHandlerInterface.pm
     version: 0
-  Google::Ads::Common::AuthTokenHandler:
-    file: lib/Google/Ads/Common/AuthTokenHandler.pm
-    version: v2.10.0
   Google::Ads::Common::CaptchaRequiredError:
     file: lib/Google/Ads/Common/CaptchaRequiredError.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::Constants:
     file: lib/Google/Ads/Common/Constants.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::ErrorUtils:
     file: lib/Google/Ads/Common/ErrorUtils.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::HTTPTransport:
     file: lib/Google/Ads/Common/HTTPTransport.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::MapUtils:
     file: lib/Google/Ads/Common/MapUtils.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::MediaUtils:
     file: lib/Google/Ads/Common/MediaUtils.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::OAuth2ApplicationsHandler:
     file: lib/Google/Ads/Common/OAuth2ApplicationsHandler.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::OAuth2BaseHandler:
     file: lib/Google/Ads/Common/OAuth2BaseHandler.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::OAuth2ServiceAccountsHandler:
     file: lib/Google/Ads/Common/OAuth2ServiceAccountsHandler.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::OAuthApplicationsHandlerInterface:
     file: lib/Google/Ads/Common/OAuthApplicationsHandlerInterface.pm
     version: 0
   Google::Ads::Common::ReportDownloadError:
     file: lib/Google/Ads/Common/ReportDownloadError.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::ReportUtils:
     file: lib/Google/Ads/Common/ReportUtils.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::Common::XPathSAXParser:
     file: lib/Google/Ads/Common/XPathSAXParser.pm
-    version: v2.10.0
+    version: v3.0.0
   Google::Ads::SOAP::Deserializer::MessageParser:
     file: lib/Google/Ads/SOAP/Deserializer/MessageParser.pm
     version: 0
@@ -6805,4 +6796,4 @@ requires:
   perl: v5.8.0
 resources:
   license: http://apache.org/licenses/LICENSE-2.0
-version: v2.17.0
+version: v3.0.0
